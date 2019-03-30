@@ -1,29 +1,31 @@
-<template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+<template lang="pug">
+    el-container
+        el-header
+            h1 {{ raw.name }}
+        el-container
+            el-aside
+                el-menu
+                    el-submenu(v-for="(group, i) in raw.groups", :key="i", :index="i.toString()")
+                        template(slot="title") {{ group.title }}
+                        el-menu-item(v-for="n in group.children", :key="n") {{ getEntity(n).name }}
+            el-main
+                entity-renderer(:entity="raw.children[4]")
 </template>
 
-<style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
+<script lang="ts">
+import { Component, Prop, Vue } from "vue-property-decorator";
+import "./components/index";
+
+@Component
+export default class App extends Vue {
+
+    get raw() {
+        return this.$store.state.raw;
     }
-  }
+
+    getEntity(id: number) {
+        return this.$store.getters.entities[id];
+    }
+
 }
-</style>
+</script>
