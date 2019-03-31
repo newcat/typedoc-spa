@@ -14,6 +14,8 @@ export default Vue.extend({
             component = "property-reflection";
         } else if (kind & Kind.FunctionOrMethod) {
             component = "method-reflection";
+        } else if (kind & Kind.Enum) {
+            component = "enum-reflection";
         } else {
             // tslint:disable-next-line: no-console
             console.warn("Unsupported reflection type", context.props.reflection.kind);

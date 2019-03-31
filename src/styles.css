@@ -60,3 +60,7 @@ ul {
 .el-menu.no-border {
     border-right: none;
 }
+
+.el-table {
+    font-size: 100% !important;
+}

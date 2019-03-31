@@ -1,7 +1,8 @@
 <template lang="pug">
 div
+    .shy Class
     h1 {{ reflection.name }}
-    p(v-if="description") {{ description }}
+    comment-renderer(v-if="reflection.comment", :comment="reflection.comment")
     
     hr.mv3
 

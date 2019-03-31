@@ -10,15 +10,15 @@ export default new Vuex.Store({
         raw: test
     },
     getters: {
-        entities(state) {
-            const entities = [];
+        reflections(state) {
+            const reflections = [];
             const stack = (state.raw.children as any[]).slice();
             while (stack.length > 0) {
                 const el = stack.pop();
-                entities[el.id] = el;
+                reflections[el.id] = el;
                 if (el.children) { el.children.forEach((c: any) => stack.push(c)); }
             }
-            return entities;
+            return reflections;
         }
     },
     mutations: {
