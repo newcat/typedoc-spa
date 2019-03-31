@@ -1,15 +1,15 @@
 <template lang="pug">
     el-container
-        el-header
+        el-header(height="70px").flex.aic.header
             h1 {{ raw.name }}
         el-container
-            el-aside
-                el-menu
+            el-aside.aside
+                el-menu.no-border
                     el-submenu(v-for="(group, i) in raw.groups", :key="i", :index="i.toString()")
                         template(slot="title") {{ group.title }}
                         el-menu-item(v-for="n in group.children", :key="n") {{ getEntity(n).name }}
             el-main
-                entity-renderer(:entity="raw.children[4]")
+                reflection-renderer(:reflection="raw.children[4]")
 </template>
 
 <script lang="ts">

@@ -1,7 +1,9 @@
 import Vue from "vue";
 
-import ClassEntity from "./ClassEntity.vue";
-import PropertyEntity from "./PropertyEntity.vue";
+import ClassReflection from "./ClassReflection.vue";
+import MethodReflection from "./MethodReflection.vue";
+import PropertyReflection from "./PropertyReflection.vue";
 
-Vue.component("class-entity", ClassEntity);
-Vue.component("property-entity", PropertyEntity);
+Vue.component("class-reflection", ClassReflection);
+Vue.component("method-reflection", MethodReflection);
+Vue.component("property-reflection", PropertyReflection);

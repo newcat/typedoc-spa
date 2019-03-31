@@ -50,3 +50,83 @@ export enum Flag {
     Const = 4096,
     Let = 8192
 }
+
+// WIP
+export interface ISource {
+    fileName: string;
+    line: number;
+    character: number;
+}
+
+// TODO
+export interface IType {
+    type: string;
+    name: string;
+    id?: number;
+    typeArguments?: IType[];
+    types: IType[];
+    elementType: IType;
+}
+
+export interface ITag {
+    tagName: string;
+    text: string;
+    paramName?: string;
+}
+
+export interface IComment {
+    shortText?: string;
+    text?: string;
+    returns?: string;
+    tags?: ITag[];
+}
+
+// TODO: Decorators
+export interface IReflection {
+    id: number;
+    name: string;
+    kind: Kind;
+    kindString: string;
+    flags?: Record<string, boolean>;
+    comment?: IComment;
+    sources: ISource[];
+}
+
+export interface IContainerReflection extends IReflection {
+    children?: IDeclarationReflection[];
+    groups?: any[]; // TODO
+}
+
+export interface IParameterReflection extends IReflection {
+    type?: IType;
+    defaultValue?: string;
+}
+
+export interface ITypeParameterReflection extends IReflection {
+    type?: IType;
+}
+
+export interface IDeclarationReflection extends IContainerReflection {
+    type?: IType;
+    typeParameter?: ITypeParameterReflection[];
+    signatures?: ISignatureReflection[];
+    indexSignature?: ISignatureReflection;
+    getSignature?: ISignatureReflection;
+    setSignature?: ISignatureReflection;
+    defaultValue?: string;
+    overwrites?: IType;
+    inheritedFrom?: IType;
+    implementationOf?: IType;
+    extendedTypes?: IType[];
+    extendedBy?: IType[];
+    implementedTypes?: IType[];
+    implementedBy?: IType[];
+}
+
+export interface ISignatureReflection extends IReflection {
+    parameters?: IParameterReflection[];
+    typeParameters?: ITypeParameterReflection[];
+    overwrites?: IType;
+    inheritedFrom?: IType;
+    implementationOf?: IType;
+}
