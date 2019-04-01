@@ -15,6 +15,13 @@ div
     
     comment-renderer.mt2(v-if="signature.comment", :comment="signature.comment")
 
+    div.mt2
+        b Returns
+        br
+        code
+            type-renderer(:type="signature.type")
+        span(v-if="signature.comment && signature.comment.returns") :&nbsp;{{ signature.comment.returns }}
+
     // TODO: Returns
 </template>
 

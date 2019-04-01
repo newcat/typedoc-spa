@@ -1,8 +1,9 @@
 <template lang="pug">
 div
-    .shy Class
+    .shy {{ reflection.kindString }}
     h1 {{ reflection.name }}
     comment-renderer(v-if="reflection.comment", :comment="reflection.comment")
+    flags-renderer.mt1(v-if="reflection.flags && Object.keys(reflection.flags).length > 0", :flags="reflection.flags")
     
     hr.mv3
 

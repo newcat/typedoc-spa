@@ -14,6 +14,7 @@ export default class TypeRenderer extends Vue {
 
     renderType(h: CreateElement, t: IType) {
         const elements: any = [];
+        if (!t) { return null; }
 
         if (t.id) {
             // this is a reference

@@ -3,7 +3,7 @@ div
     flags-renderer(v-if="reflection.flags && Object.keys(reflection.flags).length > 0", :flags="reflection.flags")
     hr.mv1.hide-if-first
     code
-        b {{ reflection.name }}:&nbsp;
+        b {{ reflection.name + optional }}:&nbsp;
         i
             type-renderer(:type="reflection.type")
         template(v-if="reflection.defaultValue")
@@ -20,6 +20,10 @@ export default class PropertyReflection extends Vue {
 
     @Prop()
     reflection!: any;
+
+    get optional() {
+        return this.reflection && this.reflection.flags && this.reflection.flags.isOptional ? "?" : "";
+    }
 
 }
 </script>
