@@ -1,0 +1,13 @@
+Module:             
+Object literal:     
+Variable:           
+Function:           chevron_circle_right
+Type alias:         
+
+Enumeration:        
+Enum member:        
+
+Interface:          
+Intf Property:      
+
+clone, cube, cubes, dice-d6, dot-circle, folder, layer-group, list, play-circle, plus-circle
