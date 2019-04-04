@@ -3,14 +3,13 @@ import Vuex from "vuex";
 
 Vue.use(Vuex);
 
-import test from "./test";
-
 export default new Vuex.Store({
     state: {
-        raw: test
+        raw: {} as any
     },
     getters: {
         reflections(state) {
+            if (!state.raw.children) { return []; }
             const reflections = [];
             const stack = (state.raw.children as any[]).slice();
             while (stack.length > 0) {
@@ -22,9 +21,16 @@ export default new Vuex.Store({
         }
     },
     mutations: {
-
+        setRaw(state, value) {
+            state.raw = value;
+        }
     },
     actions: {
-
+        async loadModule({ commit }, file: string) {
+            const r = await fetch(file);
+            if (r.ok) {
+                commit("setRaw", await r.json());
+            }
+        }
     },
 });

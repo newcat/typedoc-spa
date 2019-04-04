@@ -2,12 +2,14 @@
     el-container
         el-header(height="70px").flex.aic.header
             h1 {{ raw.name }}
+            el-select.ml2(v-model="selectedModuleName", placeholder="Module")
+                el-option(v-for="m in modules", :key="m.name", :label="m.name", :value="m.name")
         el-container
             el-aside.aside
-                el-menu.no-border
-                    el-submenu(v-for="(group, i) in raw.groups", :key="i", :index="i.toString()")
+                el-menu.no-border(:default-active="reflection ? reflection.id.toString() : '-1'")
+                    el-submenu(v-for="(group, i) in raw.groups", :key="i", :index="'h' + i.toString()")
                         template(slot="title") {{ group.title }}
-                        el-menu-item(v-for="n in group.children", :key="n", @click="go(n)")
+                        el-menu-item(v-for="n in group.children", :key="n", :index="n.toString()", @click="go(n)")
                             type-icon.mr1(:kind="getReflection(n).kind")
                             | {{ getReflection(n).name }}
             el-main
@@ -30,8 +32,19 @@ export default class App extends Vue {
 
     reverseMap = new Map<string, Kind>(Array.from(RouteMapper.entries()).map(([k, v]) => ([v, k] as [string, Kind])));
 
+    modules = (window as any).$typedoc.modules;
+    selectedModuleName = this.modules[0].name;
+
     get raw() {
         return this.$store.state.raw;
+    }
+
+    get selectedModule() {
+        return this.modules.find((m: any) => m.name === this.selectedModuleName);
+    }
+
+    mounted() {
+        this.$store.dispatch("loadModule", this.selectedModule.file);
     }
 
     getReflection(id: number) {
@@ -44,6 +57,11 @@ export default class App extends Vue {
         if (this.reverseMap.has(r.name || "")) {
             this.reflection = findReflection(r.params.name, [this.raw], this.reverseMap.get(r.name!)!) || null;
         }
+    }
+
+    @Watch("selectedModule")
+    onSelectedModuleChanged() {
+        this.$store.dispatch("loadModule", this.selectedModule.file);
     }
 
     go(n: number) {

@@ -7,7 +7,7 @@ div
                 th.ph2 Type
                 th.ph2 Description
         tbody
-            tr(v-for="p in signature.parameters")
+            tr(v-for="p in signature.parameters", :key="p.id")
                 td.ph2
                     code {{ p.name }}
                 td.ph2
