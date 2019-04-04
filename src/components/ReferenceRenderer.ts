@@ -3,14 +3,14 @@ import RouteMapper from "@/routeMapper";
 import { IReflection } from "@/types";
 
 export default Vue.extend({
-    props: ["text", "id"],
+    props: ["id", "reflection"],
     render(h) {
-        const e = this.$store.getters.reflections[this.id] as IReflection;
-        if (e && RouteMapper.has(e.kind)) {
-            const to = { name: RouteMapper.get(e.kind)!, params: { name: e.name } };
-            return h("router-link", { props: { to } }, this.text);
+        const reflection = this.reflection || this.$store.getters.reflections[this.id] as IReflection;
+        if (reflection && RouteMapper.has(reflection.kind)) {
+            const to = { name: RouteMapper.get(reflection.kind)!, params: { name: reflection.name } };
+            return h("router-link", { props: { to } }, this.$slots.default);
         } else {
-            return h("span", this.text);
+            return h("span", this.$slots.default);
         }
     }
 });

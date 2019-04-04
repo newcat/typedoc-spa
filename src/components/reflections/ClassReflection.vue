@@ -16,7 +16,15 @@ div
             li(v-for="p in reflection.typeParameter", :key="p.id")
                 b {{ p.name }}
 
-    el-card.box-card.mv2(v-for="c in reflection.children", :key="c.id")
+    el-card.box-card.mv2
+        table-of-contents(:reflections="reflection.children")
+            template(v-slot:default="sp")
+                router-link(:to="{ hash: sp.reflection.name }")
+                    type-icon.mr1(:kind="sp.reflection.kind")
+                    | {{ sp.reflection.name }}
+
+    el-card.box-card.mv2.relative(v-for="c in reflection.children", :key="c.id")
+        a.anchor(:id="c.name")
         reflection-renderer(:reflection="c")
 
 </template>

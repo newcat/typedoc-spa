@@ -20,10 +20,9 @@ export default class TypeRenderer extends Vue {
 
         if (t.id) {
             // this is a reference
-            elements.push(h("reference-renderer", { props: {
-                text: t.name,
-                id: t.id
-            } }));
+            elements.push(h("reference-renderer", { props: { id: t.id } }, [
+                h("span", { slot: "default" }, t.name)
+            ]));
         } else if (t.type === "array") {
             elements.push(h("span", [
                 this.renderType(h, t.elementType),

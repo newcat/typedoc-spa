@@ -1,12 +1,13 @@
 <template lang="pug">
     el-container
         el-header(height="70px").flex.aic.header
-            h1 {{ raw.name }}
+            h1.c-pointer(@click="go(-1)") {{ raw.name }}
             el-select.ml2(v-model="selectedModuleName", placeholder="Module")
                 el-option(v-for="m in modules", :key="m.name", :label="m.name", :value="m.name")
         el-container
             el-aside.aside
                 el-menu.no-border(:default-active="reflection ? reflection.id.toString() : '-1'")
+                    el-menu-item(index="-1", @click="go(-1)") Home
                     el-submenu(v-for="(group, i) in raw.groups", :key="i", :index="'h' + i.toString()")
                         template(slot="title") {{ group.title }}
                         el-menu-item(v-for="n in group.children", :key="n", :index="n.toString()", @click="go(n)")
@@ -14,7 +15,11 @@
                             | {{ getReflection(n).name }}
             el-main
                 reflection-renderer(v-if="reflection" :reflection="reflection")
-                el-alert(v-else, show-icon, type="warning", title="Could not find requested reflection")
+                table-of-contents(v-else, :reflections="raw.children")
+                    template(v-slot:default="{ reflection }")
+                        reference-renderer(:reflection="reflection")
+                            type-icon.mr1(:kind="reflection.kind")
+                            | {{ reflection.name }}
 </template>
 
 <script lang="ts">
@@ -56,6 +61,8 @@ export default class App extends Vue {
         const r = this.$route;
         if (this.reverseMap.has(r.name || "")) {
             this.reflection = findReflection(r.params.name, [this.raw], this.reverseMap.get(r.name!)!) || null;
+        } else {
+            this.reflection = null;
         }
     }
 
@@ -65,6 +72,9 @@ export default class App extends Vue {
     }
 
     go(n: number) {
+        if (n === -1) {
+            return this.$router.push("/");
+        }
         const e = this.getReflection(n);
         if (e && RouteMapper.has(e.kind)) {
             const r = RouteMapper.get(e.kind)!;

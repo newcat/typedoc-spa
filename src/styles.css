@@ -64,3 +64,12 @@ ul {
 .el-table {
     font-size: 100% !important;
 }
+
+.c-pointer {
+    cursor: pointer;
+}
+
+.anchor {
+    position: absolute;
+    top: -50px;
+}
