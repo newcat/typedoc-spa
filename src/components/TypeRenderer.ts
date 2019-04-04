@@ -2,6 +2,8 @@ import { CreateElement } from "vue";
 import { Component, Prop, Vue } from "vue-property-decorator";
 import { IType } from "@/types";
 
+import SignaturePreview from "./reflections/signature/Preview.vue";
+
 @Component
 export default class TypeRenderer extends Vue {
 
@@ -35,6 +37,13 @@ export default class TypeRenderer extends Vue {
                 );
             });
             elements.pop();
+        } else if (t.type === "reflection") {
+            const d = t.declaration!;
+            if (d.signatures) {
+                d.signatures.forEach((s) => {
+                    elements.push(h(SignaturePreview, { props: { signature: s } }));
+                });
+            }
         } else {
             elements.push(h("span", t.name));
         }

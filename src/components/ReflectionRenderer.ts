@@ -16,6 +16,8 @@ export default Vue.extend({
             component = "method-reflection";
         } else if (kind & Kind.Accessor) {
             component = "accessor-reflection";
+        } else if (kind & Kind.TypeAlias) {
+            component = "type-alias-reflection";
         } else {
             // tslint:disable-next-line: no-console
             console.warn("Unsupported reflection type", context.props.reflection.kind);

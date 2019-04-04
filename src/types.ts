@@ -66,6 +66,7 @@ export interface IType {
     typeArguments?: IType[];
     types: IType[];
     elementType: IType;
+    declaration?: IDeclarationReflection;
 }
 
 export interface ITag {

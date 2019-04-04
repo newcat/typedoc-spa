@@ -1,21 +1,24 @@
 <template lang="pug">
 div
-    // TODO: Replace with custom table
-    el-table(v-if="signature.parameters && signature.parameters.length > 0" :data="signature.parameters")
-        el-table-column(label="Parameter")
-            template(slot-scope="{ row }")
-                code {{ row.name }}
-        el-table-column(label="Type")
-            template(slot-scope="{ row }")
-                code
-                    type-renderer(:type="row.type")
-        el-table-column(label="Description")
-            template(slot-scope="{ row }")
-                comment-renderer(v-if="row.comment", :comment="row.comment")
+    table.w100.param-table.mb2(v-if="signature.parameters && signature.parameters.length > 0")
+        thead
+            tr
+                th.ph2 Parameter
+                th.ph2 Type
+                th.ph2 Description
+        tbody
+            tr(v-for="p in signature.parameters")
+                td.ph2
+                    code {{ p.name }}
+                td.ph2
+                    code
+                        type-renderer(:type="p.type")
+                td.ph2
+                    comment-renderer(v-if="p.comment", :comment="p.comment")
     
-    comment-renderer.mt2(v-if="signature.comment", :comment="signature.comment")
+    comment-renderer.mb2(v-if="signature.comment", :comment="signature.comment")
 
-    div.mt2
+    div
         b Returns
         br
         code
@@ -37,3 +40,9 @@ export default class SignatureDetail extends Vue {
 
 }
 </script>
+
+<style>
+.param-table thead th {
+    border-bottom: 1px solid #EBEEF5;
+}
+</style>

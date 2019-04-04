@@ -5,5 +5,6 @@ export default new Map<Kind, string>([
     [Kind.Enum, "enums"],
     [Kind.Interface, "interfaces"],
     [Kind.TypeAlias, "types"],
-    [Kind.Function, "functions"]
+    [Kind.Function, "functions"],
+    [Kind.Variable, "variables"]
 ]);
