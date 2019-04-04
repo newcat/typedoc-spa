@@ -1,6 +1,7 @@
 <template lang="pug">
 code
-    b {{ signature.name }}
+    type-icon.mr1(:kind="signature.kind")
+    b {{ name || signature.name }}
     span (
     span(v-for="(p, i) in signature.parameters", :key="p.id")
         span {{ p.name }}:&nbsp;
@@ -21,6 +22,9 @@ export default class SignaturePreview extends Vue {
 
     @Prop()
     signature!: ISignatureReflection;
+
+    @Prop({ default: "" })
+    name!: string;
 
 }
 </script>

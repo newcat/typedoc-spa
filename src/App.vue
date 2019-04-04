@@ -7,7 +7,9 @@
                 el-menu.no-border
                     el-submenu(v-for="(group, i) in raw.groups", :key="i", :index="i.toString()")
                         template(slot="title") {{ group.title }}
-                        el-menu-item(v-for="n in group.children", :key="n", @click="go(n)") {{ getReflection(n).name }}
+                        el-menu-item(v-for="n in group.children", :key="n", @click="go(n)")
+                            type-icon.mr1(:kind="getReflection(n).kind")
+                            | {{ getReflection(n).name }}
             el-main
                 reflection-renderer(v-if="reflection" :reflection="reflection")
                 el-alert(v-else, show-icon, type="warning", title="Could not find requested reflection")

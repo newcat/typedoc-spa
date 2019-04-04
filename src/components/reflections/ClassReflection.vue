@@ -1,7 +1,9 @@
 <template lang="pug">
 div
     .shy {{ reflection.kindString }}
-    h1 {{ reflection.name }}
+    h1
+        type-icon.mr2(:kind="reflection.kind")
+        | {{ reflection.name }}
     comment-renderer(v-if="reflection.comment", :comment="reflection.comment")
     flags-renderer.mt1(v-if="reflection.flags && Object.keys(reflection.flags).length > 0", :flags="reflection.flags")
     

@@ -8,14 +8,12 @@ export default Vue.extend({
 
         let component;
         const kind = context.props.reflection.kind;
-        if (kind & (Kind.ClassOrInterface | Kind.ObjectLiteral)) {
+        if (kind & (Kind.ClassOrInterface | Kind.ObjectLiteral | Kind.Enum)) {
             component = "class-reflection";
         } else if (kind & (Kind.VariableOrProperty | Kind.EnumMember)) {
             component = "property-reflection";
         } else if (kind & (Kind.FunctionOrMethod | Kind.Constructor)) {
             component = "method-reflection";
-        } else if (kind & Kind.Enum) {
-            component = "enum-reflection";
         } else if (kind & Kind.Accessor) {
             component = "accessor-reflection";
         } else {

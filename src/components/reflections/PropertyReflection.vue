@@ -3,6 +3,7 @@ div
     flags-renderer(v-if="reflection.flags && Object.keys(reflection.flags).length > 0", :flags="reflection.flags")
     hr.mv1.hide-if-first
     code
+        type-icon.mr1(:kind="reflection.kind")
         b {{ reflection.name + optional }}:&nbsp;
         i
             type-renderer(:type="reflection.type")
