@@ -6,7 +6,9 @@ import RouteMapper from "./routeMapper";
 Vue.use(Router);
 
 const routes = Array.from(RouteMapper.entries())
-    .map(([k, v]) => ({ path: `/${v}/:name`, name: v }));
+    .map(([k, v]) => ({ path: `:module/${v}/:name`, name: v }));
+
+routes.push({ path: "/:module/", name: "home" });
 
 export default new Router({
     routes,

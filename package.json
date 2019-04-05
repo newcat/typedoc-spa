@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "webpack",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
@@ -21,9 +21,17 @@
   "devDependencies": {
     "@vue/cli-plugin-typescript": "^3.5.0",
     "@vue/cli-service": "^3.5.0",
+    "clean-webpack-plugin": "^2.0.1",
+    "css-loader": "^2.1.1",
+    "fork-ts-checker-webpack-plugin": "^1.0.1",
     "node-sass": "^4.9.0",
+    "null-loader": "^0.1.1",
     "sass-loader": "^7.1.0",
     "typescript": "^3.2.1",
-    "vue-template-compiler": "^2.5.21"
+    "vue-loader": "^15.7.0",
+    "vue-template-compiler": "^2.5.21",
+    "webpack": "^4.29.6",
+    "webpack-bundle-analyzer": "^3.1.0",
+    "webpack-cli": "^3.3.0"
   }
 }

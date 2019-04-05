@@ -1,25 +1,27 @@
 {
 	"id": 0,
-	"name": "@baklavajs/core",
+	"name": "Reference - BaklavaJS",
 	"kind": 0,
 	"flags": {},
 	"children": [
 		{
-			"id": 371,
+			"id": 209,
 			"name": "TemporaryConnectionState",
 			"kind": 4,
 			"kindString": "Enumeration",
 			"flags": {
-				"isExported": true
+				"isExported": true,
+				"isExternal": true
 			},
 			"children": [
 				{
-					"id": 373,
+					"id": 211,
 					"name": "ALLOWED",
 					"kind": 16,
 					"kindString": "Enumeration member",
 					"flags": {
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"sources": [
 						{
@@ -30,12 +32,13 @@
 					]
 				},
 				{
-					"id": 374,
+					"id": 212,
 					"name": "FORBIDDEN",
 					"kind": 16,
 					"kindString": "Enumeration member",
 					"flags": {
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"sources": [
 						{
@@ -46,12 +49,13 @@
 					]
 				},
 				{
-					"id": 372,
+					"id": 210,
 					"name": "NONE",
 					"kind": 16,
 					"kindString": "Enumeration member",
 					"flags": {
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"sources": [
 						{
@@ -67,9 +71,9 @@
 					"title": "Enumeration members",
 					"kind": 16,
 					"children": [
-						373,
-						374,
-						372
+						211,
+						212,
+						210
 					]
 				}
 			],
@@ -82,19 +86,20 @@
 			]
 		},
 		{
-			"id": 25,
+			"id": 1,
 			"name": "BaklavaEvent",
 			"kind": 128,
 			"kindString": "Class",
 			"flags": {
-				"isExported": true
+				"isExported": true,
+				"isExternal": true
 			},
 			"comment": {
 				"shortText": "Main event class for Baklava"
 			},
 			"typeParameter": [
 				{
-					"id": 26,
+					"id": 2,
 					"name": "T",
 					"kind": 131072,
 					"kindString": "Type parameter",
@@ -103,13 +108,14 @@
 			],
 			"children": [
 				{
-					"id": 27,
+					"id": 3,
 					"name": "listeners",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {
 						"isProtected": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"sources": [
 						{
@@ -125,12 +131,12 @@
 							{
 								"type": "reference",
 								"name": "TokenType",
-								"id": 80
+								"id": 55
 							},
 							{
 								"type": "reference",
 								"name": "Listener",
-								"id": 81,
+								"id": 56,
 								"typeArguments": [
 									{
 										"type": "typeParameter",
@@ -143,17 +149,18 @@
 					"defaultValue": " new Map()"
 				},
 				{
-					"id": 28,
+					"id": 4,
 					"name": "addListener",
 					"kind": 2048,
 					"kindString": "Method",
 					"flags": {
 						"isPublic": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"signatures": [
 						{
-							"id": 29,
+							"id": 5,
 							"name": "addListener",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -163,7 +170,7 @@
 							},
 							"parameters": [
 								{
-									"id": 30,
+									"id": 6,
 									"name": "token",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -174,11 +181,11 @@
 									"type": {
 										"type": "reference",
 										"name": "TokenType",
-										"id": 80
+										"id": 55
 									}
 								},
 								{
-									"id": 31,
+									"id": 7,
 									"name": "listener",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -189,7 +196,7 @@
 									"type": {
 										"type": "reference",
 										"name": "Listener",
-										"id": 81,
+										"id": 56,
 										"typeArguments": [
 											{
 												"type": "typeParameter",
@@ -214,16 +221,17 @@
 					]
 				},
 				{
-					"id": 35,
+					"id": 11,
 					"name": "emit",
 					"kind": 2048,
 					"kindString": "Method",
 					"flags": {
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"signatures": [
 						{
-							"id": 36,
+							"id": 12,
 							"name": "emit",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -233,7 +241,7 @@
 							},
 							"parameters": [
 								{
-									"id": 37,
+									"id": 13,
 									"name": "data",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -262,17 +270,18 @@
 					]
 				},
 				{
-					"id": 32,
+					"id": 8,
 					"name": "removeListener",
 					"kind": 2048,
 					"kindString": "Method",
 					"flags": {
 						"isPublic": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"signatures": [
 						{
-							"id": 33,
+							"id": 9,
 							"name": "removeListener",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -282,7 +291,7 @@
 							},
 							"parameters": [
 								{
-									"id": 34,
+									"id": 10,
 									"name": "token",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -293,7 +302,7 @@
 									"type": {
 										"type": "reference",
 										"name": "TokenType",
-										"id": 80
+										"id": 55
 									}
 								}
 							],
@@ -317,16 +326,16 @@
 					"title": "Properties",
 					"kind": 1024,
 					"children": [
-						27
+						3
 					]
 				},
 				{
 					"title": "Methods",
 					"kind": 2048,
 					"children": [
-						28,
-						35,
-						32
+						4,
+						11,
+						8
 					]
 				}
 			],
@@ -341,38 +350,40 @@
 				{
 					"type": "reference",
 					"name": "PreventableBaklavaEvent",
-					"id": 38
+					"id": 14
 				}
 			]
 		},
 		{
-			"id": 385,
+			"id": 223,
 			"name": "Connection",
 			"kind": 128,
 			"kindString": "Class",
 			"flags": {
-				"isExported": true
+				"isExported": true,
+				"isExternal": true
 			},
 			"children": [
 				{
-					"id": 393,
+					"id": 231,
 					"name": "constructor",
 					"kind": 512,
 					"kindString": "Constructor",
 					"flags": {
 						"isPublic": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"signatures": [
 						{
-							"id": 394,
+							"id": 232,
 							"name": "new Connection",
 							"kind": 16384,
 							"kindString": "Constructor signature",
 							"flags": {},
 							"parameters": [
 								{
-									"id": 395,
+									"id": 233,
 									"name": "from",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -380,11 +391,11 @@
 									"type": {
 										"type": "reference",
 										"name": "NodeInterface",
-										"id": 340
+										"id": 90
 									}
 								},
 								{
-									"id": 396,
+									"id": 234,
 									"name": "to",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -392,14 +403,14 @@
 									"type": {
 										"type": "reference",
 										"name": "NodeInterface",
-										"id": 340
+										"id": 90
 									}
 								}
 							],
 							"type": {
 								"type": "reference",
 								"name": "Connection",
-								"id": 385
+								"id": 223
 							}
 						}
 					],
@@ -412,13 +423,14 @@
 					]
 				},
 				{
-					"id": 390,
+					"id": 228,
 					"name": "destructed",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {
 						"isPublic": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"sources": [
 						{
@@ -434,13 +446,14 @@
 					"defaultValue": "false"
 				},
 				{
-					"id": 387,
+					"id": 225,
 					"name": "from",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {
 						"isPublic": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"sources": [
 						{
@@ -452,17 +465,18 @@
 					"type": {
 						"type": "reference",
 						"name": "NodeInterface",
-						"id": 340
+						"id": 90
 					}
 				},
 				{
-					"id": 386,
+					"id": 224,
 					"name": "id",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {
 						"isPublic": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"sources": [
 						{
@@ -477,13 +491,14 @@
 					}
 				},
 				{
-					"id": 389,
+					"id": 227,
 					"name": "isInDanger",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {
 						"isPublic": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"sources": [
 						{
@@ -499,13 +514,14 @@
 					"defaultValue": "false"
 				},
 				{
-					"id": 388,
+					"id": 226,
 					"name": "to",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {
 						"isPublic": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"sources": [
 						{
@@ -517,21 +533,22 @@
 					"type": {
 						"type": "reference",
 						"name": "NodeInterface",
-						"id": 340
+						"id": 90
 					}
 				},
 				{
-					"id": 397,
+					"id": 235,
 					"name": "destruct",
 					"kind": 2048,
 					"kindString": "Method",
 					"flags": {
 						"isPublic": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"signatures": [
 						{
-							"id": 398,
+							"id": 236,
 							"name": "destruct",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -551,22 +568,24 @@
 					]
 				},
 				{
-					"id": 391,
+					"id": 229,
 					"name": "events",
 					"kind": 2097152,
 					"kindString": "Object literal",
 					"flags": {
 						"isPublic": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"children": [
 						{
-							"id": 392,
+							"id": 230,
 							"name": "destruct",
 							"kind": 32,
 							"kindString": "Variable",
 							"flags": {
-								"isExported": true
+								"isExported": true,
+								"isExternal": true
 							},
 							"sources": [
 								{
@@ -578,7 +597,7 @@
 							"type": {
 								"type": "reference",
 								"name": "BaklavaEvent",
-								"id": 25,
+								"id": 1,
 								"typeArguments": [
 									{
 										"type": "intrinsic",
@@ -594,7 +613,7 @@
 							"title": "Variables",
 							"kind": 32,
 							"children": [
-								392
+								230
 							]
 						}
 					],
@@ -616,32 +635,32 @@
 					"title": "Constructors",
 					"kind": 512,
 					"children": [
-						393
+						231
 					]
 				},
 				{
 					"title": "Properties",
 					"kind": 1024,
 					"children": [
-						390,
-						387,
-						386,
-						389,
-						388
+						228,
+						225,
+						224,
+						227,
+						226
 					]
 				},
 				{
 					"title": "Methods",
 					"kind": 2048,
 					"children": [
-						397
+						235
 					]
 				},
 				{
 					"title": "Object literals",
 					"kind": 2097152,
 					"children": [
-						391
+						229
 					]
 				}
 			],
@@ -654,36 +673,38 @@
 			]
 		},
 		{
-			"id": 399,
+			"id": 237,
 			"name": "DummyConnection",
 			"kind": 128,
 			"kindString": "Class",
 			"flags": {
-				"isExported": true
+				"isExported": true,
+				"isExternal": true
 			},
 			"comment": {
 				"shortText": "This class is used for calculation purposes only.\nIt won't alter any state of the connected nodes"
 			},
 			"children": [
 				{
-					"id": 403,
+					"id": 241,
 					"name": "constructor",
 					"kind": 512,
 					"kindString": "Constructor",
 					"flags": {
 						"isPublic": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"signatures": [
 						{
-							"id": 404,
+							"id": 242,
 							"name": "new DummyConnection",
 							"kind": 16384,
 							"kindString": "Constructor signature",
 							"flags": {},
 							"parameters": [
 								{
-									"id": 405,
+									"id": 243,
 									"name": "from",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -691,11 +712,11 @@
 									"type": {
 										"type": "reference",
 										"name": "NodeInterface",
-										"id": 340
+										"id": 90
 									}
 								},
 								{
-									"id": 406,
+									"id": 244,
 									"name": "to",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -703,14 +724,14 @@
 									"type": {
 										"type": "reference",
 										"name": "NodeInterface",
-										"id": 340
+										"id": 90
 									}
 								}
 							],
 							"type": {
 								"type": "reference",
 								"name": "DummyConnection",
-								"id": 399
+								"id": 237
 							}
 						}
 					],
@@ -723,13 +744,14 @@
 					]
 				},
 				{
-					"id": 401,
+					"id": 239,
 					"name": "from",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {
 						"isPublic": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"sources": [
 						{
@@ -741,22 +763,23 @@
 					"type": {
 						"type": "reference",
 						"name": "NodeInterface",
-						"id": 340
+						"id": 90
 					},
 					"implementationOf": {
 						"type": "reference",
 						"name": "IConnection.from",
-						"id": 383
+						"id": 221
 					}
 				},
 				{
-					"id": 400,
+					"id": 238,
 					"name": "id",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {
 						"isPublic": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"sources": [
 						{
@@ -772,17 +795,18 @@
 					"implementationOf": {
 						"type": "reference",
 						"name": "IConnection.id",
-						"id": 382
+						"id": 220
 					}
 				},
 				{
-					"id": 402,
+					"id": 240,
 					"name": "to",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {
 						"isPublic": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"sources": [
 						{
@@ -794,12 +818,12 @@
 					"type": {
 						"type": "reference",
 						"name": "NodeInterface",
-						"id": 340
+						"id": 90
 					},
 					"implementationOf": {
 						"type": "reference",
 						"name": "IConnection.to",
-						"id": 384
+						"id": 222
 					}
 				}
 			],
@@ -808,16 +832,16 @@
 					"title": "Constructors",
 					"kind": 512,
 					"children": [
-						403
+						241
 					]
 				},
 				{
 					"title": "Properties",
 					"kind": 1024,
 					"children": [
-						401,
-						400,
-						402
+						239,
+						238,
+						240
 					]
 				}
 			],
@@ -832,186 +856,39 @@
 				{
 					"type": "reference",
 					"name": "IConnection",
-					"id": 381
+					"id": 219
 				}
 			]
 		},
 		{
-			"id": 194,
+			"id": 250,
 			"name": "Editor",
 			"kind": 128,
 			"kindString": "Class",
 			"flags": {
-				"isExported": true
+				"isExported": true,
+				"isExternal": true
 			},
 			"comment": {
 				"shortText": "The main model class for BaklavaJS"
 			},
 			"children": [
 				{
-					"id": 197,
-					"name": "_connections",
-					"kind": 1024,
-					"kindString": "Property",
-					"flags": {
-						"isPrivate": true,
-						"isExported": true
-					},
-					"sources": [
-						{
-							"fileName": "editor.ts",
-							"line": 15,
-							"character": 24
-						}
-					],
-					"type": {
-						"type": "array",
-						"elementType": {
-							"type": "reference",
-							"name": "Connection",
-							"id": 385
-						}
-					},
-					"defaultValue": " []"
-				},
-				{
-					"id": 199,
-					"name": "_nodeCategories",
-					"kind": 1024,
-					"kindString": "Property",
-					"flags": {
-						"isPrivate": true,
-						"isExported": true
-					},
-					"sources": [
-						{
-							"fileName": "editor.ts",
-							"line": 17,
-							"character": 27
-						}
-					],
-					"type": {
-						"type": "reference",
-						"name": "Map",
-						"typeArguments": [
-							{
-								"type": "intrinsic",
-								"name": "string"
-							},
-							{
-								"type": "array",
-								"elementType": {
-									"type": "intrinsic",
-									"name": "string"
-								}
-							}
-						]
-					},
-					"defaultValue": " new Map([[\"default\", []]])"
-				},
-				{
-					"id": 198,
-					"name": "_nodeTypes",
-					"kind": 1024,
-					"kindString": "Property",
-					"flags": {
-						"isPrivate": true,
-						"isExported": true
-					},
-					"sources": [
-						{
-							"fileName": "editor.ts",
-							"line": 16,
-							"character": 22
-						}
-					],
-					"type": {
-						"type": "reference",
-						"name": "Map",
-						"typeArguments": [
-							{
-								"type": "intrinsic",
-								"name": "string"
-							},
-							{
-								"type": "reference",
-								"name": "NodeConstructor",
-								"id": 261
-							}
-						]
-					},
-					"defaultValue": " new Map()"
-				},
-				{
-					"id": 196,
-					"name": "_nodes",
-					"kind": 1024,
-					"kindString": "Property",
-					"flags": {
-						"isPrivate": true,
-						"isExported": true
-					},
-					"sources": [
-						{
-							"fileName": "editor.ts",
-							"line": 14,
-							"character": 18
-						}
-					],
-					"type": {
-						"type": "array",
-						"elementType": {
-							"type": "reference",
-							"name": "Node",
-							"id": 267
-						}
-					},
-					"defaultValue": " []"
-				},
-				{
-					"id": 195,
-					"name": "_plugins",
-					"kind": 1024,
-					"kindString": "Property",
-					"flags": {
-						"isPrivate": true,
-						"isExported": true
-					},
-					"sources": [
-						{
-							"fileName": "editor.ts",
-							"line": 13,
-							"character": 20
-						}
-					],
-					"type": {
-						"type": "reference",
-						"name": "Set",
-						"typeArguments": [
-							{
-								"type": "reference",
-								"name": "IPlugin",
-								"id": 165
-							}
-						]
-					},
-					"defaultValue": " new Set()"
-				},
-				{
-					"id": 219,
+					"id": 270,
 					"name": "connections",
 					"kind": 262144,
 					"kindString": "Accessor",
 					"flags": {
 						"isPublic": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"comment": {
 						"shortText": "List of all connections"
 					},
 					"getSignature": [
 						{
-							"id": 220,
+							"id": 271,
 							"name": "__get",
 							"kind": 524288,
 							"kindString": "Get signature",
@@ -1026,7 +903,7 @@
 									{
 										"type": "reference",
 										"name": "Connection",
-										"id": 385
+										"id": 223
 									}
 								]
 							}
@@ -1041,20 +918,21 @@
 					]
 				},
 				{
-					"id": 224,
+					"id": 275,
 					"name": "nodeCategories",
 					"kind": 262144,
 					"kindString": "Accessor",
 					"flags": {
 						"isPublic": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"comment": {
 						"shortText": "Mapping of nodes to node categories"
 					},
 					"getSignature": [
 						{
-							"id": 225,
+							"id": 276,
 							"name": "__get",
 							"kind": 524288,
 							"kindString": "Get signature",
@@ -1090,20 +968,21 @@
 					]
 				},
 				{
-					"id": 221,
+					"id": 272,
 					"name": "nodeTypes",
 					"kind": 262144,
 					"kindString": "Accessor",
 					"flags": {
 						"isPublic": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"comment": {
 						"shortText": "List of all registered node types"
 					},
 					"getSignature": [
 						{
-							"id": 222,
+							"id": 273,
 							"name": "__get",
 							"kind": 524288,
 							"kindString": "Get signature",
@@ -1122,7 +1001,7 @@
 									{
 										"type": "reflection",
 										"declaration": {
-											"id": 223,
+											"id": 274,
 											"name": "__type",
 											"kind": 65536,
 											"kindString": "Type literal",
@@ -1142,20 +1021,21 @@
 					]
 				},
 				{
-					"id": 217,
+					"id": 268,
 					"name": "nodes",
 					"kind": 262144,
 					"kindString": "Accessor",
 					"flags": {
 						"isPublic": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"comment": {
 						"shortText": "List of all nodes"
 					},
 					"getSignature": [
 						{
-							"id": 218,
+							"id": 269,
 							"name": "__get",
 							"kind": 524288,
 							"kindString": "Get signature",
@@ -1170,7 +1050,7 @@
 									{
 										"type": "reference",
 										"name": "Node",
-										"id": 267
+										"id": 142
 									}
 								]
 							}
@@ -1185,20 +1065,21 @@
 					]
 				},
 				{
-					"id": 226,
+					"id": 277,
 					"name": "plugins",
 					"kind": 262144,
 					"kindString": "Accessor",
 					"flags": {
 						"isPublic": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"comment": {
 						"shortText": "List of all plugins in this editor"
 					},
 					"getSignature": [
 						{
-							"id": 227,
+							"id": 278,
 							"name": "__get",
 							"kind": 524288,
 							"kindString": "Get signature",
@@ -1213,7 +1094,7 @@
 									{
 										"type": "reference",
 										"name": "IPlugin",
-										"id": 165
+										"id": 245
 									}
 								]
 							}
@@ -1228,17 +1109,18 @@
 					]
 				},
 				{
-					"id": 239,
+					"id": 290,
 					"name": "addConnection",
 					"kind": 2048,
 					"kindString": "Method",
 					"flags": {
 						"isPublic": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"signatures": [
 						{
-							"id": 240,
+							"id": 291,
 							"name": "addConnection",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -1249,7 +1131,7 @@
 							},
 							"parameters": [
 								{
-									"id": 241,
+									"id": 292,
 									"name": "from",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -1260,11 +1142,11 @@
 									"type": {
 										"type": "reference",
 										"name": "NodeInterface",
-										"id": 340
+										"id": 90
 									}
 								},
 								{
-									"id": 242,
+									"id": 293,
 									"name": "to",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -1275,7 +1157,7 @@
 									"type": {
 										"type": "reference",
 										"name": "NodeInterface",
-										"id": 340
+										"id": 90
 									}
 								}
 							],
@@ -1285,7 +1167,7 @@
 									{
 										"type": "reference",
 										"name": "Connection",
-										"id": 385
+										"id": 223
 									},
 									{
 										"type": "intrinsic",
@@ -1304,17 +1186,18 @@
 					]
 				},
 				{
-					"id": 233,
+					"id": 284,
 					"name": "addNode",
 					"kind": 2048,
 					"kindString": "Method",
 					"flags": {
 						"isPublic": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"signatures": [
 						{
-							"id": 234,
+							"id": 285,
 							"name": "addNode",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -1325,7 +1208,7 @@
 							},
 							"parameters": [
 								{
-									"id": 235,
+									"id": 286,
 									"name": "node",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -1336,7 +1219,7 @@
 									"type": {
 										"type": "reference",
 										"name": "Node",
-										"id": 267
+										"id": 142
 									}
 								}
 							],
@@ -1346,7 +1229,7 @@
 									{
 										"type": "reference",
 										"name": "Node",
-										"id": 267
+										"id": 142
 									},
 									{
 										"type": "intrinsic",
@@ -1365,17 +1248,18 @@
 					]
 				},
 				{
-					"id": 246,
+					"id": 297,
 					"name": "checkConnection",
 					"kind": 2048,
 					"kindString": "Method",
 					"flags": {
 						"isPublic": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"signatures": [
 						{
-							"id": 247,
+							"id": 298,
 							"name": "checkConnection",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -1386,7 +1270,7 @@
 							},
 							"parameters": [
 								{
-									"id": 248,
+									"id": 299,
 									"name": "from",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -1397,11 +1281,11 @@
 									"type": {
 										"type": "reference",
 										"name": "NodeInterface",
-										"id": 340
+										"id": 90
 									}
 								},
 								{
-									"id": 249,
+									"id": 300,
 									"name": "to",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -1412,7 +1296,7 @@
 									"type": {
 										"type": "reference",
 										"name": "NodeInterface",
-										"id": 340
+										"id": 90
 									}
 								}
 							],
@@ -1426,7 +1310,7 @@
 									{
 										"type": "reference",
 										"name": "DummyConnection",
-										"id": 399
+										"id": 237
 									}
 								]
 							}
@@ -1441,70 +1325,18 @@
 					]
 				},
 				{
-					"id": 258,
-					"name": "findNodeInterface",
-					"kind": 2048,
-					"kindString": "Method",
-					"flags": {
-						"isPrivate": true,
-						"isExported": true
-					},
-					"signatures": [
-						{
-							"id": 259,
-							"name": "findNodeInterface",
-							"kind": 4096,
-							"kindString": "Call signature",
-							"flags": {},
-							"parameters": [
-								{
-									"id": 260,
-									"name": "id",
-									"kind": 32768,
-									"kindString": "Parameter",
-									"flags": {},
-									"type": {
-										"type": "intrinsic",
-										"name": "string"
-									}
-								}
-							],
-							"type": {
-								"type": "union",
-								"types": [
-									{
-										"type": "intrinsic",
-										"name": "undefined"
-									},
-									{
-										"type": "reference",
-										"name": "NodeInterface",
-										"id": 340
-									}
-								]
-							}
-						}
-					],
-					"sources": [
-						{
-							"fileName": "editor.ts",
-							"line": 266,
-							"character": 29
-						}
-					]
-				},
-				{
-					"id": 250,
+					"id": 301,
 					"name": "load",
 					"kind": 2048,
 					"kindString": "Method",
 					"flags": {
 						"isPublic": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"signatures": [
 						{
-							"id": 251,
+							"id": 302,
 							"name": "load",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -1514,7 +1346,7 @@
 							},
 							"parameters": [
 								{
-									"id": 252,
+									"id": 303,
 									"name": "state",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -1525,7 +1357,7 @@
 									"type": {
 										"type": "reference",
 										"name": "IState",
-										"id": 4
+										"id": 69
 									}
 								}
 							],
@@ -1544,17 +1376,18 @@
 					]
 				},
 				{
-					"id": 228,
+					"id": 279,
 					"name": "registerNodeType",
 					"kind": 2048,
 					"kindString": "Method",
 					"flags": {
 						"isPublic": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"signatures": [
 						{
-							"id": 229,
+							"id": 280,
 							"name": "registerNodeType",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -1564,7 +1397,7 @@
 							},
 							"parameters": [
 								{
-									"id": 230,
+									"id": 281,
 									"name": "typeName",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -1578,7 +1411,7 @@
 									}
 								},
 								{
-									"id": 231,
+									"id": 282,
 									"name": "type",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -1589,11 +1422,11 @@
 									"type": {
 										"type": "reference",
 										"name": "NodeConstructor",
-										"id": 261
+										"id": 309
 									}
 								},
 								{
-									"id": 232,
+									"id": 283,
 									"name": "category",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -1623,17 +1456,18 @@
 					]
 				},
 				{
-					"id": 243,
+					"id": 294,
 					"name": "removeConnection",
 					"kind": 2048,
 					"kindString": "Method",
 					"flags": {
 						"isPublic": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"signatures": [
 						{
-							"id": 244,
+							"id": 295,
 							"name": "removeConnection",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -1643,7 +1477,7 @@
 							},
 							"parameters": [
 								{
-									"id": 245,
+									"id": 296,
 									"name": "connection",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -1654,7 +1488,7 @@
 									"type": {
 										"type": "reference",
 										"name": "Connection",
-										"id": 385
+										"id": 223
 									}
 								}
 							],
@@ -1673,17 +1507,18 @@
 					]
 				},
 				{
-					"id": 236,
+					"id": 287,
 					"name": "removeNode",
 					"kind": 2048,
 					"kindString": "Method",
 					"flags": {
 						"isPublic": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"signatures": [
 						{
-							"id": 237,
+							"id": 288,
 							"name": "removeNode",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -1693,7 +1528,7 @@
 							},
 							"parameters": [
 								{
-									"id": 238,
+									"id": 289,
 									"name": "node",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -1704,7 +1539,7 @@
 									"type": {
 										"type": "reference",
 										"name": "Node",
-										"id": 267
+										"id": 142
 									}
 								}
 							],
@@ -1723,17 +1558,18 @@
 					]
 				},
 				{
-					"id": 253,
+					"id": 304,
 					"name": "save",
 					"kind": 2048,
 					"kindString": "Method",
 					"flags": {
 						"isPublic": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"signatures": [
 						{
-							"id": 254,
+							"id": 305,
 							"name": "save",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -1745,7 +1581,7 @@
 							"type": {
 								"type": "reference",
 								"name": "IState",
-								"id": 4
+								"id": 69
 							}
 						}
 					],
@@ -1758,17 +1594,18 @@
 					]
 				},
 				{
-					"id": 255,
+					"id": 306,
 					"name": "use",
 					"kind": 2048,
 					"kindString": "Method",
 					"flags": {
 						"isPublic": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"signatures": [
 						{
-							"id": 256,
+							"id": 307,
 							"name": "use",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -1779,7 +1616,7 @@
 							},
 							"parameters": [
 								{
-									"id": 257,
+									"id": 308,
 									"name": "plugin",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -1790,7 +1627,7 @@
 									"type": {
 										"type": "reference",
 										"name": "IPlugin",
-										"id": 165
+										"id": 245
 									}
 								}
 							],
@@ -1809,22 +1646,24 @@
 					]
 				},
 				{
-					"id": 200,
+					"id": 251,
 					"name": "events",
 					"kind": 2097152,
 					"kindString": "Object literal",
 					"flags": {
 						"isPublic": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"children": [
 						{
-							"id": 208,
+							"id": 259,
 							"name": "addConnection",
 							"kind": 32,
 							"kindString": "Variable",
 							"flags": {
-								"isExported": true
+								"isExported": true,
+								"isExternal": true
 							},
 							"sources": [
 								{
@@ -1836,24 +1675,25 @@
 							"type": {
 								"type": "reference",
 								"name": "BaklavaEvent",
-								"id": 25,
+								"id": 1,
 								"typeArguments": [
 									{
 										"type": "reference",
 										"name": "IConnection",
-										"id": 381
+										"id": 219
 									}
 								]
 							},
 							"defaultValue": " new BaklavaEvent<IConnection>()"
 						},
 						{
-							"id": 204,
+							"id": 255,
 							"name": "addNode",
 							"kind": 32,
 							"kindString": "Variable",
 							"flags": {
-								"isExported": true
+								"isExported": true,
+								"isExternal": true
 							},
 							"sources": [
 								{
@@ -1865,24 +1705,25 @@
 							"type": {
 								"type": "reference",
 								"name": "BaklavaEvent",
-								"id": 25,
+								"id": 1,
 								"typeArguments": [
 									{
 										"type": "reference",
 										"name": "Node",
-										"id": 267
+										"id": 142
 									}
 								]
 							},
 							"defaultValue": " new BaklavaEvent<Node>()"
 						},
 						{
-							"id": 207,
+							"id": 258,
 							"name": "beforeAddConnection",
 							"kind": 32,
 							"kindString": "Variable",
 							"flags": {
-								"isExported": true
+								"isExported": true,
+								"isExternal": true
 							},
 							"sources": [
 								{
@@ -1894,24 +1735,25 @@
 							"type": {
 								"type": "reference",
 								"name": "PreventableBaklavaEvent",
-								"id": 38,
+								"id": 14,
 								"typeArguments": [
 									{
 										"type": "reference",
 										"name": "IAddConnectionEventData",
-										"id": 170
+										"id": 311
 									}
 								]
 							},
 							"defaultValue": " new PreventableBaklavaEvent<IAddConnectionEventData>()"
 						},
 						{
-							"id": 203,
+							"id": 254,
 							"name": "beforeAddNode",
 							"kind": 32,
 							"kindString": "Variable",
 							"flags": {
-								"isExported": true
+								"isExported": true,
+								"isExternal": true
 							},
 							"sources": [
 								{
@@ -1923,24 +1765,25 @@
 							"type": {
 								"type": "reference",
 								"name": "PreventableBaklavaEvent",
-								"id": 38,
+								"id": 14,
 								"typeArguments": [
 									{
 										"type": "reference",
 										"name": "Node",
-										"id": 267
+										"id": 142
 									}
 								]
 							},
 							"defaultValue": " new PreventableBaklavaEvent<Node>()"
 						},
 						{
-							"id": 201,
+							"id": 252,
 							"name": "beforeRegisterNodeType",
 							"kind": 32,
 							"kindString": "Variable",
 							"flags": {
-								"isExported": true
+								"isExported": true,
+								"isExternal": true
 							},
 							"sources": [
 								{
@@ -1952,24 +1795,25 @@
 							"type": {
 								"type": "reference",
 								"name": "PreventableBaklavaEvent",
-								"id": 38,
+								"id": 14,
 								"typeArguments": [
 									{
 										"type": "reference",
 										"name": "IAddNodeTypeEventData",
-										"id": 173
+										"id": 314
 									}
 								]
 							},
 							"defaultValue": " new PreventableBaklavaEvent<IAddNodeTypeEventData>()"
 						},
 						{
-							"id": 210,
+							"id": 261,
 							"name": "beforeRemoveConnection",
 							"kind": 32,
 							"kindString": "Variable",
 							"flags": {
-								"isExported": true
+								"isExported": true,
+								"isExternal": true
 							},
 							"sources": [
 								{
@@ -1981,24 +1825,25 @@
 							"type": {
 								"type": "reference",
 								"name": "PreventableBaklavaEvent",
-								"id": 38,
+								"id": 14,
 								"typeArguments": [
 									{
 										"type": "reference",
 										"name": "IConnection",
-										"id": 381
+										"id": 219
 									}
 								]
 							},
 							"defaultValue": " new PreventableBaklavaEvent<IConnection>()"
 						},
 						{
-							"id": 205,
+							"id": 256,
 							"name": "beforeRemoveNode",
 							"kind": 32,
 							"kindString": "Variable",
 							"flags": {
-								"isExported": true
+								"isExported": true,
+								"isExternal": true
 							},
 							"sources": [
 								{
@@ -2010,24 +1855,25 @@
 							"type": {
 								"type": "reference",
 								"name": "PreventableBaklavaEvent",
-								"id": 38,
+								"id": 14,
 								"typeArguments": [
 									{
 										"type": "reference",
 										"name": "Node",
-										"id": 267
+										"id": 142
 									}
 								]
 							},
 							"defaultValue": " new PreventableBaklavaEvent<Node>()"
 						},
 						{
-							"id": 212,
+							"id": 263,
 							"name": "beforeUsePlugin",
 							"kind": 32,
 							"kindString": "Variable",
 							"flags": {
-								"isExported": true
+								"isExported": true,
+								"isExternal": true
 							},
 							"sources": [
 								{
@@ -2039,24 +1885,25 @@
 							"type": {
 								"type": "reference",
 								"name": "PreventableBaklavaEvent",
-								"id": 38,
+								"id": 14,
 								"typeArguments": [
 									{
 										"type": "reference",
 										"name": "IPlugin",
-										"id": 165
+										"id": 245
 									}
 								]
 							},
 							"defaultValue": " new PreventableBaklavaEvent<IPlugin>()"
 						},
 						{
-							"id": 209,
+							"id": 260,
 							"name": "checkConnection",
 							"kind": 32,
 							"kindString": "Variable",
 							"flags": {
-								"isExported": true
+								"isExported": true,
+								"isExternal": true
 							},
 							"sources": [
 								{
@@ -2068,24 +1915,25 @@
 							"type": {
 								"type": "reference",
 								"name": "PreventableBaklavaEvent",
-								"id": 38,
+								"id": 14,
 								"typeArguments": [
 									{
 										"type": "reference",
 										"name": "IAddConnectionEventData",
-										"id": 170
+										"id": 311
 									}
 								]
 							},
 							"defaultValue": " new PreventableBaklavaEvent<IAddConnectionEventData>()"
 						},
 						{
-							"id": 202,
+							"id": 253,
 							"name": "registerNodeType",
 							"kind": 32,
 							"kindString": "Variable",
 							"flags": {
-								"isExported": true
+								"isExported": true,
+								"isExternal": true
 							},
 							"sources": [
 								{
@@ -2097,24 +1945,25 @@
 							"type": {
 								"type": "reference",
 								"name": "BaklavaEvent",
-								"id": 25,
+								"id": 1,
 								"typeArguments": [
 									{
 										"type": "reference",
 										"name": "IAddNodeTypeEventData",
-										"id": 173
+										"id": 314
 									}
 								]
 							},
 							"defaultValue": " new BaklavaEvent<IAddNodeTypeEventData>()"
 						},
 						{
-							"id": 211,
+							"id": 262,
 							"name": "removeConnection",
 							"kind": 32,
 							"kindString": "Variable",
 							"flags": {
-								"isExported": true
+								"isExported": true,
+								"isExternal": true
 							},
 							"sources": [
 								{
@@ -2126,24 +1975,25 @@
 							"type": {
 								"type": "reference",
 								"name": "BaklavaEvent",
-								"id": 25,
+								"id": 1,
 								"typeArguments": [
 									{
 										"type": "reference",
 										"name": "IConnection",
-										"id": 381
+										"id": 219
 									}
 								]
 							},
 							"defaultValue": " new BaklavaEvent<IConnection>()"
 						},
 						{
-							"id": 206,
+							"id": 257,
 							"name": "removeNode",
 							"kind": 32,
 							"kindString": "Variable",
 							"flags": {
-								"isExported": true
+								"isExported": true,
+								"isExternal": true
 							},
 							"sources": [
 								{
@@ -2155,24 +2005,25 @@
 							"type": {
 								"type": "reference",
 								"name": "BaklavaEvent",
-								"id": 25,
+								"id": 1,
 								"typeArguments": [
 									{
 										"type": "reference",
 										"name": "Node",
-										"id": 267
+										"id": 142
 									}
 								]
 							},
 							"defaultValue": " new BaklavaEvent<Node>()"
 						},
 						{
-							"id": 213,
+							"id": 264,
 							"name": "usePlugin",
 							"kind": 32,
 							"kindString": "Variable",
 							"flags": {
-								"isExported": true
+								"isExported": true,
+								"isExternal": true
 							},
 							"sources": [
 								{
@@ -2184,12 +2035,12 @@
 							"type": {
 								"type": "reference",
 								"name": "BaklavaEvent",
-								"id": 25,
+								"id": 1,
 								"typeArguments": [
 									{
 										"type": "reference",
 										"name": "IPlugin",
-										"id": 165
+										"id": 245
 									}
 								]
 							},
@@ -2201,19 +2052,19 @@
 							"title": "Variables",
 							"kind": 32,
 							"children": [
-								208,
-								204,
-								207,
-								203,
-								201,
-								210,
-								205,
-								212,
-								209,
-								202,
-								211,
-								206,
-								213
+								259,
+								255,
+								258,
+								254,
+								252,
+								261,
+								256,
+								263,
+								260,
+								253,
+								262,
+								257,
+								264
 							]
 						}
 					],
@@ -2230,22 +2081,24 @@
 					}
 				},
 				{
-					"id": 214,
+					"id": 265,
 					"name": "hooks",
 					"kind": 2097152,
 					"kindString": "Object literal",
 					"flags": {
 						"isPublic": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"children": [
 						{
-							"id": 216,
+							"id": 267,
 							"name": "load",
 							"kind": 32,
 							"kindString": "Variable",
 							"flags": {
-								"isExported": true
+								"isExported": true,
+								"isExternal": true
 							},
 							"sources": [
 								{
@@ -2257,24 +2110,25 @@
 							"type": {
 								"type": "reference",
 								"name": "SequentialHook",
-								"id": 66,
+								"id": 41,
 								"typeArguments": [
 									{
 										"type": "reference",
 										"name": "IState",
-										"id": 4
+										"id": 69
 									}
 								]
 							},
 							"defaultValue": " new SequentialHook<IState>()"
 						},
 						{
-							"id": 215,
+							"id": 266,
 							"name": "save",
 							"kind": 32,
 							"kindString": "Variable",
 							"flags": {
-								"isExported": true
+								"isExported": true,
+								"isExternal": true
 							},
 							"sources": [
 								{
@@ -2286,12 +2140,12 @@
 							"type": {
 								"type": "reference",
 								"name": "SequentialHook",
-								"id": 66,
+								"id": 41,
 								"typeArguments": [
 									{
 										"type": "reference",
 										"name": "IState",
-										"id": 4
+										"id": 69
 									}
 								]
 							},
@@ -2303,8 +2157,8 @@
 							"title": "Variables",
 							"kind": 32,
 							"children": [
-								216,
-								215
+								267,
+								266
 							]
 						}
 					],
@@ -2323,49 +2177,37 @@
 			],
 			"groups": [
 				{
-					"title": "Properties",
-					"kind": 1024,
-					"children": [
-						197,
-						199,
-						198,
-						196,
-						195
-					]
-				},
-				{
 					"title": "Accessors",
 					"kind": 262144,
 					"children": [
-						219,
-						224,
-						221,
-						217,
-						226
+						270,
+						275,
+						272,
+						268,
+						277
 					]
 				},
 				{
 					"title": "Methods",
 					"kind": 2048,
 					"children": [
-						239,
-						233,
-						246,
-						258,
-						250,
-						228,
-						243,
-						236,
-						253,
-						255
+						290,
+						284,
+						297,
+						301,
+						279,
+						294,
+						287,
+						304,
+						306
 					]
 				},
 				{
 					"title": "Object literals",
 					"kind": 2097152,
 					"children": [
-						200,
-						214
+						251,
+						265
 					]
 				}
 			],
@@ -2378,12 +2220,13 @@
 			]
 		},
 		{
-			"id": 51,
+			"id": 27,
 			"name": "Hook",
 			"kind": 128,
 			"kindString": "Class",
 			"flags": {
 				"isExported": true,
+				"isExternal": true,
 				"isAbstract": true
 			},
 			"comment": {
@@ -2391,14 +2234,14 @@
 			},
 			"typeParameter": [
 				{
-					"id": 52,
+					"id": 28,
 					"name": "I",
 					"kind": 131072,
 					"kindString": "Type parameter",
 					"flags": {}
 				},
 				{
-					"id": 53,
+					"id": 29,
 					"name": "O",
 					"kind": 131072,
 					"kindString": "Type parameter",
@@ -2407,57 +2250,14 @@
 			],
 			"children": [
 				{
-					"id": 54,
-					"name": "tapMap",
-					"kind": 1024,
-					"kindString": "Property",
-					"flags": {
-						"isPrivate": true,
-						"isExported": true
-					},
-					"sources": [
-						{
-							"fileName": "events/eventEmitter.ts",
-							"line": 64,
-							"character": 18
-						}
-					],
-					"type": {
-						"type": "reference",
-						"name": "Map",
-						"typeArguments": [
-							{
-								"type": "reference",
-								"name": "TokenType",
-								"id": 80
-							},
-							{
-								"type": "reference",
-								"name": "HookTap",
-								"id": 86,
-								"typeArguments": [
-									{
-										"type": "typeParameter",
-										"name": "I"
-									},
-									{
-										"type": "typeParameter",
-										"name": "O"
-									}
-								]
-							}
-						]
-					},
-					"defaultValue": " new Map()"
-				},
-				{
-					"id": 55,
+					"id": 30,
 					"name": "taps",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {
 						"isProtected": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"sources": [
 						{
@@ -2473,7 +2273,7 @@
 							{
 								"type": "reference",
 								"name": "HookTap",
-								"id": 86,
+								"id": 61,
 								"typeArguments": [
 									{
 										"type": "typeParameter",
@@ -2490,25 +2290,26 @@
 					"defaultValue": " []"
 				},
 				{
-					"id": 63,
+					"id": 38,
 					"name": "execute",
 					"kind": 2048,
 					"kindString": "Method",
 					"flags": {
 						"isPublic": true,
 						"isExported": true,
+						"isExternal": true,
 						"isAbstract": true
 					},
 					"signatures": [
 						{
-							"id": 64,
+							"id": 39,
 							"name": "execute",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
 							"parameters": [
 								{
-									"id": 65,
+									"id": 40,
 									"name": "data",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -2534,24 +2335,25 @@
 					]
 				},
 				{
-					"id": 56,
+					"id": 31,
 					"name": "tap",
 					"kind": 2048,
 					"kindString": "Method",
 					"flags": {
 						"isPublic": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"signatures": [
 						{
-							"id": 57,
+							"id": 32,
 							"name": "tap",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
 							"parameters": [
 								{
-									"id": 58,
+									"id": 33,
 									"name": "token",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -2559,11 +2361,11 @@
 									"type": {
 										"type": "reference",
 										"name": "TokenType",
-										"id": 80
+										"id": 55
 									}
 								},
 								{
-									"id": 59,
+									"id": 34,
 									"name": "tapFn",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -2571,7 +2373,7 @@
 									"type": {
 										"type": "reference",
 										"name": "HookTap",
-										"id": 86,
+										"id": 61,
 										"typeArguments": [
 											{
 												"type": "typeParameter",
@@ -2600,24 +2402,25 @@
 					]
 				},
 				{
-					"id": 60,
+					"id": 35,
 					"name": "untap",
 					"kind": 2048,
 					"kindString": "Method",
 					"flags": {
 						"isPublic": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"signatures": [
 						{
-							"id": 61,
+							"id": 36,
 							"name": "untap",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
 							"parameters": [
 								{
-									"id": 62,
+									"id": 37,
 									"name": "token",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -2625,7 +2428,7 @@
 									"type": {
 										"type": "reference",
 										"name": "TokenType",
-										"id": 80
+										"id": 55
 									}
 								}
 							],
@@ -2649,17 +2452,16 @@
 					"title": "Properties",
 					"kind": 1024,
 					"children": [
-						54,
-						55
+						30
 					]
 				},
 				{
 					"title": "Methods",
 					"kind": 2048,
 					"children": [
-						63,
-						56,
-						60
+						38,
+						31,
+						35
 					]
 				}
 			],
@@ -2674,17 +2476,18 @@
 				{
 					"type": "reference",
 					"name": "SequentialHook",
-					"id": 66
+					"id": 41
 				}
 			]
 		},
 		{
-			"id": 267,
+			"id": 142,
 			"name": "Node",
 			"kind": 128,
 			"kindString": "Class",
 			"flags": {
 				"isExported": true,
+				"isExternal": true,
 				"isAbstract": true
 			},
 			"comment": {
@@ -2692,36 +2495,14 @@
 			},
 			"children": [
 				{
-					"id": 287,
-					"name": "editorInstance",
-					"kind": 1024,
-					"kindString": "Property",
-					"flags": {
-						"isPrivate": true,
-						"isExported": true,
-						"isOptional": true
-					},
-					"sources": [
-						{
-							"fileName": "node.ts",
-							"line": 57,
-							"character": 26
-						}
-					],
-					"type": {
-						"type": "reference",
-						"name": "Editor",
-						"id": 194
-					}
-				},
-				{
-					"id": 270,
+					"id": 145,
 					"name": "id",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {
 						"isPublic": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"comment": {
 						"shortText": "Unique identifier of the node"
@@ -2740,13 +2521,14 @@
 					"defaultValue": " \"node_\" + generateId()"
 				},
 				{
-					"id": 271,
+					"id": 146,
 					"name": "interfaces",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {
 						"isPublic": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"comment": {
 						"shortText": "A map of all interfaces of the node.\n| Key = Name of the interface\n| Value = [[NodeInterface]] instance"
@@ -2769,20 +2551,21 @@
 							{
 								"type": "reference",
 								"name": "NodeInterface",
-								"id": 340
+								"id": 90
 							}
 						]
 					},
 					"defaultValue": " new Map()"
 				},
 				{
-					"id": 269,
+					"id": 144,
 					"name": "name",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {
 						"isPublic": true,
 						"isExported": true,
+						"isExternal": true,
 						"isAbstract": true
 					},
 					"comment": {
@@ -2801,13 +2584,14 @@
 					}
 				},
 				{
-					"id": 272,
+					"id": 147,
 					"name": "options",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {
 						"isPublic": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"comment": {
 						"shortText": "A map of all options of the node.\n| Key = Name of the option\n| Value = [[NodeOption]] instance"
@@ -2830,20 +2614,21 @@
 							{
 								"type": "reference",
 								"name": "NodeOption",
-								"id": 149
+								"id": 123
 							}
 						]
 					},
 					"defaultValue": " new Map()"
 				},
 				{
-					"id": 273,
+					"id": 148,
 					"name": "state",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {
 						"isPublic": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"comment": {
 						"shortText": "Use this property to save additional state of the node"
@@ -2871,13 +2656,14 @@
 					}
 				},
 				{
-					"id": 268,
+					"id": 143,
 					"name": "type",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {
 						"isPublic": true,
 						"isExported": true,
+						"isExternal": true,
 						"isAbstract": true
 					},
 					"comment": {
@@ -2896,20 +2682,21 @@
 					}
 				},
 				{
-					"id": 288,
+					"id": 162,
 					"name": "inputInterfaces",
 					"kind": 262144,
 					"kindString": "Accessor",
 					"flags": {
 						"isPublic": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"comment": {
 						"shortText": "All input interfaces of the node"
 					},
 					"getSignature": [
 						{
-							"id": 289,
+							"id": 163,
 							"name": "__get",
 							"kind": 524288,
 							"kindString": "Get signature",
@@ -2928,7 +2715,7 @@
 									{
 										"type": "reference",
 										"name": "NodeInterface",
-										"id": 340
+										"id": 90
 									}
 								]
 							}
@@ -2943,20 +2730,21 @@
 					]
 				},
 				{
-					"id": 290,
+					"id": 164,
 					"name": "outputInterfaces",
 					"kind": 262144,
 					"kindString": "Accessor",
 					"flags": {
 						"isPublic": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"comment": {
 						"shortText": "All output interfaces of the node"
 					},
 					"getSignature": [
 						{
-							"id": 291,
+							"id": 165,
 							"name": "__get",
 							"kind": 524288,
 							"kindString": "Get signature",
@@ -2975,7 +2763,7 @@
 									{
 										"type": "reference",
 										"name": "NodeInterface",
-										"id": 340
+										"id": 90
 									}
 								]
 							}
@@ -2990,17 +2778,18 @@
 					]
 				},
 				{
-					"id": 299,
+					"id": 173,
 					"name": "addInputInterface",
 					"kind": 2048,
 					"kindString": "Method",
 					"flags": {
 						"isProtected": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"signatures": [
 						{
-							"id": 300,
+							"id": 174,
 							"name": "addInputInterface",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -3011,7 +2800,7 @@
 							},
 							"parameters": [
 								{
-									"id": 301,
+									"id": 175,
 									"name": "name",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -3025,7 +2814,7 @@
 									}
 								},
 								{
-									"id": 302,
+									"id": 176,
 									"name": "option",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -3050,7 +2839,7 @@
 									}
 								},
 								{
-									"id": 303,
+									"id": 177,
 									"name": "defaultValue",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -3066,7 +2855,7 @@
 									}
 								},
 								{
-									"id": 304,
+									"id": 178,
 									"name": "additionalProperties",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -3102,7 +2891,7 @@
 									{
 										"type": "reference",
 										"name": "NodeInterface",
-										"id": 340
+										"id": 90
 									}
 								]
 							}
@@ -3117,94 +2906,18 @@
 					]
 				},
 				{
-					"id": 335,
-					"name": "addInterface",
-					"kind": 2048,
-					"kindString": "Method",
-					"flags": {
-						"isPrivate": true,
-						"isExported": true
-					},
-					"signatures": [
-						{
-							"id": 336,
-							"name": "addInterface",
-							"kind": 4096,
-							"kindString": "Call signature",
-							"flags": {},
-							"parameters": [
-								{
-									"id": 337,
-									"name": "isInput",
-									"kind": 32768,
-									"kindString": "Parameter",
-									"flags": {},
-									"type": {
-										"type": "intrinsic",
-										"name": "boolean"
-									}
-								},
-								{
-									"id": 338,
-									"name": "name",
-									"kind": 32768,
-									"kindString": "Parameter",
-									"flags": {},
-									"type": {
-										"type": "intrinsic",
-										"name": "string"
-									}
-								},
-								{
-									"id": 339,
-									"name": "option",
-									"kind": 32768,
-									"kindString": "Parameter",
-									"flags": {
-										"isOptional": true
-									},
-									"type": {
-										"type": "union",
-										"types": [
-											{
-												"type": "intrinsic",
-												"name": "undefined"
-											},
-											{
-												"type": "intrinsic",
-												"name": "string"
-											}
-										]
-									}
-								}
-							],
-							"type": {
-								"type": "reference",
-								"name": "NodeInterface",
-								"id": 340
-							}
-						}
-					],
-					"sources": [
-						{
-							"fileName": "node.ts",
-							"line": 254,
-							"character": 24
-						}
-					]
-				},
-				{
-					"id": 312,
+					"id": 186,
 					"name": "addOption",
 					"kind": 2048,
 					"kindString": "Method",
 					"flags": {
 						"isProtected": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"signatures": [
 						{
-							"id": 313,
+							"id": 187,
 							"name": "addOption",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -3215,7 +2928,7 @@
 							},
 							"parameters": [
 								{
-									"id": 314,
+									"id": 188,
 									"name": "name",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -3229,7 +2942,7 @@
 									}
 								},
 								{
-									"id": 315,
+									"id": 189,
 									"name": "component",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -3243,7 +2956,7 @@
 									}
 								},
 								{
-									"id": 316,
+									"id": 190,
 									"name": "defaultValue",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -3258,7 +2971,7 @@
 									"defaultValue": " null"
 								},
 								{
-									"id": 317,
+									"id": 191,
 									"name": "sidebarComponent",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -3283,7 +2996,7 @@
 									}
 								},
 								{
-									"id": 318,
+									"id": 192,
 									"name": "additionalProperties",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -3319,7 +3032,7 @@
 									{
 										"type": "reference",
 										"name": "NodeOption",
-										"id": 149
+										"id": 123
 									}
 								]
 							}
@@ -3334,17 +3047,18 @@
 					]
 				},
 				{
-					"id": 305,
+					"id": 179,
 					"name": "addOutputInterface",
 					"kind": 2048,
 					"kindString": "Method",
 					"flags": {
 						"isProtected": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"signatures": [
 						{
-							"id": 306,
+							"id": 180,
 							"name": "addOutputInterface",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -3355,7 +3069,7 @@
 							},
 							"parameters": [
 								{
-									"id": 307,
+									"id": 181,
 									"name": "name",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -3369,7 +3083,7 @@
 									}
 								},
 								{
-									"id": 308,
+									"id": 182,
 									"name": "additionalProperties",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -3405,7 +3119,7 @@
 									{
 										"type": "reference",
 										"name": "NodeInterface",
-										"id": 340
+										"id": 90
 									}
 								]
 							}
@@ -3420,17 +3134,18 @@
 					]
 				},
 				{
-					"id": 297,
+					"id": 171,
 					"name": "calculate",
 					"kind": 2048,
 					"kindString": "Method",
 					"flags": {
 						"isPublic": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"signatures": [
 						{
-							"id": 298,
+							"id": 172,
 							"name": "calculate",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -3454,17 +3169,18 @@
 					]
 				},
 				{
-					"id": 322,
+					"id": 196,
 					"name": "getInterface",
 					"kind": 2048,
 					"kindString": "Method",
 					"flags": {
 						"isPublic": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"signatures": [
 						{
-							"id": 323,
+							"id": 197,
 							"name": "getInterface",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -3474,7 +3190,7 @@
 							},
 							"parameters": [
 								{
-									"id": 324,
+									"id": 198,
 									"name": "name",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -3491,7 +3207,7 @@
 							"type": {
 								"type": "reference",
 								"name": "NodeInterface",
-								"id": 340
+								"id": 90
 							}
 						}
 					],
@@ -3504,17 +3220,18 @@
 					]
 				},
 				{
-					"id": 325,
+					"id": 199,
 					"name": "getOptionValue",
 					"kind": 2048,
 					"kindString": "Method",
 					"flags": {
 						"isPublic": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"signatures": [
 						{
-							"id": 326,
+							"id": 200,
 							"name": "getOptionValue",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -3524,7 +3241,7 @@
 							},
 							"parameters": [
 								{
-									"id": 327,
+									"id": 201,
 									"name": "name",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -3553,24 +3270,25 @@
 					]
 				},
 				{
-					"id": 292,
+					"id": 166,
 					"name": "load",
 					"kind": 2048,
 					"kindString": "Method",
 					"flags": {
 						"isPublic": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"signatures": [
 						{
-							"id": 293,
+							"id": 167,
 							"name": "load",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
 							"parameters": [
 								{
-									"id": 294,
+									"id": 168,
 									"name": "state",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -3578,7 +3296,7 @@
 									"type": {
 										"type": "reference",
 										"name": "INodeState",
-										"id": 8
+										"id": 73
 									}
 								}
 							],
@@ -3597,17 +3315,18 @@
 					]
 				},
 				{
-					"id": 332,
+					"id": 206,
 					"name": "registerEditor",
 					"kind": 2048,
 					"kindString": "Method",
 					"flags": {
 						"isPublic": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"signatures": [
 						{
-							"id": 333,
+							"id": 207,
 							"name": "registerEditor",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -3617,7 +3336,7 @@
 							},
 							"parameters": [
 								{
-									"id": 334,
+									"id": 208,
 									"name": "editor",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -3628,7 +3347,7 @@
 									"type": {
 										"type": "reference",
 										"name": "Editor",
-										"id": 194
+										"id": 250
 									}
 								}
 							],
@@ -3647,17 +3366,18 @@
 					]
 				},
 				{
-					"id": 309,
+					"id": 183,
 					"name": "removeInterface",
 					"kind": 2048,
 					"kindString": "Method",
 					"flags": {
 						"isProtected": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"signatures": [
 						{
-							"id": 310,
+							"id": 184,
 							"name": "removeInterface",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -3667,7 +3387,7 @@
 							},
 							"parameters": [
 								{
-									"id": 311,
+									"id": 185,
 									"name": "name",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -3696,17 +3416,18 @@
 					]
 				},
 				{
-					"id": 319,
+					"id": 193,
 					"name": "removeOption",
 					"kind": 2048,
 					"kindString": "Method",
 					"flags": {
 						"isProtected": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"signatures": [
 						{
-							"id": 320,
+							"id": 194,
 							"name": "removeOption",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -3716,7 +3437,7 @@
 							},
 							"parameters": [
 								{
-									"id": 321,
+									"id": 195,
 									"name": "name",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -3745,17 +3466,18 @@
 					]
 				},
 				{
-					"id": 295,
+					"id": 169,
 					"name": "save",
 					"kind": 2048,
 					"kindString": "Method",
 					"flags": {
 						"isPublic": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"signatures": [
 						{
-							"id": 296,
+							"id": 170,
 							"name": "save",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -3763,7 +3485,7 @@
 							"type": {
 								"type": "reference",
 								"name": "INodeState",
-								"id": 8
+								"id": 73
 							}
 						}
 					],
@@ -3776,17 +3498,18 @@
 					]
 				},
 				{
-					"id": 328,
+					"id": 202,
 					"name": "setOptionValue",
 					"kind": 2048,
 					"kindString": "Method",
 					"flags": {
 						"isPublic": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"signatures": [
 						{
-							"id": 329,
+							"id": 203,
 							"name": "setOptionValue",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -3796,7 +3519,7 @@
 							},
 							"parameters": [
 								{
-									"id": 330,
+									"id": 204,
 									"name": "name",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -3810,7 +3533,7 @@
 									}
 								},
 								{
-									"id": 331,
+									"id": 205,
 									"name": "value",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -3839,22 +3562,24 @@
 					]
 				},
 				{
-					"id": 274,
+					"id": 149,
 					"name": "events",
 					"kind": 2097152,
 					"kindString": "Object literal",
 					"flags": {
 						"isPublic": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"children": [
 						{
-							"id": 276,
+							"id": 151,
 							"name": "addInterface",
 							"kind": 32,
 							"kindString": "Variable",
 							"flags": {
-								"isExported": true
+								"isExported": true,
+								"isExternal": true
 							},
 							"sources": [
 								{
@@ -3866,24 +3591,25 @@
 							"type": {
 								"type": "reference",
 								"name": "BaklavaEvent",
-								"id": 25,
+								"id": 1,
 								"typeArguments": [
 									{
 										"type": "reference",
 										"name": "NodeInterface",
-										"id": 340
+										"id": 90
 									}
 								]
 							},
 							"defaultValue": " new BaklavaEvent<NodeInterface>()"
 						},
 						{
-							"id": 280,
+							"id": 155,
 							"name": "addOption",
 							"kind": 32,
 							"kindString": "Variable",
 							"flags": {
-								"isExported": true
+								"isExported": true,
+								"isExternal": true
 							},
 							"sources": [
 								{
@@ -3895,24 +3621,25 @@
 							"type": {
 								"type": "reference",
 								"name": "BaklavaEvent",
-								"id": 25,
+								"id": 1,
 								"typeArguments": [
 									{
 										"type": "reference",
 										"name": "IOptionEventData",
-										"id": 187
+										"id": 328
 									}
 								]
 							},
 							"defaultValue": " new BaklavaEvent<IOptionEventData>()"
 						},
 						{
-							"id": 275,
+							"id": 150,
 							"name": "beforeAddInterface",
 							"kind": 32,
 							"kindString": "Variable",
 							"flags": {
-								"isExported": true
+								"isExported": true,
+								"isExternal": true
 							},
 							"sources": [
 								{
@@ -3924,24 +3651,25 @@
 							"type": {
 								"type": "reference",
 								"name": "PreventableBaklavaEvent",
-								"id": 38,
+								"id": 14,
 								"typeArguments": [
 									{
 										"type": "reference",
 										"name": "IAddInterfaceEventData",
-										"id": 177
+										"id": 318
 									}
 								]
 							},
 							"defaultValue": " new PreventableBaklavaEvent<IAddInterfaceEventData>()"
 						},
 						{
-							"id": 279,
+							"id": 154,
 							"name": "beforeAddOption",
 							"kind": 32,
 							"kindString": "Variable",
 							"flags": {
-								"isExported": true
+								"isExported": true,
+								"isExternal": true
 							},
 							"sources": [
 								{
@@ -3953,24 +3681,25 @@
 							"type": {
 								"type": "reference",
 								"name": "PreventableBaklavaEvent",
-								"id": 38,
+								"id": 14,
 								"typeArguments": [
 									{
 										"type": "reference",
 										"name": "IAddOptionEventData",
-										"id": 182
+										"id": 323
 									}
 								]
 							},
 							"defaultValue": " new PreventableBaklavaEvent<IAddOptionEventData>()"
 						},
 						{
-							"id": 277,
+							"id": 152,
 							"name": "beforeRemoveInterface",
 							"kind": 32,
 							"kindString": "Variable",
 							"flags": {
-								"isExported": true
+								"isExported": true,
+								"isExternal": true
 							},
 							"sources": [
 								{
@@ -3982,24 +3711,25 @@
 							"type": {
 								"type": "reference",
 								"name": "PreventableBaklavaEvent",
-								"id": 38,
+								"id": 14,
 								"typeArguments": [
 									{
 										"type": "reference",
 										"name": "NodeInterface",
-										"id": 340
+										"id": 90
 									}
 								]
 							},
 							"defaultValue": " new PreventableBaklavaEvent<NodeInterface>()"
 						},
 						{
-							"id": 281,
+							"id": 156,
 							"name": "beforeRemoveOption",
 							"kind": 32,
 							"kindString": "Variable",
 							"flags": {
-								"isExported": true
+								"isExported": true,
+								"isExternal": true
 							},
 							"sources": [
 								{
@@ -4011,24 +3741,25 @@
 							"type": {
 								"type": "reference",
 								"name": "PreventableBaklavaEvent",
-								"id": 38,
+								"id": 14,
 								"typeArguments": [
 									{
 										"type": "reference",
 										"name": "IOptionEventData",
-										"id": 187
+										"id": 328
 									}
 								]
 							},
 							"defaultValue": " new PreventableBaklavaEvent<IOptionEventData>()"
 						},
 						{
-							"id": 278,
+							"id": 153,
 							"name": "removeInterface",
 							"kind": 32,
 							"kindString": "Variable",
 							"flags": {
-								"isExported": true
+								"isExported": true,
+								"isExternal": true
 							},
 							"sources": [
 								{
@@ -4040,24 +3771,25 @@
 							"type": {
 								"type": "reference",
 								"name": "BaklavaEvent",
-								"id": 25,
+								"id": 1,
 								"typeArguments": [
 									{
 										"type": "reference",
 										"name": "NodeInterface",
-										"id": 340
+										"id": 90
 									}
 								]
 							},
 							"defaultValue": " new BaklavaEvent<NodeInterface>()"
 						},
 						{
-							"id": 282,
+							"id": 157,
 							"name": "removeOption",
 							"kind": 32,
 							"kindString": "Variable",
 							"flags": {
-								"isExported": true
+								"isExported": true,
+								"isExternal": true
 							},
 							"sources": [
 								{
@@ -4069,24 +3801,25 @@
 							"type": {
 								"type": "reference",
 								"name": "BaklavaEvent",
-								"id": 25,
+								"id": 1,
 								"typeArguments": [
 									{
 										"type": "reference",
 										"name": "IOptionEventData",
-										"id": 187
+										"id": 328
 									}
 								]
 							},
 							"defaultValue": " new BaklavaEvent<IOptionEventData>()"
 						},
 						{
-							"id": 283,
+							"id": 158,
 							"name": "update",
 							"kind": 32,
 							"kindString": "Variable",
 							"flags": {
-								"isExported": true
+								"isExported": true,
+								"isExternal": true
 							},
 							"sources": [
 								{
@@ -4098,12 +3831,12 @@
 							"type": {
 								"type": "reference",
 								"name": "BaklavaEvent",
-								"id": 25,
+								"id": 1,
 								"typeArguments": [
 									{
 										"type": "reference",
 										"name": "INodeUpdateEventData",
-										"id": 190
+										"id": 331
 									}
 								]
 							},
@@ -4115,15 +3848,15 @@
 							"title": "Variables",
 							"kind": 32,
 							"children": [
-								276,
-								280,
-								275,
-								279,
-								277,
-								281,
-								278,
-								282,
-								283
+								151,
+								155,
+								150,
+								154,
+								152,
+								156,
+								153,
+								157,
+								158
 							]
 						}
 					],
@@ -4140,22 +3873,24 @@
 					}
 				},
 				{
-					"id": 284,
+					"id": 159,
 					"name": "hooks",
 					"kind": 2097152,
 					"kindString": "Object literal",
 					"flags": {
 						"isPublic": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"children": [
 						{
-							"id": 285,
+							"id": 160,
 							"name": "load",
 							"kind": 32,
 							"kindString": "Variable",
 							"flags": {
-								"isExported": true
+								"isExported": true,
+								"isExternal": true
 							},
 							"sources": [
 								{
@@ -4167,24 +3902,25 @@
 							"type": {
 								"type": "reference",
 								"name": "SequentialHook",
-								"id": 66,
+								"id": 41,
 								"typeArguments": [
 									{
 										"type": "reference",
 										"name": "INodeState",
-										"id": 8
+										"id": 73
 									}
 								]
 							},
 							"defaultValue": " new SequentialHook<INodeState>()"
 						},
 						{
-							"id": 286,
+							"id": 161,
 							"name": "save",
 							"kind": 32,
 							"kindString": "Variable",
 							"flags": {
-								"isExported": true
+								"isExported": true,
+								"isExternal": true
 							},
 							"sources": [
 								{
@@ -4196,12 +3932,12 @@
 							"type": {
 								"type": "reference",
 								"name": "SequentialHook",
-								"id": 66,
+								"id": 41,
 								"typeArguments": [
 									{
 										"type": "reference",
 										"name": "INodeState",
-										"id": 8
+										"id": 73
 									}
 								]
 							},
@@ -4213,8 +3949,8 @@
 							"title": "Variables",
 							"kind": 32,
 							"children": [
-								285,
-								286
+								160,
+								161
 							]
 						}
 					],
@@ -4236,48 +3972,46 @@
 					"title": "Properties",
 					"kind": 1024,
 					"children": [
-						287,
-						270,
-						271,
-						269,
-						272,
-						273,
-						268
+						145,
+						146,
+						144,
+						147,
+						148,
+						143
 					]
 				},
 				{
 					"title": "Accessors",
 					"kind": 262144,
 					"children": [
-						288,
-						290
+						162,
+						164
 					]
 				},
 				{
 					"title": "Methods",
 					"kind": 2048,
 					"children": [
-						299,
-						335,
-						312,
-						305,
-						297,
-						322,
-						325,
-						292,
-						332,
-						309,
-						319,
-						295,
-						328
+						173,
+						186,
+						179,
+						171,
+						196,
+						199,
+						166,
+						206,
+						183,
+						193,
+						169,
+						202
 					]
 				},
 				{
 					"title": "Object literals",
 					"kind": 2097152,
 					"children": [
-						274,
-						284
+						149,
+						159
 					]
 				}
 			],
@@ -4290,36 +4024,38 @@
 			]
 		},
 		{
-			"id": 98,
+			"id": 335,
 			"name": "NodeBuilder",
 			"kind": 128,
 			"kindString": "Class",
 			"flags": {
-				"isExported": true
+				"isExported": true,
+				"isExternal": true
 			},
 			"comment": {
 				"shortText": "Utility class for creating custom nodes"
 			},
 			"children": [
 				{
-					"id": 103,
+					"id": 336,
 					"name": "constructor",
 					"kind": 512,
 					"kindString": "Constructor",
 					"flags": {
 						"isPublic": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"signatures": [
 						{
-							"id": 104,
+							"id": 337,
 							"name": "new NodeBuilder",
 							"kind": 16384,
 							"kindString": "Constructor signature",
 							"flags": {},
 							"parameters": [
 								{
-									"id": 105,
+									"id": 338,
 									"name": "name",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -4333,7 +4069,7 @@
 							"type": {
 								"type": "reference",
 								"name": "NodeBuilder",
-								"id": 98
+								"id": 335
 							}
 						}
 					],
@@ -4346,121 +4082,18 @@
 					]
 				},
 				{
-					"id": 102,
-					"name": "calcFunction",
-					"kind": 1024,
-					"kindString": "Property",
-					"flags": {
-						"isPrivate": true,
-						"isExported": true,
-						"isOptional": true
-					},
-					"sources": [
-						{
-							"fileName": "nodeBuilder.ts",
-							"line": 59,
-							"character": 24
-						}
-					],
-					"type": {
-						"type": "reference",
-						"name": "CalculationFunction",
-						"id": 131
-					}
-				},
-				{
-					"id": 100,
-					"name": "intfs",
-					"kind": 1024,
-					"kindString": "Property",
-					"flags": {
-						"isPrivate": true,
-						"isExported": true
-					},
-					"sources": [
-						{
-							"fileName": "nodeBuilder.ts",
-							"line": 57,
-							"character": 17
-						}
-					],
-					"type": {
-						"type": "array",
-						"elementType": {
-							"type": "reference",
-							"name": "IInterfaceOptions",
-							"id": 92
-						}
-					},
-					"defaultValue": " []"
-				},
-				{
-					"id": 99,
-					"name": "name",
-					"kind": 1024,
-					"kindString": "Property",
-					"flags": {
-						"isPrivate": true,
-						"isExported": true
-					},
-					"sources": [
-						{
-							"fileName": "nodeBuilder.ts",
-							"line": 56,
-							"character": 16
-						}
-					],
-					"type": {
-						"type": "intrinsic",
-						"name": "string"
-					},
-					"defaultValue": "\"\""
-				},
-				{
-					"id": 101,
-					"name": "options",
-					"kind": 1024,
-					"kindString": "Property",
-					"flags": {
-						"isPrivate": true,
-						"isExported": true
-					},
-					"sources": [
-						{
-							"fileName": "nodeBuilder.ts",
-							"line": 58,
-							"character": 19
-						}
-					],
-					"type": {
-						"type": "reference",
-						"name": "Map",
-						"typeArguments": [
-							{
-								"type": "intrinsic",
-								"name": "string"
-							},
-							{
-								"type": "reference",
-								"name": "IOption",
-								"id": 145
-							}
-						]
-					},
-					"defaultValue": " new Map()"
-				},
-				{
-					"id": 108,
+					"id": 341,
 					"name": "addInputInterface",
 					"kind": 2048,
 					"kindString": "Method",
 					"flags": {
 						"isPublic": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"signatures": [
 						{
-							"id": 109,
+							"id": 342,
 							"name": "addInputInterface",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -4471,7 +4104,7 @@
 							},
 							"parameters": [
 								{
-									"id": 110,
+									"id": 343,
 									"name": "name",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -4485,7 +4118,7 @@
 									}
 								},
 								{
-									"id": 111,
+									"id": 344,
 									"name": "option",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -4510,7 +4143,7 @@
 									}
 								},
 								{
-									"id": 112,
+									"id": 345,
 									"name": "defaultValue",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -4526,7 +4159,7 @@
 									}
 								},
 								{
-									"id": 113,
+									"id": 346,
 									"name": "additionalProperties",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -4555,7 +4188,7 @@
 							"type": {
 								"type": "reference",
 								"name": "NodeBuilder",
-								"id": 98
+								"id": 335
 							}
 						}
 					],
@@ -4568,17 +4201,18 @@
 					]
 				},
 				{
-					"id": 118,
+					"id": 351,
 					"name": "addOption",
 					"kind": 2048,
 					"kindString": "Method",
 					"flags": {
 						"isPublic": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"signatures": [
 						{
-							"id": 119,
+							"id": 352,
 							"name": "addOption",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -4589,7 +4223,7 @@
 							},
 							"parameters": [
 								{
-									"id": 120,
+									"id": 353,
 									"name": "name",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -4603,7 +4237,7 @@
 									}
 								},
 								{
-									"id": 121,
+									"id": 354,
 									"name": "optionComponent",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -4614,7 +4248,7 @@
 									}
 								},
 								{
-									"id": 122,
+									"id": 355,
 									"name": "defaultValue",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -4630,7 +4264,7 @@
 									}
 								},
 								{
-									"id": 123,
+									"id": 356,
 									"name": "sidebarComponent",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -4655,7 +4289,7 @@
 									}
 								},
 								{
-									"id": 124,
+									"id": 357,
 									"name": "additionalProperties",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -4684,7 +4318,7 @@
 							"type": {
 								"type": "reference",
 								"name": "NodeBuilder",
-								"id": 98
+								"id": 335
 							}
 						}
 					],
@@ -4697,17 +4331,18 @@
 					]
 				},
 				{
-					"id": 114,
+					"id": 347,
 					"name": "addOutputInterface",
 					"kind": 2048,
 					"kindString": "Method",
 					"flags": {
 						"isPublic": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"signatures": [
 						{
-							"id": 115,
+							"id": 348,
 							"name": "addOutputInterface",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -4718,7 +4353,7 @@
 							},
 							"parameters": [
 								{
-									"id": 116,
+									"id": 349,
 									"name": "name",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -4732,7 +4367,7 @@
 									}
 								},
 								{
-									"id": 117,
+									"id": 350,
 									"name": "additionalProperties",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -4761,7 +4396,7 @@
 							"type": {
 								"type": "reference",
 								"name": "NodeBuilder",
-								"id": 98
+								"id": 335
 							}
 						}
 					],
@@ -4774,17 +4409,18 @@
 					]
 				},
 				{
-					"id": 106,
+					"id": 339,
 					"name": "build",
 					"kind": 2048,
 					"kindString": "Method",
 					"flags": {
 						"isPublic": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"signatures": [
 						{
-							"id": 107,
+							"id": 340,
 							"name": "build",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -4796,7 +4432,7 @@
 							"type": {
 								"type": "reference",
 								"name": "NodeConstructor",
-								"id": 261
+								"id": 309
 							}
 						}
 					],
@@ -4809,60 +4445,18 @@
 					]
 				},
 				{
-					"id": 128,
-					"name": "checkDefaultValue",
-					"kind": 2048,
-					"kindString": "Method",
-					"flags": {
-						"isPrivate": true,
-						"isExported": true
-					},
-					"signatures": [
-						{
-							"id": 129,
-							"name": "checkDefaultValue",
-							"kind": 4096,
-							"kindString": "Call signature",
-							"flags": {},
-							"parameters": [
-								{
-									"id": 130,
-									"name": "v",
-									"kind": 32768,
-									"kindString": "Parameter",
-									"flags": {},
-									"type": {
-										"type": "intrinsic",
-										"name": "any"
-									}
-								}
-							],
-							"type": {
-								"type": "intrinsic",
-								"name": "void"
-							}
-						}
-					],
-					"sources": [
-						{
-							"fileName": "nodeBuilder.ts",
-							"line": 139,
-							"character": 29
-						}
-					]
-				},
-				{
-					"id": 125,
+					"id": 358,
 					"name": "onCalculate",
 					"kind": 2048,
 					"kindString": "Method",
 					"flags": {
 						"isPublic": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"signatures": [
 						{
-							"id": 126,
+							"id": 359,
 							"name": "onCalculate",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -4873,7 +4467,7 @@
 							},
 							"parameters": [
 								{
-									"id": 127,
+									"id": 360,
 									"name": "cb",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -4883,15 +4477,14 @@
 									},
 									"type": {
 										"type": "reference",
-										"name": "CalculationFunction",
-										"id": 131
+										"name": "CalculationFunction"
 									}
 								}
 							],
 							"type": {
 								"type": "reference",
 								"name": "NodeBuilder",
-								"id": 98
+								"id": 335
 							}
 						}
 					],
@@ -4909,29 +4502,18 @@
 					"title": "Constructors",
 					"kind": 512,
 					"children": [
-						103
-					]
-				},
-				{
-					"title": "Properties",
-					"kind": 1024,
-					"children": [
-						102,
-						100,
-						99,
-						101
+						336
 					]
 				},
 				{
 					"title": "Methods",
 					"kind": 2048,
 					"children": [
-						108,
-						118,
-						114,
-						106,
-						128,
-						125
+						341,
+						351,
+						347,
+						339,
+						358
 					]
 				}
 			],
@@ -4944,33 +4526,35 @@
 			]
 		},
 		{
-			"id": 340,
+			"id": 90,
 			"name": "NodeInterface",
 			"kind": 128,
 			"kindString": "Class",
 			"flags": {
-				"isExported": true
+				"isExported": true,
+				"isExternal": true
 			},
 			"children": [
 				{
-					"id": 362,
+					"id": 110,
 					"name": "constructor",
 					"kind": 512,
 					"kindString": "Constructor",
 					"flags": {
 						"isPublic": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"signatures": [
 						{
-							"id": 363,
+							"id": 111,
 							"name": "new NodeInterface",
 							"kind": 16384,
 							"kindString": "Constructor signature",
 							"flags": {},
 							"parameters": [
 								{
-									"id": 364,
+									"id": 112,
 									"name": "parent",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -4978,11 +4562,11 @@
 									"type": {
 										"type": "reference",
 										"name": "Node",
-										"id": 267
+										"id": 142
 									}
 								},
 								{
-									"id": 365,
+									"id": 113,
 									"name": "isInput",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -4996,7 +4580,7 @@
 							"type": {
 								"type": "reference",
 								"name": "NodeInterface",
-								"id": 340
+								"id": 90
 							}
 						}
 					],
@@ -5009,57 +4593,14 @@
 					]
 				},
 				{
-					"id": 352,
-					"name": "_connectionCount",
-					"kind": 1024,
-					"kindString": "Property",
-					"flags": {
-						"isPrivate": true,
-						"isExported": true
-					},
-					"sources": [
-						{
-							"fileName": "nodeInterface.ts",
-							"line": 24,
-							"character": 28
-						}
-					],
-					"type": {
-						"type": "intrinsic",
-						"name": "number"
-					},
-					"defaultValue": "0"
-				},
-				{
-					"id": 357,
-					"name": "_value",
-					"kind": 1024,
-					"kindString": "Property",
-					"flags": {
-						"isPrivate": true,
-						"isExported": true
-					},
-					"sources": [
-						{
-							"fileName": "nodeInterface.ts",
-							"line": 33,
-							"character": 18
-						}
-					],
-					"type": {
-						"type": "intrinsic",
-						"name": "any"
-					},
-					"defaultValue": " null"
-				},
-				{
-					"id": 341,
+					"id": 91,
 					"name": "id",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {
 						"isPublic": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"sources": [
 						{
@@ -5074,13 +4615,14 @@
 					}
 				},
 				{
-					"id": 342,
+					"id": 92,
 					"name": "isInput",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {
 						"isPublic": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"sources": [
 						{
@@ -5095,13 +4637,14 @@
 					}
 				},
 				{
-					"id": 344,
+					"id": 94,
 					"name": "option",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {
 						"isPublic": true,
 						"isExported": true,
+						"isExternal": true,
 						"isOptional": true
 					},
 					"sources": [
@@ -5126,13 +4669,14 @@
 					}
 				},
 				{
-					"id": 343,
+					"id": 93,
 					"name": "parent",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {
 						"isPublic": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"sources": [
 						{
@@ -5144,21 +4688,22 @@
 					"type": {
 						"type": "reference",
 						"name": "Node",
-						"id": 267
+						"id": 142
 					}
 				},
 				{
-					"id": 353,
+					"id": 102,
 					"name": "connectionCount",
 					"kind": 262144,
 					"kindString": "Accessor",
 					"flags": {
 						"isPublic": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"getSignature": [
 						{
-							"id": 356,
+							"id": 105,
 							"name": "__get",
 							"kind": 524288,
 							"kindString": "Get signature",
@@ -5171,14 +4716,14 @@
 					],
 					"setSignature": [
 						{
-							"id": 354,
+							"id": 103,
 							"name": "__set",
 							"kind": 1048576,
 							"kindString": "Set signature",
 							"flags": {},
 							"parameters": [
 								{
-									"id": 355,
+									"id": 104,
 									"name": "v",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -5209,17 +4754,18 @@
 					]
 				},
 				{
-					"id": 358,
+					"id": 106,
 					"name": "value",
 					"kind": 262144,
 					"kindString": "Accessor",
 					"flags": {
 						"isPublic": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"getSignature": [
 						{
-							"id": 361,
+							"id": 109,
 							"name": "__get",
 							"kind": 524288,
 							"kindString": "Get signature",
@@ -5232,14 +4778,14 @@
 					],
 					"setSignature": [
 						{
-							"id": 359,
+							"id": 107,
 							"name": "__set",
 							"kind": 1048576,
 							"kindString": "Set signature",
 							"flags": {},
 							"parameters": [
 								{
-									"id": 360,
+									"id": 108,
 									"name": "v",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -5270,24 +4816,25 @@
 					]
 				},
 				{
-					"id": 366,
+					"id": 114,
 					"name": "load",
 					"kind": 2048,
 					"kindString": "Method",
 					"flags": {
 						"isPublic": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"signatures": [
 						{
-							"id": 367,
+							"id": 115,
 							"name": "load",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
 							"parameters": [
 								{
-									"id": 368,
+									"id": 116,
 									"name": "state",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -5295,7 +4842,7 @@
 									"type": {
 										"type": "reference",
 										"name": "IInterfaceState",
-										"id": 16
+										"id": 81
 									}
 								}
 							],
@@ -5314,17 +4861,18 @@
 					]
 				},
 				{
-					"id": 369,
+					"id": 117,
 					"name": "save",
 					"kind": 2048,
 					"kindString": "Method",
 					"flags": {
 						"isPublic": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"signatures": [
 						{
-							"id": 370,
+							"id": 118,
 							"name": "save",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -5332,7 +4880,7 @@
 							"type": {
 								"type": "reference",
 								"name": "IInterfaceState",
-								"id": 16
+								"id": 81
 							}
 						}
 					],
@@ -5345,22 +4893,24 @@
 					]
 				},
 				{
-					"id": 345,
+					"id": 95,
 					"name": "events",
 					"kind": 2097152,
 					"kindString": "Object literal",
 					"flags": {
 						"isPublic": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"children": [
 						{
-							"id": 347,
+							"id": 97,
 							"name": "beforeSetValue",
 							"kind": 32,
 							"kindString": "Variable",
 							"flags": {
-								"isExported": true
+								"isExported": true,
+								"isExternal": true
 							},
 							"sources": [
 								{
@@ -5372,7 +4922,7 @@
 							"type": {
 								"type": "reference",
 								"name": "PreventableBaklavaEvent",
-								"id": 38,
+								"id": 14,
 								"typeArguments": [
 									{
 										"type": "intrinsic",
@@ -5383,12 +4933,13 @@
 							"defaultValue": " new PreventableBaklavaEvent<any>()"
 						},
 						{
-							"id": 346,
+							"id": 96,
 							"name": "setConnectionCount",
 							"kind": 32,
 							"kindString": "Variable",
 							"flags": {
-								"isExported": true
+								"isExported": true,
+								"isExternal": true
 							},
 							"sources": [
 								{
@@ -5400,7 +4951,7 @@
 							"type": {
 								"type": "reference",
 								"name": "BaklavaEvent",
-								"id": 25,
+								"id": 1,
 								"typeArguments": [
 									{
 										"type": "intrinsic",
@@ -5411,12 +4962,13 @@
 							"defaultValue": " new BaklavaEvent<number>()"
 						},
 						{
-							"id": 348,
+							"id": 98,
 							"name": "setValue",
 							"kind": 32,
 							"kindString": "Variable",
 							"flags": {
-								"isExported": true
+								"isExported": true,
+								"isExternal": true
 							},
 							"sources": [
 								{
@@ -5428,7 +4980,7 @@
 							"type": {
 								"type": "reference",
 								"name": "BaklavaEvent",
-								"id": 25,
+								"id": 1,
 								"typeArguments": [
 									{
 										"type": "intrinsic",
@@ -5444,9 +4996,9 @@
 							"title": "Variables",
 							"kind": 32,
 							"children": [
-								347,
-								346,
-								348
+								97,
+								96,
+								98
 							]
 						}
 					],
@@ -5463,22 +5015,24 @@
 					}
 				},
 				{
-					"id": 349,
+					"id": 99,
 					"name": "hooks",
 					"kind": 2097152,
 					"kindString": "Object literal",
 					"flags": {
 						"isPublic": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"children": [
 						{
-							"id": 350,
+							"id": 100,
 							"name": "load",
 							"kind": 32,
 							"kindString": "Variable",
 							"flags": {
-								"isExported": true
+								"isExported": true,
+								"isExternal": true
 							},
 							"sources": [
 								{
@@ -5490,24 +5044,25 @@
 							"type": {
 								"type": "reference",
 								"name": "SequentialHook",
-								"id": 66,
+								"id": 41,
 								"typeArguments": [
 									{
 										"type": "reference",
 										"name": "IInterfaceState",
-										"id": 16
+										"id": 81
 									}
 								]
 							},
 							"defaultValue": " new SequentialHook<IInterfaceState>()"
 						},
 						{
-							"id": 351,
+							"id": 101,
 							"name": "save",
 							"kind": 32,
 							"kindString": "Variable",
 							"flags": {
-								"isExported": true
+								"isExported": true,
+								"isExternal": true
 							},
 							"sources": [
 								{
@@ -5519,12 +5074,12 @@
 							"type": {
 								"type": "reference",
 								"name": "SequentialHook",
-								"id": 66,
+								"id": 41,
 								"typeArguments": [
 									{
 										"type": "reference",
 										"name": "IInterfaceState",
-										"id": 16
+										"id": 81
 									}
 								]
 							},
@@ -5536,8 +5091,8 @@
 							"title": "Variables",
 							"kind": 32,
 							"children": [
-								350,
-								351
+								100,
+								101
 							]
 						}
 					],
@@ -5559,43 +5114,41 @@
 					"title": "Constructors",
 					"kind": 512,
 					"children": [
-						362
+						110
 					]
 				},
 				{
 					"title": "Properties",
 					"kind": 1024,
 					"children": [
-						352,
-						357,
-						341,
-						342,
-						344,
-						343
+						91,
+						92,
+						94,
+						93
 					]
 				},
 				{
 					"title": "Accessors",
 					"kind": 262144,
 					"children": [
-						353,
-						358
+						102,
+						106
 					]
 				},
 				{
 					"title": "Methods",
 					"kind": 2048,
 					"children": [
-						366,
-						369
+						114,
+						117
 					]
 				},
 				{
 					"title": "Object literals",
 					"kind": 2097152,
 					"children": [
-						345,
-						349
+						95,
+						99
 					]
 				}
 			],
@@ -5608,33 +5161,35 @@
 			]
 		},
 		{
-			"id": 149,
+			"id": 123,
 			"name": "NodeOption",
 			"kind": 128,
 			"kindString": "Class",
 			"flags": {
-				"isExported": true
+				"isExported": true,
+				"isExternal": true
 			},
 			"children": [
 				{
-					"id": 156,
+					"id": 129,
 					"name": "constructor",
 					"kind": 512,
 					"kindString": "Constructor",
 					"flags": {
 						"isPublic": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"signatures": [
 						{
-							"id": 157,
+							"id": 130,
 							"name": "new NodeOption",
 							"kind": 16384,
 							"kindString": "Constructor signature",
 							"flags": {},
 							"parameters": [
 								{
-									"id": 158,
+									"id": 131,
 									"name": "optionComponent",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -5645,7 +5200,7 @@
 									}
 								},
 								{
-									"id": 159,
+									"id": 132,
 									"name": "value",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -5658,7 +5213,7 @@
 									}
 								},
 								{
-									"id": 160,
+									"id": 133,
 									"name": "sidebarComponent",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -5674,7 +5229,7 @@
 							"type": {
 								"type": "reference",
 								"name": "NodeOption",
-								"id": 149
+								"id": 123
 							}
 						}
 					],
@@ -5687,34 +5242,14 @@
 					]
 				},
 				{
-					"id": 155,
-					"name": "_value",
-					"kind": 1024,
-					"kindString": "Property",
-					"flags": {
-						"isPrivate": true,
-						"isExported": true
-					},
-					"sources": [
-						{
-							"fileName": "nodeOption.ts",
-							"line": 21,
-							"character": 18
-						}
-					],
-					"type": {
-						"type": "intrinsic",
-						"name": "any"
-					}
-				},
-				{
-					"id": 150,
+					"id": 124,
 					"name": "optionComponent",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {
 						"isPublic": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"comment": {
 						"shortText": "Name of the component that should be displayed for the option"
@@ -5733,17 +5268,18 @@
 					"implementationOf": {
 						"type": "reference",
 						"name": "IOption.optionComponent",
-						"id": 146
+						"id": 120
 					}
 				},
 				{
-					"id": 151,
+					"id": 125,
 					"name": "sidebarComponent",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {
 						"isPublic": true,
 						"isExported": true,
+						"isExternal": true,
 						"isOptional": true
 					},
 					"comment": {
@@ -5772,21 +5308,22 @@
 					"implementationOf": {
 						"type": "reference",
 						"name": "IOption.sidebarComponent",
-						"id": 148
+						"id": 122
 					}
 				},
 				{
-					"id": 161,
+					"id": 134,
 					"name": "value",
 					"kind": 262144,
 					"kindString": "Accessor",
 					"flags": {
 						"isPublic": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"getSignature": [
 						{
-							"id": 162,
+							"id": 135,
 							"name": "__get",
 							"kind": 524288,
 							"kindString": "Get signature",
@@ -5799,14 +5336,14 @@
 					],
 					"setSignature": [
 						{
-							"id": 163,
+							"id": 136,
 							"name": "__set",
 							"kind": 1048576,
 							"kindString": "Set signature",
 							"flags": {},
 							"parameters": [
 								{
-									"id": 164,
+									"id": 137,
 									"name": "v",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -5838,26 +5375,28 @@
 					"implementationOf": {
 						"type": "reference",
 						"name": "IOption.value",
-						"id": 147
+						"id": 121
 					}
 				},
 				{
-					"id": 152,
+					"id": 126,
 					"name": "events",
 					"kind": 2097152,
 					"kindString": "Object literal",
 					"flags": {
 						"isPublic": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"children": [
 						{
-							"id": 153,
+							"id": 127,
 							"name": "beforeSetValue",
 							"kind": 32,
 							"kindString": "Variable",
 							"flags": {
-								"isExported": true
+								"isExported": true,
+								"isExternal": true
 							},
 							"sources": [
 								{
@@ -5869,7 +5408,7 @@
 							"type": {
 								"type": "reference",
 								"name": "PreventableBaklavaEvent",
-								"id": 38,
+								"id": 14,
 								"typeArguments": [
 									{
 										"type": "intrinsic",
@@ -5880,12 +5419,13 @@
 							"defaultValue": " new PreventableBaklavaEvent<any>()"
 						},
 						{
-							"id": 154,
+							"id": 128,
 							"name": "setValue",
 							"kind": 32,
 							"kindString": "Variable",
 							"flags": {
-								"isExported": true
+								"isExported": true,
+								"isExternal": true
 							},
 							"sources": [
 								{
@@ -5897,7 +5437,7 @@
 							"type": {
 								"type": "reference",
 								"name": "BaklavaEvent",
-								"id": 25,
+								"id": 1,
 								"typeArguments": [
 									{
 										"type": "intrinsic",
@@ -5913,8 +5453,8 @@
 							"title": "Variables",
 							"kind": 32,
 							"children": [
-								153,
-								154
+								127,
+								128
 							]
 						}
 					],
@@ -5936,30 +5476,29 @@
 					"title": "Constructors",
 					"kind": 512,
 					"children": [
-						156
+						129
 					]
 				},
 				{
 					"title": "Properties",
 					"kind": 1024,
 					"children": [
-						155,
-						150,
-						151
+						124,
+						125
 					]
 				},
 				{
 					"title": "Accessors",
 					"kind": 262144,
 					"children": [
-						161
+						134
 					]
 				},
 				{
 					"title": "Object literals",
 					"kind": 2097152,
 					"children": [
-						152
+						126
 					]
 				}
 			],
@@ -5974,24 +5513,25 @@
 				{
 					"type": "reference",
 					"name": "IOption",
-					"id": 145
+					"id": 119
 				}
 			]
 		},
 		{
-			"id": 38,
+			"id": 14,
 			"name": "PreventableBaklavaEvent",
 			"kind": 128,
 			"kindString": "Class",
 			"flags": {
-				"isExported": true
+				"isExported": true,
+				"isExternal": true
 			},
 			"comment": {
 				"shortText": "Extension for the [[BaklavaEvent]] class. A listener can return `false` to prevent\nthis event from happening."
 			},
 			"typeParameter": [
 				{
-					"id": 39,
+					"id": 15,
 					"name": "T",
 					"kind": 131072,
 					"kindString": "Type parameter",
@@ -6000,13 +5540,14 @@
 			],
 			"children": [
 				{
-					"id": 43,
+					"id": 19,
 					"name": "listeners",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {
 						"isProtected": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"sources": [
 						{
@@ -6022,12 +5563,12 @@
 							{
 								"type": "reference",
 								"name": "TokenType",
-								"id": 80
+								"id": 55
 							},
 							{
 								"type": "reference",
 								"name": "Listener",
-								"id": 81,
+								"id": 56,
 								"typeArguments": [
 									{
 										"type": "typeParameter",
@@ -6041,21 +5582,22 @@
 					"inheritedFrom": {
 						"type": "reference",
 						"name": "BaklavaEvent.listeners",
-						"id": 27
+						"id": 3
 					}
 				},
 				{
-					"id": 44,
+					"id": 20,
 					"name": "addListener",
 					"kind": 2048,
 					"kindString": "Method",
 					"flags": {
 						"isPublic": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"signatures": [
 						{
-							"id": 45,
+							"id": 21,
 							"name": "addListener",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -6065,7 +5607,7 @@
 							},
 							"parameters": [
 								{
-									"id": 46,
+									"id": 22,
 									"name": "token",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -6076,11 +5618,11 @@
 									"type": {
 										"type": "reference",
 										"name": "TokenType",
-										"id": 80
+										"id": 55
 									}
 								},
 								{
-									"id": 47,
+									"id": 23,
 									"name": "listener",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -6091,7 +5633,7 @@
 									"type": {
 										"type": "reference",
 										"name": "Listener",
-										"id": 81,
+										"id": 56,
 										"typeArguments": [
 											{
 												"type": "typeParameter",
@@ -6108,7 +5650,7 @@
 							"inheritedFrom": {
 								"type": "reference",
 								"name": "BaklavaEvent.addListener",
-								"id": 28
+								"id": 4
 							}
 						}
 					],
@@ -6122,20 +5664,21 @@
 					"inheritedFrom": {
 						"type": "reference",
 						"name": "BaklavaEvent.addListener",
-						"id": 28
+						"id": 4
 					}
 				},
 				{
-					"id": 40,
+					"id": 16,
 					"name": "emit",
 					"kind": 2048,
 					"kindString": "Method",
 					"flags": {
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"signatures": [
 						{
-							"id": 41,
+							"id": 17,
 							"name": "emit",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -6146,7 +5689,7 @@
 							},
 							"parameters": [
 								{
-									"id": 42,
+									"id": 18,
 									"name": "data",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -6167,7 +5710,7 @@
 							"overwrites": {
 								"type": "reference",
 								"name": "BaklavaEvent.emit",
-								"id": 35
+								"id": 11
 							}
 						}
 					],
@@ -6181,21 +5724,22 @@
 					"overwrites": {
 						"type": "reference",
 						"name": "BaklavaEvent.emit",
-						"id": 35
+						"id": 11
 					}
 				},
 				{
-					"id": 48,
+					"id": 24,
 					"name": "removeListener",
 					"kind": 2048,
 					"kindString": "Method",
 					"flags": {
 						"isPublic": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"signatures": [
 						{
-							"id": 49,
+							"id": 25,
 							"name": "removeListener",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -6205,7 +5749,7 @@
 							},
 							"parameters": [
 								{
-									"id": 50,
+									"id": 26,
 									"name": "token",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -6216,7 +5760,7 @@
 									"type": {
 										"type": "reference",
 										"name": "TokenType",
-										"id": 80
+										"id": 55
 									}
 								}
 							],
@@ -6227,7 +5771,7 @@
 							"inheritedFrom": {
 								"type": "reference",
 								"name": "BaklavaEvent.removeListener",
-								"id": 32
+								"id": 8
 							}
 						}
 					],
@@ -6241,7 +5785,7 @@
 					"inheritedFrom": {
 						"type": "reference",
 						"name": "BaklavaEvent.removeListener",
-						"id": 32
+						"id": 8
 					}
 				}
 			],
@@ -6250,16 +5794,16 @@
 					"title": "Properties",
 					"kind": 1024,
 					"children": [
-						43
+						19
 					]
 				},
 				{
 					"title": "Methods",
 					"kind": 2048,
 					"children": [
-						44,
-						40,
-						48
+						20,
+						16,
+						24
 					]
 				}
 			],
@@ -6274,7 +5818,7 @@
 				{
 					"type": "reference",
 					"name": "BaklavaEvent",
-					"id": 25,
+					"id": 1,
 					"typeArguments": [
 						{
 							"type": "typeParameter",
@@ -6285,26 +5829,27 @@
 			]
 		},
 		{
-			"id": 66,
+			"id": 41,
 			"name": "SequentialHook",
 			"kind": 128,
 			"kindString": "Class",
 			"flags": {
-				"isExported": true
+				"isExported": true,
+				"isExternal": true
 			},
 			"comment": {
 				"shortText": "This class will run the taps one after each other and pass the data from every tap to another."
 			},
 			"typeParameter": [
 				{
-					"id": 67,
+					"id": 42,
 					"name": "T",
 					"kind": 131072,
 					"kindString": "Type parameter",
 					"flags": {}
 				},
 				{
-					"id": 71,
+					"id": 46,
 					"name": "O",
 					"kind": 131072,
 					"kindString": "Type parameter",
@@ -6313,13 +5858,14 @@
 			],
 			"children": [
 				{
-					"id": 72,
+					"id": 47,
 					"name": "taps",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {
 						"isProtected": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"sources": [
 						{
@@ -6335,7 +5881,7 @@
 							{
 								"type": "reference",
 								"name": "HookTap",
-								"id": 86,
+								"id": 61,
 								"typeArguments": [
 									{
 										"type": "typeParameter",
@@ -6353,28 +5899,29 @@
 					"inheritedFrom": {
 						"type": "reference",
 						"name": "Hook.taps",
-						"id": 55
+						"id": 30
 					}
 				},
 				{
-					"id": 68,
+					"id": 43,
 					"name": "execute",
 					"kind": 2048,
 					"kindString": "Method",
 					"flags": {
 						"isPublic": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"signatures": [
 						{
-							"id": 69,
+							"id": 44,
 							"name": "execute",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
 							"parameters": [
 								{
-									"id": 70,
+									"id": 45,
 									"name": "data",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -6392,7 +5939,7 @@
 							"overwrites": {
 								"type": "reference",
 								"name": "Hook.execute",
-								"id": 63
+								"id": 38
 							}
 						}
 					],
@@ -6406,28 +5953,29 @@
 					"overwrites": {
 						"type": "reference",
 						"name": "Hook.execute",
-						"id": 63
+						"id": 38
 					}
 				},
 				{
-					"id": 73,
+					"id": 48,
 					"name": "tap",
 					"kind": 2048,
 					"kindString": "Method",
 					"flags": {
 						"isPublic": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"signatures": [
 						{
-							"id": 74,
+							"id": 49,
 							"name": "tap",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
 							"parameters": [
 								{
-									"id": 75,
+									"id": 50,
 									"name": "token",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -6435,11 +5983,11 @@
 									"type": {
 										"type": "reference",
 										"name": "TokenType",
-										"id": 80
+										"id": 55
 									}
 								},
 								{
-									"id": 76,
+									"id": 51,
 									"name": "tapFn",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -6447,7 +5995,7 @@
 									"type": {
 										"type": "reference",
 										"name": "HookTap",
-										"id": 86,
+										"id": 61,
 										"typeArguments": [
 											{
 												"type": "typeParameter",
@@ -6468,7 +6016,7 @@
 							"inheritedFrom": {
 								"type": "reference",
 								"name": "Hook.tap",
-								"id": 56
+								"id": 31
 							}
 						}
 					],
@@ -6482,28 +6030,29 @@
 					"inheritedFrom": {
 						"type": "reference",
 						"name": "Hook.tap",
-						"id": 56
+						"id": 31
 					}
 				},
 				{
-					"id": 77,
+					"id": 52,
 					"name": "untap",
 					"kind": 2048,
 					"kindString": "Method",
 					"flags": {
 						"isPublic": true,
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"signatures": [
 						{
-							"id": 78,
+							"id": 53,
 							"name": "untap",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
 							"parameters": [
 								{
-									"id": 79,
+									"id": 54,
 									"name": "token",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -6511,7 +6060,7 @@
 									"type": {
 										"type": "reference",
 										"name": "TokenType",
-										"id": 80
+										"id": 55
 									}
 								}
 							],
@@ -6522,7 +6071,7 @@
 							"inheritedFrom": {
 								"type": "reference",
 								"name": "Hook.untap",
-								"id": 60
+								"id": 35
 							}
 						}
 					],
@@ -6536,7 +6085,7 @@
 					"inheritedFrom": {
 						"type": "reference",
 						"name": "Hook.untap",
-						"id": 60
+						"id": 35
 					}
 				}
 			],
@@ -6545,16 +6094,16 @@
 					"title": "Properties",
 					"kind": 1024,
 					"children": [
-						72
+						47
 					]
 				},
 				{
 					"title": "Methods",
 					"kind": 2048,
 					"children": [
-						68,
-						73,
-						77
+						43,
+						48,
+						52
 					]
 				}
 			],
@@ -6569,7 +6118,7 @@
 				{
 					"type": "reference",
 					"name": "Hook",
-					"id": 51,
+					"id": 27,
 					"typeArguments": [
 						{
 							"type": "typeParameter",
@@ -6580,21 +6129,23 @@
 			]
 		},
 		{
-			"id": 170,
+			"id": 311,
 			"name": "IAddConnectionEventData",
 			"kind": 256,
 			"kindString": "Interface",
 			"flags": {
-				"isExported": true
+				"isExported": true,
+				"isExternal": true
 			},
 			"children": [
 				{
-					"id": 171,
+					"id": 312,
 					"name": "from",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"sources": [
 						{
@@ -6606,16 +6157,17 @@
 					"type": {
 						"type": "reference",
 						"name": "NodeInterface",
-						"id": 340
+						"id": 90
 					}
 				},
 				{
-					"id": 172,
+					"id": 313,
 					"name": "to",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"sources": [
 						{
@@ -6627,7 +6179,7 @@
 					"type": {
 						"type": "reference",
 						"name": "NodeInterface",
-						"id": 340
+						"id": 90
 					}
 				}
 			],
@@ -6636,8 +6188,8 @@
 					"title": "Properties",
 					"kind": 1024,
 					"children": [
-						171,
-						172
+						312,
+						313
 					]
 				}
 			],
@@ -6650,21 +6202,23 @@
 			]
 		},
 		{
-			"id": 177,
+			"id": 318,
 			"name": "IAddInterfaceEventData",
 			"kind": 256,
 			"kindString": "Interface",
 			"flags": {
-				"isExported": true
+				"isExported": true,
+				"isExternal": true
 			},
 			"children": [
 				{
-					"id": 181,
+					"id": 322,
 					"name": "defaultValue",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {
 						"isExported": true,
+						"isExternal": true,
 						"isOptional": true
 					},
 					"sources": [
@@ -6680,12 +6234,13 @@
 					}
 				},
 				{
-					"id": 179,
+					"id": 320,
 					"name": "isInput",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"sources": [
 						{
@@ -6700,12 +6255,13 @@
 					}
 				},
 				{
-					"id": 178,
+					"id": 319,
 					"name": "name",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"sources": [
 						{
@@ -6720,12 +6276,13 @@
 					}
 				},
 				{
-					"id": 180,
+					"id": 321,
 					"name": "option",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {
 						"isExported": true,
+						"isExternal": true,
 						"isOptional": true
 					},
 					"sources": [
@@ -6755,10 +6312,10 @@
 					"title": "Properties",
 					"kind": 1024,
 					"children": [
-						181,
-						179,
-						178,
-						180
+						322,
+						320,
+						319,
+						321
 					]
 				}
 			],
@@ -6771,21 +6328,23 @@
 			]
 		},
 		{
-			"id": 173,
+			"id": 314,
 			"name": "IAddNodeTypeEventData",
 			"kind": 256,
 			"kindString": "Interface",
 			"flags": {
-				"isExported": true
+				"isExported": true,
+				"isExternal": true
 			},
 			"children": [
 				{
-					"id": 176,
+					"id": 317,
 					"name": "category",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"sources": [
 						{
@@ -6800,12 +6359,13 @@
 					}
 				},
 				{
-					"id": 175,
+					"id": 316,
 					"name": "type",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"sources": [
 						{
@@ -6817,16 +6377,17 @@
 					"type": {
 						"type": "reference",
 						"name": "NodeConstructor",
-						"id": 261
+						"id": 309
 					}
 				},
 				{
-					"id": 174,
+					"id": 315,
 					"name": "typeName",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"sources": [
 						{
@@ -6846,9 +6407,9 @@
 					"title": "Properties",
 					"kind": 1024,
 					"children": [
-						176,
-						175,
-						174
+						317,
+						316,
+						315
 					]
 				}
 			],
@@ -6861,21 +6422,23 @@
 			]
 		},
 		{
-			"id": 182,
+			"id": 323,
 			"name": "IAddOptionEventData",
 			"kind": 256,
 			"kindString": "Interface",
 			"flags": {
-				"isExported": true
+				"isExported": true,
+				"isExternal": true
 			},
 			"children": [
 				{
-					"id": 184,
+					"id": 325,
 					"name": "component",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"sources": [
 						{
@@ -6890,12 +6453,13 @@
 					}
 				},
 				{
-					"id": 185,
+					"id": 326,
 					"name": "defaultValue",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"sources": [
 						{
@@ -6910,12 +6474,13 @@
 					}
 				},
 				{
-					"id": 183,
+					"id": 324,
 					"name": "name",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"sources": [
 						{
@@ -6930,12 +6495,13 @@
 					}
 				},
 				{
-					"id": 186,
+					"id": 327,
 					"name": "sidebarComponent",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {
 						"isExported": true,
+						"isExternal": true,
 						"isOptional": true
 					},
 					"sources": [
@@ -6965,10 +6531,10 @@
 					"title": "Properties",
 					"kind": 1024,
 					"children": [
-						184,
-						185,
-						183,
-						186
+						325,
+						326,
+						324,
+						327
 					]
 				}
 			],
@@ -6981,21 +6547,23 @@
 			]
 		},
 		{
-			"id": 381,
+			"id": 219,
 			"name": "IConnection",
 			"kind": 256,
 			"kindString": "Interface",
 			"flags": {
-				"isExported": true
+				"isExported": true,
+				"isExternal": true
 			},
 			"children": [
 				{
-					"id": 383,
+					"id": 221,
 					"name": "from",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"sources": [
 						{
@@ -7007,16 +6575,17 @@
 					"type": {
 						"type": "reference",
 						"name": "NodeInterface",
-						"id": 340
+						"id": 90
 					}
 				},
 				{
-					"id": 382,
+					"id": 220,
 					"name": "id",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"sources": [
 						{
@@ -7031,12 +6600,13 @@
 					}
 				},
 				{
-					"id": 384,
+					"id": 222,
 					"name": "to",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"sources": [
 						{
@@ -7048,7 +6618,7 @@
 					"type": {
 						"type": "reference",
 						"name": "NodeInterface",
-						"id": 340
+						"id": 90
 					}
 				}
 			],
@@ -7057,9 +6627,9 @@
 					"title": "Properties",
 					"kind": 1024,
 					"children": [
-						383,
-						382,
-						384
+						221,
+						220,
+						222
 					]
 				}
 			],
@@ -7074,26 +6644,28 @@
 				{
 					"type": "reference",
 					"name": "DummyConnection",
-					"id": 399
+					"id": 237
 				}
 			]
 		},
 		{
-			"id": 20,
+			"id": 85,
 			"name": "IConnectionState",
 			"kind": 256,
 			"kindString": "Interface",
 			"flags": {
-				"isExported": true
+				"isExported": true,
+				"isExternal": true
 			},
 			"children": [
 				{
-					"id": 22,
+					"id": 87,
 					"name": "from",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"sources": [
 						{
@@ -7108,12 +6680,13 @@
 					}
 				},
 				{
-					"id": 21,
+					"id": 86,
 					"name": "id",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"sources": [
 						{
@@ -7128,12 +6701,13 @@
 					}
 				},
 				{
-					"id": 23,
+					"id": 88,
 					"name": "to",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"sources": [
 						{
@@ -7153,9 +6727,9 @@
 					"title": "Properties",
 					"kind": 1024,
 					"children": [
-						22,
-						21,
-						23
+						87,
+						86,
+						88
 					]
 				}
 			],
@@ -7170,7 +6744,7 @@
 				{
 					"type": "reflection",
 					"declaration": {
-						"id": 24,
+						"id": 89,
 						"name": "__type",
 						"kind": 65536,
 						"kindString": "Type literal",
@@ -7187,21 +6761,23 @@
 			]
 		},
 		{
-			"id": 263,
+			"id": 138,
 			"name": "IInterfaceCreateOptions",
 			"kind": 256,
 			"kindString": "Interface",
 			"flags": {
-				"isExported": true
+				"isExported": true,
+				"isExternal": true
 			},
 			"children": [
 				{
-					"id": 265,
+					"id": 140,
 					"name": "name",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {
 						"isExported": true,
+						"isExternal": true,
 						"isOptional": true
 					},
 					"sources": [
@@ -7226,12 +6802,13 @@
 					}
 				},
 				{
-					"id": 266,
+					"id": 141,
 					"name": "optionName",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {
 						"isExported": true,
+						"isExternal": true,
 						"isOptional": true
 					},
 					"sources": [
@@ -7256,12 +6833,13 @@
 					}
 				},
 				{
-					"id": 264,
+					"id": 139,
 					"name": "type",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {
 						"isExported": true,
+						"isExternal": true,
 						"isOptional": true
 					},
 					"sources": [
@@ -7291,9 +6869,9 @@
 					"title": "Properties",
 					"kind": 1024,
 					"children": [
-						265,
-						266,
-						264
+						140,
+						141,
+						139
 					]
 				}
 			],
@@ -7306,165 +6884,23 @@
 			]
 		},
 		{
-			"id": 92,
-			"name": "IInterfaceOptions",
-			"kind": 256,
-			"kindString": "Interface",
-			"flags": {},
-			"children": [
-				{
-					"id": 97,
-					"name": "additionalProperties",
-					"kind": 1024,
-					"kindString": "Property",
-					"flags": {
-						"isOptional": true
-					},
-					"sources": [
-						{
-							"fileName": "nodeBuilder.ts",
-							"line": 8,
-							"character": 24
-						}
-					],
-					"type": {
-						"type": "reference",
-						"name": "Record",
-						"typeArguments": [
-							{
-								"type": "intrinsic",
-								"name": "string"
-							},
-							{
-								"type": "intrinsic",
-								"name": "any"
-							}
-						]
-					}
-				},
-				{
-					"id": 96,
-					"name": "defaultValue",
-					"kind": 1024,
-					"kindString": "Property",
-					"flags": {
-						"isOptional": true
-					},
-					"sources": [
-						{
-							"fileName": "nodeBuilder.ts",
-							"line": 7,
-							"character": 16
-						}
-					],
-					"type": {
-						"type": "intrinsic",
-						"name": "any"
-					}
-				},
-				{
-					"id": 93,
-					"name": "isInput",
-					"kind": 1024,
-					"kindString": "Property",
-					"flags": {},
-					"sources": [
-						{
-							"fileName": "nodeBuilder.ts",
-							"line": 4,
-							"character": 11
-						}
-					],
-					"type": {
-						"type": "intrinsic",
-						"name": "boolean"
-					}
-				},
-				{
-					"id": 94,
-					"name": "name",
-					"kind": 1024,
-					"kindString": "Property",
-					"flags": {},
-					"sources": [
-						{
-							"fileName": "nodeBuilder.ts",
-							"line": 5,
-							"character": 8
-						}
-					],
-					"type": {
-						"type": "intrinsic",
-						"name": "string"
-					}
-				},
-				{
-					"id": 95,
-					"name": "option",
-					"kind": 1024,
-					"kindString": "Property",
-					"flags": {
-						"isOptional": true
-					},
-					"sources": [
-						{
-							"fileName": "nodeBuilder.ts",
-							"line": 6,
-							"character": 10
-						}
-					],
-					"type": {
-						"type": "union",
-						"types": [
-							{
-								"type": "intrinsic",
-								"name": "undefined"
-							},
-							{
-								"type": "intrinsic",
-								"name": "string"
-							}
-						]
-					}
-				}
-			],
-			"groups": [
-				{
-					"title": "Properties",
-					"kind": 1024,
-					"children": [
-						97,
-						96,
-						93,
-						94,
-						95
-					]
-				}
-			],
-			"sources": [
-				{
-					"fileName": "nodeBuilder.ts",
-					"line": 3,
-					"character": 27
-				}
-			]
-		},
-		{
-			"id": 16,
+			"id": 81,
 			"name": "IInterfaceState",
 			"kind": 256,
 			"kindString": "Interface",
 			"flags": {
-				"isExported": true
+				"isExported": true,
+				"isExternal": true
 			},
 			"children": [
 				{
-					"id": 17,
+					"id": 82,
 					"name": "id",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"sources": [
 						{
@@ -7479,12 +6915,13 @@
 					}
 				},
 				{
-					"id": 18,
+					"id": 83,
 					"name": "value",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"sources": [
 						{
@@ -7504,8 +6941,8 @@
 					"title": "Properties",
 					"kind": 1024,
 					"children": [
-						17,
-						18
+						82,
+						83
 					]
 				}
 			],
@@ -7520,7 +6957,7 @@
 				{
 					"type": "reflection",
 					"declaration": {
-						"id": 19,
+						"id": 84,
 						"name": "__type",
 						"kind": 65536,
 						"kindString": "Type literal",
@@ -7537,21 +6974,23 @@
 			]
 		},
 		{
-			"id": 8,
+			"id": 73,
 			"name": "INodeState",
 			"kind": 256,
 			"kindString": "Interface",
 			"flags": {
-				"isExported": true
+				"isExported": true,
+				"isExternal": true
 			},
 			"children": [
 				{
-					"id": 11,
+					"id": 76,
 					"name": "id",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"sources": [
 						{
@@ -7566,12 +7005,13 @@
 					}
 				},
 				{
-					"id": 12,
+					"id": 77,
 					"name": "interfaces",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"sources": [
 						{
@@ -7594,7 +7034,7 @@
 									{
 										"type": "reference",
 										"name": "IInterfaceState",
-										"id": 16
+										"id": 81
 									}
 								]
 							}
@@ -7602,12 +7042,13 @@
 					}
 				},
 				{
-					"id": 10,
+					"id": 75,
 					"name": "name",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"sources": [
 						{
@@ -7622,12 +7063,13 @@
 					}
 				},
 				{
-					"id": 13,
+					"id": 78,
 					"name": "options",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"sources": [
 						{
@@ -7657,12 +7099,13 @@
 					}
 				},
 				{
-					"id": 14,
+					"id": 79,
 					"name": "state",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"sources": [
 						{
@@ -7677,12 +7120,13 @@
 					}
 				},
 				{
-					"id": 9,
+					"id": 74,
 					"name": "type",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"sources": [
 						{
@@ -7702,12 +7146,12 @@
 					"title": "Properties",
 					"kind": 1024,
 					"children": [
-						11,
-						12,
-						10,
-						13,
-						14,
-						9
+						76,
+						77,
+						75,
+						78,
+						79,
+						74
 					]
 				}
 			],
@@ -7722,7 +7166,7 @@
 				{
 					"type": "reflection",
 					"declaration": {
-						"id": 15,
+						"id": 80,
 						"name": "__type",
 						"kind": 65536,
 						"kindString": "Type literal",
@@ -7739,21 +7183,23 @@
 			]
 		},
 		{
-			"id": 190,
+			"id": 331,
 			"name": "INodeUpdateEventData",
 			"kind": 256,
 			"kindString": "Interface",
 			"flags": {
-				"isExported": true
+				"isExported": true,
+				"isExternal": true
 			},
 			"children": [
 				{
-					"id": 193,
+					"id": 334,
 					"name": "interface",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {
 						"isExported": true,
+						"isExternal": true,
 						"isOptional": true
 					},
 					"sources": [
@@ -7766,16 +7212,17 @@
 					"type": {
 						"type": "reference",
 						"name": "NodeInterface",
-						"id": 340
+						"id": 90
 					}
 				},
 				{
-					"id": 191,
+					"id": 332,
 					"name": "name",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"sources": [
 						{
@@ -7790,12 +7237,13 @@
 					}
 				},
 				{
-					"id": 192,
+					"id": 333,
 					"name": "option",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {
 						"isExported": true,
+						"isExternal": true,
 						"isOptional": true
 					},
 					"sources": [
@@ -7808,7 +7256,7 @@
 					"type": {
 						"type": "reference",
 						"name": "NodeOption",
-						"id": 149
+						"id": 123
 					}
 				}
 			],
@@ -7817,9 +7265,9 @@
 					"title": "Properties",
 					"kind": 1024,
 					"children": [
-						193,
-						191,
-						192
+						334,
+						332,
+						333
 					]
 				}
 			],
@@ -7832,21 +7280,23 @@
 			]
 		},
 		{
-			"id": 145,
+			"id": 119,
 			"name": "IOption",
 			"kind": 256,
 			"kindString": "Interface",
 			"flags": {
-				"isExported": true
+				"isExported": true,
+				"isExternal": true
 			},
 			"children": [
 				{
-					"id": 146,
+					"id": 120,
 					"name": "optionComponent",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"sources": [
 						{
@@ -7861,12 +7311,13 @@
 					}
 				},
 				{
-					"id": 148,
+					"id": 122,
 					"name": "sidebarComponent",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {
 						"isExported": true,
+						"isExternal": true,
 						"isOptional": true
 					},
 					"sources": [
@@ -7891,12 +7342,13 @@
 					}
 				},
 				{
-					"id": 147,
+					"id": 121,
 					"name": "value",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"sources": [
 						{
@@ -7916,9 +7368,9 @@
 					"title": "Properties",
 					"kind": 1024,
 					"children": [
-						146,
-						148,
-						147
+						120,
+						122,
+						121
 					]
 				}
 			],
@@ -7933,26 +7385,28 @@
 				{
 					"type": "reference",
 					"name": "NodeOption",
-					"id": 149
+					"id": 123
 				}
 			]
 		},
 		{
-			"id": 187,
+			"id": 328,
 			"name": "IOptionEventData",
 			"kind": 256,
 			"kindString": "Interface",
 			"flags": {
-				"isExported": true
+				"isExported": true,
+				"isExternal": true
 			},
 			"children": [
 				{
-					"id": 188,
+					"id": 329,
 					"name": "name",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"sources": [
 						{
@@ -7967,12 +7421,13 @@
 					}
 				},
 				{
-					"id": 189,
+					"id": 330,
 					"name": "option",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"sources": [
 						{
@@ -7984,7 +7439,7 @@
 					"type": {
 						"type": "reference",
 						"name": "IOption",
-						"id": 145
+						"id": 119
 					}
 				}
 			],
@@ -7993,8 +7448,8 @@
 					"title": "Properties",
 					"kind": 1024,
 					"children": [
-						188,
-						189
+						329,
+						330
 					]
 				}
 			],
@@ -8007,21 +7462,23 @@
 			]
 		},
 		{
-			"id": 165,
+			"id": 245,
 			"name": "IPlugin",
 			"kind": 256,
 			"kindString": "Interface",
 			"flags": {
-				"isExported": true
+				"isExported": true,
+				"isExternal": true
 			},
 			"children": [
 				{
-					"id": 166,
+					"id": 246,
 					"name": "type",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"sources": [
 						{
@@ -8036,23 +7493,24 @@
 					}
 				},
 				{
-					"id": 167,
+					"id": 247,
 					"name": "register",
 					"kind": 2048,
 					"kindString": "Method",
 					"flags": {
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"signatures": [
 						{
-							"id": 168,
+							"id": 248,
 							"name": "register",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
 							"parameters": [
 								{
-									"id": 169,
+									"id": 249,
 									"name": "editor",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -8060,7 +7518,7 @@
 									"type": {
 										"type": "reference",
 										"name": "Editor",
-										"id": 194
+										"id": 250
 									}
 								}
 							],
@@ -8084,14 +7542,14 @@
 					"title": "Properties",
 					"kind": 1024,
 					"children": [
-						166
+						246
 					]
 				},
 				{
 					"title": "Methods",
 					"kind": 2048,
 					"children": [
-						167
+						247
 					]
 				}
 			],
@@ -8104,21 +7562,23 @@
 			]
 		},
 		{
-			"id": 4,
+			"id": 69,
 			"name": "IState",
 			"kind": 256,
 			"kindString": "Interface",
 			"flags": {
-				"isExported": true
+				"isExported": true,
+				"isExternal": true
 			},
 			"children": [
 				{
-					"id": 6,
+					"id": 71,
 					"name": "connections",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"sources": [
 						{
@@ -8132,17 +7592,18 @@
 						"elementType": {
 							"type": "reference",
 							"name": "IConnectionState",
-							"id": 20
+							"id": 85
 						}
 					}
 				},
 				{
-					"id": 5,
+					"id": 70,
 					"name": "nodes",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"sources": [
 						{
@@ -8156,7 +7617,7 @@
 						"elementType": {
 							"type": "reference",
 							"name": "INodeState",
-							"id": 8
+							"id": 73
 						}
 					}
 				}
@@ -8166,8 +7627,8 @@
 					"title": "Properties",
 					"kind": 1024,
 					"children": [
-						6,
-						5
+						71,
+						70
 					]
 				}
 			],
@@ -8182,7 +7643,7 @@
 				{
 					"type": "reflection",
 					"declaration": {
-						"id": 7,
+						"id": 72,
 						"name": "__type",
 						"kind": 65536,
 						"kindString": "Type literal",
@@ -8199,21 +7660,23 @@
 			]
 		},
 		{
-			"id": 375,
+			"id": 213,
 			"name": "ITemporaryConnection",
 			"kind": 256,
 			"kindString": "Interface",
 			"flags": {
-				"isExported": true
+				"isExported": true,
+				"isExternal": true
 			},
 			"children": [
 				{
-					"id": 377,
+					"id": 215,
 					"name": "from",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"sources": [
 						{
@@ -8225,16 +7688,17 @@
 					"type": {
 						"type": "reference",
 						"name": "NodeInterface",
-						"id": 340
+						"id": 90
 					}
 				},
 				{
-					"id": 379,
+					"id": 217,
 					"name": "mx",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {
 						"isExported": true,
+						"isExternal": true,
 						"isOptional": true
 					},
 					"sources": [
@@ -8259,12 +7723,13 @@
 					}
 				},
 				{
-					"id": 380,
+					"id": 218,
 					"name": "my",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {
 						"isExported": true,
+						"isExternal": true,
 						"isOptional": true
 					},
 					"sources": [
@@ -8289,12 +7754,13 @@
 					}
 				},
 				{
-					"id": 376,
+					"id": 214,
 					"name": "status",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {
-						"isExported": true
+						"isExported": true,
+						"isExternal": true
 					},
 					"sources": [
 						{
@@ -8306,16 +7772,17 @@
 					"type": {
 						"type": "reference",
 						"name": "TemporaryConnectionState",
-						"id": 371
+						"id": 209
 					}
 				},
 				{
-					"id": 378,
+					"id": 216,
 					"name": "to",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {
 						"isExported": true,
+						"isExternal": true,
 						"isOptional": true
 					},
 					"sources": [
@@ -8328,7 +7795,7 @@
 					"type": {
 						"type": "reference",
 						"name": "NodeInterface",
-						"id": 340
+						"id": 90
 					}
 				}
 			],
@@ -8337,11 +7804,11 @@
 					"title": "Properties",
 					"kind": 1024,
 					"children": [
-						377,
-						379,
-						380,
-						376,
-						378
+						215,
+						217,
+						218,
+						214,
+						216
 					]
 				}
 			],
@@ -8354,93 +7821,24 @@
 			]
 		},
 		{
-			"id": 131,
-			"name": "CalculationFunction",
-			"kind": 4194304,
-			"kindString": "Type alias",
-			"flags": {},
-			"sources": [
-				{
-					"fileName": "nodeBuilder.ts",
-					"line": 11,
-					"character": 24
-				}
-			],
-			"type": {
-				"type": "reflection",
-				"declaration": {
-					"id": 132,
-					"name": "__type",
-					"kind": 65536,
-					"kindString": "Type literal",
-					"flags": {},
-					"signatures": [
-						{
-							"id": 133,
-							"name": "__call",
-							"kind": 4096,
-							"kindString": "Call signature",
-							"flags": {},
-							"parameters": [
-								{
-									"id": 134,
-									"name": "this",
-									"kind": 32768,
-									"kindString": "Parameter",
-									"flags": {},
-									"type": {
-										"type": "reference",
-										"name": "Node",
-										"id": 267
-									}
-								},
-								{
-									"id": 135,
-									"name": "n",
-									"kind": 32768,
-									"kindString": "Parameter",
-									"flags": {},
-									"type": {
-										"type": "reference",
-										"name": "Node",
-										"id": 267
-									}
-								}
-							],
-							"type": {
-								"type": "intrinsic",
-								"name": "any"
-							}
-						}
-					],
-					"sources": [
-						{
-							"fileName": "nodeBuilder.ts",
-							"line": 11,
-							"character": 26
-						}
-					]
-				}
-			}
-		},
-		{
-			"id": 86,
+			"id": 61,
 			"name": "HookTap",
 			"kind": 4194304,
 			"kindString": "Type alias",
 			"flags": {
-				"isExported": true
+				"isExported": true,
+				"isExternal": true
 			},
 			"typeParameter": [
 				{
-					"id": 87,
+					"id": 62,
 					"name": "I",
 					"kind": 131072,
 					"kindString": "Type parameter",
 					"flags": {}
 				},
 				{
-					"id": 88,
+					"id": 63,
 					"name": "O",
 					"kind": 131072,
 					"kindString": "Type parameter",
@@ -8457,21 +7855,21 @@
 			"type": {
 				"type": "reflection",
 				"declaration": {
-					"id": 89,
+					"id": 64,
 					"name": "__type",
 					"kind": 65536,
 					"kindString": "Type literal",
 					"flags": {},
 					"signatures": [
 						{
-							"id": 90,
+							"id": 65,
 							"name": "__call",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
 							"parameters": [
 								{
-									"id": 91,
+									"id": 66,
 									"name": "i",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -8499,16 +7897,17 @@
 			}
 		},
 		{
-			"id": 81,
+			"id": 56,
 			"name": "Listener",
 			"kind": 4194304,
 			"kindString": "Type alias",
 			"flags": {
-				"isExported": true
+				"isExported": true,
+				"isExternal": true
 			},
 			"typeParameter": [
 				{
-					"id": 82,
+					"id": 57,
 					"name": "T",
 					"kind": 131072,
 					"kindString": "Type parameter",
@@ -8525,21 +7924,21 @@
 			"type": {
 				"type": "reflection",
 				"declaration": {
-					"id": 83,
+					"id": 58,
 					"name": "__type",
 					"kind": 65536,
 					"kindString": "Type literal",
 					"flags": {},
 					"signatures": [
 						{
-							"id": 84,
+							"id": 59,
 							"name": "__call",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
 							"parameters": [
 								{
-									"id": 85,
+									"id": 60,
 									"name": "ev",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -8567,12 +7966,13 @@
 			}
 		},
 		{
-			"id": 261,
+			"id": 309,
 			"name": "NodeConstructor",
 			"kind": 4194304,
 			"kindString": "Type alias",
 			"flags": {
-				"isExported": true
+				"isExported": true,
+				"isExternal": true
 			},
 			"sources": [
 				{
@@ -8584,7 +7984,7 @@
 			"type": {
 				"type": "reflection",
 				"declaration": {
-					"id": 262,
+					"id": 310,
 					"name": "__type",
 					"kind": 65536,
 					"kindString": "Type literal",
@@ -8600,12 +8000,13 @@
 			}
 		},
 		{
-			"id": 80,
+			"id": 55,
 			"name": "TokenType",
 			"kind": 4194304,
 			"kindString": "Type alias",
 			"flags": {
-				"isExported": true
+				"isExported": true,
+				"isExternal": true
 			},
 			"sources": [
 				{
@@ -8629,37 +8030,17 @@
 			}
 		},
 		{
-			"id": 1,
-			"name": "counter",
-			"kind": 32,
-			"kindString": "Variable",
-			"flags": {
-				"isLet": true
-			},
-			"sources": [
-				{
-					"fileName": "idGenerator.ts",
-					"line": 1,
-					"character": 11
-				}
-			],
-			"type": {
-				"type": "intrinsic",
-				"name": "number"
-			},
-			"defaultValue": "0"
-		},
-		{
-			"id": 2,
+			"id": 67,
 			"name": "generateId",
 			"kind": 64,
 			"kindString": "Function",
 			"flags": {
-				"isExported": true
+				"isExported": true,
+				"isExternal": true
 			},
 			"signatures": [
 				{
-					"id": 3,
+					"id": 68,
 					"name": "generateId",
 					"kind": 4096,
 					"kindString": "Call signature",
@@ -8677,137 +8058,6 @@
 					"character": 34
 				}
 			]
-		},
-		{
-			"id": 139,
-			"name": "generateNode",
-			"kind": 64,
-			"kindString": "Function",
-			"flags": {},
-			"signatures": [
-				{
-					"id": 140,
-					"name": "generateNode",
-					"kind": 4096,
-					"kindString": "Call signature",
-					"flags": {},
-					"parameters": [
-						{
-							"id": 141,
-							"name": "type",
-							"kind": 32768,
-							"kindString": "Parameter",
-							"flags": {},
-							"type": {
-								"type": "intrinsic",
-								"name": "string"
-							}
-						},
-						{
-							"id": 142,
-							"name": "intfs",
-							"kind": 32768,
-							"kindString": "Parameter",
-							"flags": {},
-							"type": {
-								"type": "array",
-								"elementType": {
-									"type": "reference",
-									"name": "IInterfaceOptions",
-									"id": 92
-								}
-							}
-						},
-						{
-							"id": 143,
-							"name": "options",
-							"kind": 32768,
-							"kindString": "Parameter",
-							"flags": {},
-							"type": {
-								"type": "reference",
-								"name": "Map",
-								"typeArguments": [
-									{
-										"type": "intrinsic",
-										"name": "string"
-									},
-									{
-										"type": "reference",
-										"name": "IOption",
-										"id": 145
-									}
-								]
-							}
-						},
-						{
-							"id": 144,
-							"name": "calcFunction",
-							"kind": 32768,
-							"kindString": "Parameter",
-							"flags": {
-								"isOptional": true
-							},
-							"type": {
-								"type": "reference",
-								"name": "CalculationFunction",
-								"id": 131
-							}
-						}
-					],
-					"type": {
-						"type": "reference",
-						"name": "(Anonymous class)"
-					}
-				}
-			],
-			"sources": [
-				{
-					"fileName": "nodeBuilder.ts",
-					"line": 21,
-					"character": 21
-				}
-			]
-		},
-		{
-			"id": 136,
-			"name": "getDefaultValue",
-			"kind": 64,
-			"kindString": "Function",
-			"flags": {},
-			"signatures": [
-				{
-					"id": 137,
-					"name": "getDefaultValue",
-					"kind": 4096,
-					"kindString": "Call signature",
-					"flags": {},
-					"parameters": [
-						{
-							"id": 138,
-							"name": "v",
-							"kind": 32768,
-							"kindString": "Parameter",
-							"flags": {},
-							"type": {
-								"type": "intrinsic",
-								"name": "any"
-							}
-						}
-					],
-					"type": {
-						"type": "intrinsic",
-						"name": "any"
-					}
-				}
-			],
-			"sources": [
-				{
-					"fileName": "nodeBuilder.ts",
-					"line": 13,
-					"character": 24
-				}
-			]
 		}
 	],
 	"groups": [
@@ -8815,73 +8065,62 @@
 			"title": "Enumerations",
 			"kind": 4,
 			"children": [
-				371
+				209
 			]
 		},
 		{
 			"title": "Classes",
 			"kind": 128,
 			"children": [
-				25,
-				385,
-				399,
-				194,
-				51,
-				267,
-				98,
-				340,
-				149,
-				38,
-				66
+				1,
+				223,
+				237,
+				250,
+				27,
+				142,
+				335,
+				90,
+				123,
+				14,
+				41
 			]
 		},
 		{
 			"title": "Interfaces",
 			"kind": 256,
 			"children": [
-				170,
-				177,
-				173,
-				182,
-				381,
-				20,
-				263,
-				92,
-				16,
-				8,
-				190,
-				145,
-				187,
-				165,
-				4,
-				375
+				311,
+				318,
+				314,
+				323,
+				219,
+				85,
+				138,
+				81,
+				73,
+				331,
+				119,
+				328,
+				245,
+				69,
+				213
 			]
 		},
 		{
 			"title": "Type aliases",
 			"kind": 4194304,
 			"children": [
-				131,
-				86,
-				81,
-				261,
-				80
-			]
-		},
-		{
-			"title": "Variables",
-			"kind": 32,
-			"children": [
-				1
+				61,
+				56,
+				309,
+				55
 			]
 		},
 		{
 			"title": "Functions",
 			"kind": 64,
 			"children": [
-				2,
-				139,
-				136
+				67
 			]
 		}
 	]

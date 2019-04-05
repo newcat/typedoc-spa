@@ -1,3 +1,8 @@
+export interface IModule {
+    name: string;
+    file: string;
+}
+
 export enum Kind {
     Global = 0,
     ExternalModule = 1,

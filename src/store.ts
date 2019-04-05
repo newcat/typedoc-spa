@@ -1,11 +1,13 @@
 import Vue from "vue";
 import Vuex from "vuex";
+import { IModule } from "./types";
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
     state: {
-        raw: {} as any
+        raw: {} as any,
+        loadedModule: null as IModule|null
     },
     getters: {
         reflections(state) {
@@ -21,15 +23,22 @@ export default new Vuex.Store({
         }
     },
     mutations: {
-        setRaw(state, value) {
+        setModule(state, [value, module]) {
             state.raw = value;
+            state.loadedModule = module;
         }
     },
     actions: {
-        async loadModule({ commit }, file: string) {
-            const r = await fetch(file);
-            if (r.ok) {
-                commit("setRaw", await r.json());
+        async loadModule({ commit }, m: IModule) {
+            if (m) {
+                const r = await fetch(m.file);
+                if (r.ok) {
+                    commit("setModule", [await r.json(), m]);
+                } else {
+                    commit("setModule", [null, ""]);
+                }
+            } else {
+                commit("setModule", [null, ""]);
             }
         }
     },
