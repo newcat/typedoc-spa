@@ -6,7 +6,6 @@ import store from "./store";
 import ScrollFix from "./scrollfix";
 
 import ElementUI from "element-ui";
-import "element-ui/lib/theme-chalk/index.css";
 Vue.use(ElementUI);
 
 import "beardcss/dist/beard.css";

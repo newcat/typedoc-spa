@@ -62,7 +62,7 @@ export default class App extends Vue {
             return;
         }
 
-        if (this.loadedModule !== r.params.module) {
+        if ((this.loadedModule && this.loadedModule.name) !== r.params.module) {
             const mod = this.modules.find((m) => m.name === r.params.module);
             await this.loadModule(mod);
         }
