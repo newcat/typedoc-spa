@@ -11,7 +11,7 @@ div
 
     el-card.box-card(v-if="reflection.typeParameter")
         span(slot="header")
-            h3 Type Parameters
+            h3.mv0 Type Parameters
         ul
             li(v-for="p in reflection.typeParameter", :key="p.id")
                 b {{ p.name }}

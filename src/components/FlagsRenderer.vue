@@ -1,6 +1,6 @@
 <template lang="pug">
 div
-    el-tag.mr1(v-for="tag in flagsArray", :key="tag") {{ tag }}
+    span.el-tag.mr1(v-for="tag in flagsArray", :key="tag") {{ tag }}
 </template>
 
 <script lang="ts">

@@ -3,6 +3,8 @@ const VueLoaderPlugin = require("vue-loader/lib/plugin");
 const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 module.exports = {
     mode: 'production',
@@ -40,7 +42,12 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                use: [{ loader: "style-loader" }, { loader: 'css-loader' }, { loader: 'postcss-loader' }]
+                use: [{ loader: MiniCssExtractPlugin.loader }, { loader: 'css-loader' }, { loader: 'postcss-loader' }]
+            },
+            {
+                test: /\.scss$/,
+                use: [{ loader: MiniCssExtractPlugin.loader }, { loader: 'css-loader' },
+                      { loader: 'postcss-loader' }, { loader: "sass-loader" }]
             },
             {
                 test: /\.ts$/,
@@ -58,7 +65,7 @@ module.exports = {
             },
             {
                 test: /ttf|woff/,
-                loader: "null-loader"
+                loader: "base64-inline-loader"
             }
         ]
     },
@@ -74,7 +81,9 @@ module.exports = {
         new BundleAnalyzerPlugin({
             openAnalyzer: false,
             analyzerMode: "static"
-        })
+        }),
+        new MiniCssExtractPlugin(),
+        new OptimizeCssAssetsPlugin()
     ],
     entry: {
         'typedoc-spa': './src/main.ts'

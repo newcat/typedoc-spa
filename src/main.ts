@@ -4,12 +4,10 @@ import router from "./router";
 import store from "./store";
 
 import ScrollFix from "./scrollfix";
-
-import ElementUI from "element-ui";
-Vue.use(ElementUI);
-
-import "beardcss/dist/beard.css";
-import "./styles.css";
+import "./elementUi";
+import "./fontAwesome";
+import "normalize.css/normalize.css";
+import "./styles.scss";
 
 Vue.config.productionTip = false;
 

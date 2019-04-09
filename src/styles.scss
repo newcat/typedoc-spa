@@ -1,0 +1,82 @@
+body {
+    font-family: 'Noto Sans', Helvetica, Arial, sans-serif;
+    font-size: 13pt;
+    line-height: 2em;
+}
+
+a, a:visited {
+    color: #409EFF;
+}
+
+ul {
+    list-style-type: square;
+    list-style-position: inside;
+}
+
+.hide-first > *:first-child,
+.hide-last > *:last-child,
+.hide-if-first:first-child,
+.hide-if-last:last-child
+{
+    display: none;
+}
+
+.anchor {
+    position: absolute;
+    top: -50px;
+}
+
+.shy { color: gray; }
+.small { font-size: smaller; }
+.header { border-bottom: 1px solid #e6e6e6; }
+.aside { border-right: 1px solid #e6e6e6; }
+.el-menu.no-border { border-right: none; }
+.el-table { font-size: 100% !important; }
+.c-pointer { cursor: pointer; }
+.w100 { width: 100%; }
+.relative { position: relative; }
+.flex { display: flex; }
+.flex-grow { flex-grow: 1; }
+.aic { align-items: center; }
+
+$position-units: (
+    padding: 'p',
+    margin: 'm'
+);
+
+$spacing-amounts: (
+    0: 0,
+    1: 1,
+    2: 2,
+    3: 3,
+    4: 4,
+    5: 5
+);
+
+@each $id, $position in $position-units {
+    @each $name, $i in $spacing-amounts {
+        .#{$position}a#{$name} {
+            #{$id}: #{$i}rem !important;
+        }
+        .#{$position}t#{$name} {
+            #{$id}-top: #{$i}rem !important;
+        }
+        .#{$position}r#{$name} {
+            #{$id}-right: #{$i}rem !important;
+        }
+        .#{$position}b#{$name} {
+            #{$id}-bottom: #{$i}rem !important;
+        }
+        .#{$position}l#{$name} {
+            #{$id}-left: #{$i}rem !important;
+        }
+        .#{$position}v#{$name} {
+            #{$id}-top: #{$i}rem !important;
+            #{$id}-bottom: #{$i}rem !important;
+        }
+        .#{$position}h#{$name} {
+            #{$id}-left: #{$i}rem !important;
+            #{$id}-right: #{$i}rem !important;
+        }
+    }
+}

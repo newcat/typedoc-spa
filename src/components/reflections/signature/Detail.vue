@@ -3,17 +3,17 @@ div
     table.w100.param-table.mb2(v-if="signature.parameters && signature.parameters.length > 0")
         thead
             tr
-                th.ph2 Parameter
-                th.ph2 Type
-                th.ph2 Description
+                th.ph2.pv0 Parameter
+                th.ph2.pv0 Type
+                th.ph2.pv0 Description
         tbody
             tr(v-for="p in signature.parameters", :key="p.id")
-                td.ph2
+                td.ph2.pv0
                     code {{ p.name }}
-                td.ph2
+                td.ph2.pv0
                     code
                         type-renderer(:type="p.type")
-                td.ph2
+                td.ph2.pv0
                     comment-renderer(v-if="p.comment", :comment="p.comment")
     
     comment-renderer.mb2(v-if="signature.comment", :comment="signature.comment")

@@ -31,6 +31,8 @@ export default Vue.extend({
     props: ["kind"],
     render(h) {
         const { icon, color } = mapping.get(this.kind) || { icon: "poo", color: "red" };
-        return h("span", { staticClass: `fas fa-${icon}`, style: `color: ${color};` });
+        return h("span", { style: `color: ${color};` }, [
+            h("font-awesome-icon", { props: { icon } })
+        ]);
     }
 });

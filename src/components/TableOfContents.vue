@@ -1,9 +1,9 @@
 <template lang="pug">
 div
     div(v-for="(c, i) in categories", :key="c.header", :class="{ mb3: i + 1 !== categories.length }")
-        h4 {{ c.header }}
+        h4.mv0 {{ c.header }}
         el-row(:gutter="10")
-            el-col(v-for="r in c.reflections", :key="r.id", :xs="12", :lg="8")
+            el-col(v-for="r in c.reflections", :key="r.id", :xs="24", :sm="24", :md="12", :lg="8", :xl="6")
                 slot(:reflection="r")
 </template>
 
