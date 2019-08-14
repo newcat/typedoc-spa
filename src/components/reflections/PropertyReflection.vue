@@ -2,6 +2,7 @@
 div
     flags-renderer(v-if="reflection.flags && Object.keys(reflection.flags).length > 0", :flags="reflection.flags")
     hr.mv1.hide-if-first
+    comment-renderer(v-if="reflection.comment", :comment="reflection.comment")
     code
         type-icon.mr1(:kind="reflection.kind")
         b {{ reflection.name + optional }}:&nbsp;

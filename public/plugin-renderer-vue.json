@@ -1,0 +1,9559 @@
+{
+	"id": 0,
+	"name": "Reference - BaklavaJS",
+	"kind": 0,
+	"flags": {},
+	"children": [
+		{
+			"id": 205,
+			"name": "TemporaryConnectionState",
+			"kind": 4,
+			"kindString": "Enumeration",
+			"flags": {
+				"isExported": true,
+				"isExternal": true
+			},
+			"children": [
+				{
+					"id": 207,
+					"name": "ALLOWED",
+					"kind": 16,
+					"kindString": "Enumeration member",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/connection.ts",
+							"line": 5,
+							"character": 11
+						}
+					]
+				},
+				{
+					"id": 208,
+					"name": "FORBIDDEN",
+					"kind": 16,
+					"kindString": "Enumeration member",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/connection.ts",
+							"line": 6,
+							"character": 13
+						}
+					]
+				},
+				{
+					"id": 206,
+					"name": "NONE",
+					"kind": 16,
+					"kindString": "Enumeration member",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/connection.ts",
+							"line": 4,
+							"character": 8
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Enumeration members",
+					"kind": 16,
+					"children": [
+						207,
+						208,
+						206
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "baklavajs-core/types/connection.ts",
+					"line": 3,
+					"character": 36
+				}
+			]
+		},
+		{
+			"id": 238,
+			"name": "BaklavaEvent",
+			"kind": 128,
+			"kindString": "Class",
+			"flags": {
+				"isExported": true,
+				"isExternal": true
+			},
+			"comment": {
+				"shortText": "Main event class for Baklava"
+			},
+			"typeParameter": [
+				{
+					"id": 239,
+					"name": "T",
+					"kind": 131072,
+					"kindString": "Type parameter",
+					"flags": {}
+				}
+			],
+			"children": [
+				{
+					"id": 240,
+					"name": "listeners",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isProtected": true,
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/src/events/eventEmitter.ts",
+							"line": 10,
+							"character": 23
+						}
+					],
+					"type": {
+						"type": "reference",
+						"name": "Map",
+						"typeArguments": [
+							{
+								"type": "reference",
+								"name": "TokenType",
+								"id": 40
+							},
+							{
+								"type": "reference",
+								"name": "Listener",
+								"id": 41,
+								"typeArguments": [
+									{
+										"type": "typeParameter",
+										"name": "T"
+									}
+								]
+							}
+						]
+					},
+					"defaultValue": " new Map()"
+				},
+				{
+					"id": 241,
+					"name": "addListener",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isPublic": true,
+						"isExported": true,
+						"isExternal": true
+					},
+					"signatures": [
+						{
+							"id": 242,
+							"name": "addListener",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"shortText": "Subscribe to the event"
+							},
+							"parameters": [
+								{
+									"id": 243,
+									"name": "token",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"comment": {
+										"text": "A token that can be used to unsubscribe from the event later on"
+									},
+									"type": {
+										"type": "reference",
+										"name": "TokenType",
+										"id": 40
+									}
+								},
+								{
+									"id": 244,
+									"name": "listener",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"comment": {
+										"text": "A callback that will be invoked when the event occurs\n"
+									},
+									"type": {
+										"type": "reference",
+										"name": "Listener",
+										"id": 41,
+										"typeArguments": [
+											{
+												"type": "typeParameter",
+												"name": "T"
+											}
+										]
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							},
+							"implementationOf": {
+								"type": "reference",
+								"name": "IBaklavaEvent.addListener",
+								"id": 6
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "baklavajs-core/src/events/eventEmitter.ts",
+							"line": 17,
+							"character": 22
+						}
+					],
+					"implementationOf": {
+						"type": "reference",
+						"name": "IBaklavaEvent.addListener",
+						"id": 5
+					}
+				},
+				{
+					"id": 248,
+					"name": "emit",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"signatures": [
+						{
+							"id": 249,
+							"name": "emit",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"shortText": "Invoke all listeners"
+							},
+							"parameters": [
+								{
+									"id": 250,
+									"name": "data",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"comment": {
+										"text": "The data to invoke the listeners with.\n"
+									},
+									"type": {
+										"type": "typeParameter",
+										"name": "T"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							},
+							"implementationOf": {
+								"type": "reference",
+								"name": "IBaklavaEvent.emit",
+								"id": 13
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "baklavajs-core/src/events/eventEmitter.ts",
+							"line": 36,
+							"character": 8
+						}
+					],
+					"implementationOf": {
+						"type": "reference",
+						"name": "IBaklavaEvent.emit",
+						"id": 12
+					}
+				},
+				{
+					"id": 245,
+					"name": "removeListener",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isPublic": true,
+						"isExported": true,
+						"isExternal": true
+					},
+					"signatures": [
+						{
+							"id": 246,
+							"name": "removeListener",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"shortText": "Remove a listener"
+							},
+							"parameters": [
+								{
+									"id": 247,
+									"name": "token",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"comment": {
+										"text": "The token that was specified when subscribing to the listener.\nAn invalid token does not result in an error.\n"
+									},
+									"type": {
+										"type": "reference",
+										"name": "TokenType",
+										"id": 40
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							},
+							"implementationOf": {
+								"type": "reference",
+								"name": "IBaklavaEvent.removeListener",
+								"id": 10
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "baklavajs-core/src/events/eventEmitter.ts",
+							"line": 26,
+							"character": 25
+						}
+					],
+					"implementationOf": {
+						"type": "reference",
+						"name": "IBaklavaEvent.removeListener",
+						"id": 9
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"kind": 1024,
+					"children": [
+						240
+					]
+				},
+				{
+					"title": "Methods",
+					"kind": 2048,
+					"children": [
+						241,
+						248,
+						245
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "baklavajs-core/src/events/eventEmitter.ts",
+					"line": 8,
+					"character": 25
+				}
+			],
+			"extendedBy": [
+				{
+					"type": "reference",
+					"name": "PreventableBaklavaEvent",
+					"id": 251
+				}
+			],
+			"implementedTypes": [
+				{
+					"type": "reference",
+					"name": "IBaklavaEvent",
+					"id": 3,
+					"typeArguments": [
+						{
+							"type": "typeParameter",
+							"name": "T"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 225,
+			"name": "Clipboard",
+			"kind": 128,
+			"kindString": "Class",
+			"flags": {
+				"isExported": true
+			},
+			"children": [
+				{
+					"id": 228,
+					"name": "constructor",
+					"kind": 512,
+					"kindString": "Constructor",
+					"flags": {
+						"isPublic": true,
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 229,
+							"name": "new Clipboard",
+							"kind": 16384,
+							"kindString": "Constructor signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 230,
+									"name": "editor",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "IEditor",
+										"id": 78
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "Clipboard",
+								"id": 225
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "baklavajs-plugin-renderer-vue/src/clipboard.ts",
+							"line": 12,
+							"character": 5
+						}
+					]
+				},
+				{
+					"id": 226,
+					"name": "isEmpty",
+					"kind": 262144,
+					"kindString": "Accessor",
+					"flags": {
+						"isPublic": true,
+						"isExported": true
+					},
+					"getSignature": [
+						{
+							"id": 227,
+							"name": "__get",
+							"kind": 524288,
+							"kindString": "Get signature",
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "boolean"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "baklavajs-plugin-renderer-vue/src/clipboard.ts",
+							"line": 10,
+							"character": 22
+						}
+					]
+				},
+				{
+					"id": 231,
+					"name": "clear",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isPublic": true,
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 232,
+							"name": "clear",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "baklavajs-plugin-renderer-vue/src/clipboard.ts",
+							"line": 18,
+							"character": 16
+						}
+					]
+				},
+				{
+					"id": 233,
+					"name": "copy",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isPublic": true,
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 234,
+							"name": "copy",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 235,
+									"name": "selectedNodes",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "array",
+										"elementType": {
+											"type": "reference",
+											"name": "INode",
+											"id": 156
+										}
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "baklavajs-plugin-renderer-vue/src/clipboard.ts",
+							"line": 23,
+							"character": 15
+						}
+					]
+				},
+				{
+					"id": 236,
+					"name": "paste",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isPublic": true,
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 237,
+							"name": "paste",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "baklavajs-plugin-renderer-vue/src/clipboard.ts",
+							"line": 33,
+							"character": 16
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Constructors",
+					"kind": 512,
+					"children": [
+						228
+					]
+				},
+				{
+					"title": "Accessors",
+					"kind": 262144,
+					"children": [
+						226
+					]
+				},
+				{
+					"title": "Methods",
+					"kind": 2048,
+					"children": [
+						231,
+						233,
+						236
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "baklavajs-plugin-renderer-vue/src/clipboard.ts",
+					"line": 3,
+					"character": 30
+				}
+			]
+		},
+		{
+			"id": 406,
+			"name": "ConnectionStep",
+			"kind": 128,
+			"kindString": "Class",
+			"flags": {
+				"isExported": true
+			},
+			"children": [
+				{
+					"id": 408,
+					"name": "constructor",
+					"kind": 512,
+					"kindString": "Constructor",
+					"flags": {
+						"isPublic": true,
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 409,
+							"name": "new ConnectionStep",
+							"kind": 16384,
+							"kindString": "Constructor signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 410,
+									"name": "type",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "union",
+										"types": [
+											{
+												"type": "stringLiteral",
+												"value": "addConnection"
+											},
+											{
+												"type": "stringLiteral",
+												"value": "removeConnection"
+											}
+										]
+									}
+								},
+								{
+									"id": 411,
+									"name": "data",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "union",
+										"types": [
+											{
+												"type": "intrinsic",
+												"name": "string"
+											},
+											{
+												"type": "reference",
+												"name": "IConnection",
+												"id": 215
+											}
+										]
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "ConnectionStep",
+								"id": 406
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "baklavajs-plugin-renderer-vue/src/history/connectionStep.ts",
+							"line": 9,
+							"character": 47
+						}
+					]
+				},
+				{
+					"id": 407,
+					"name": "type",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isPublic": true,
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-plugin-renderer-vue/src/history/connectionStep.ts",
+							"line": 6,
+							"character": 15
+						}
+					],
+					"type": {
+						"type": "union",
+						"types": [
+							{
+								"type": "stringLiteral",
+								"value": "addConnection"
+							},
+							{
+								"type": "stringLiteral",
+								"value": "removeConnection"
+							}
+						]
+					},
+					"implementationOf": {
+						"type": "reference",
+						"name": "IStep.type",
+						"id": 399
+					}
+				},
+				{
+					"id": 415,
+					"name": "redo",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isPublic": true,
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 416,
+							"name": "redo",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 417,
+									"name": "editor",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "IEditor",
+										"id": 78
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							},
+							"implementationOf": {
+								"type": "reference",
+								"name": "IStep.redo",
+								"id": 404
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "baklavajs-plugin-renderer-vue/src/history/connectionStep.ts",
+							"line": 33,
+							"character": 15
+						}
+					],
+					"implementationOf": {
+						"type": "reference",
+						"name": "IStep.redo",
+						"id": 403
+					}
+				},
+				{
+					"id": 412,
+					"name": "undo",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isPublic": true,
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 413,
+							"name": "undo",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 414,
+									"name": "editor",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "IEditor",
+										"id": 78
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							},
+							"implementationOf": {
+								"type": "reference",
+								"name": "IStep.undo",
+								"id": 401
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "baklavajs-plugin-renderer-vue/src/history/connectionStep.ts",
+							"line": 25,
+							"character": 15
+						}
+					],
+					"implementationOf": {
+						"type": "reference",
+						"name": "IStep.undo",
+						"id": 400
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Constructors",
+					"kind": 512,
+					"children": [
+						408
+					]
+				},
+				{
+					"title": "Properties",
+					"kind": 1024,
+					"children": [
+						407
+					]
+				},
+				{
+					"title": "Methods",
+					"kind": 2048,
+					"children": [
+						415,
+						412
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "baklavajs-plugin-renderer-vue/src/history/connectionStep.ts",
+					"line": 4,
+					"character": 35
+				}
+			],
+			"implementedTypes": [
+				{
+					"type": "reference",
+					"name": "IStep",
+					"id": 398
+				}
+			]
+		},
+		{
+			"id": 430,
+			"name": "History",
+			"kind": 128,
+			"kindString": "Class",
+			"flags": {
+				"isExported": true
+			},
+			"children": [
+				{
+					"id": 432,
+					"name": "constructor",
+					"kind": 512,
+					"kindString": "Constructor",
+					"flags": {
+						"isPublic": true,
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 433,
+							"name": "new History",
+							"kind": 16384,
+							"kindString": "Constructor signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 434,
+									"name": "viewPlugin",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "ViewPlugin",
+										"id": 357
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "History",
+								"id": 430
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "baklavajs-plugin-renderer-vue/src/history/index.ts",
+							"line": 17,
+							"character": 43
+						}
+					]
+				},
+				{
+					"id": 431,
+					"name": "maxSteps",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isPublic": true,
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-plugin-renderer-vue/src/history/index.ts",
+							"line": 9,
+							"character": 19
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "number"
+					},
+					"defaultValue": "200"
+				},
+				{
+					"id": 437,
+					"name": "commitTransaction",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isPublic": true,
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 438,
+							"name": "commitTransaction",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "baklavajs-plugin-renderer-vue/src/history/index.ts",
+							"line": 39,
+							"character": 28
+						}
+					]
+				},
+				{
+					"id": 441,
+					"name": "redo",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isPublic": true,
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 442,
+							"name": "redo",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "baklavajs-plugin-renderer-vue/src/history/index.ts",
+							"line": 50,
+							"character": 15
+						}
+					]
+				},
+				{
+					"id": 435,
+					"name": "startTransaction",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isPublic": true,
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 436,
+							"name": "startTransaction",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "baklavajs-plugin-renderer-vue/src/history/index.ts",
+							"line": 35,
+							"character": 27
+						}
+					]
+				},
+				{
+					"id": 439,
+					"name": "undo",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isPublic": true,
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 440,
+							"name": "undo",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "baklavajs-plugin-renderer-vue/src/history/index.ts",
+							"line": 43,
+							"character": 15
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Constructors",
+					"kind": 512,
+					"children": [
+						432
+					]
+				},
+				{
+					"title": "Properties",
+					"kind": 1024,
+					"children": [
+						431
+					]
+				},
+				{
+					"title": "Methods",
+					"kind": 2048,
+					"children": [
+						437,
+						441,
+						435,
+						439
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "baklavajs-plugin-renderer-vue/src/history/index.ts",
+					"line": 7,
+					"character": 28
+				}
+			]
+		},
+		{
+			"id": 264,
+			"name": "Hook",
+			"kind": 128,
+			"kindString": "Class",
+			"flags": {
+				"isExported": true,
+				"isExternal": true,
+				"isAbstract": true
+			},
+			"comment": {
+				"shortText": "Base class for hooks in Baklava"
+			},
+			"typeParameter": [
+				{
+					"id": 265,
+					"name": "I",
+					"kind": 131072,
+					"kindString": "Type parameter",
+					"flags": {}
+				},
+				{
+					"id": 266,
+					"name": "O",
+					"kind": 131072,
+					"kindString": "Type parameter",
+					"flags": {}
+				}
+			],
+			"children": [
+				{
+					"id": 267,
+					"name": "taps",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isProtected": true,
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/src/events/eventEmitter.ts",
+							"line": 67,
+							"character": 18
+						}
+					],
+					"type": {
+						"type": "reference",
+						"name": "Array",
+						"typeArguments": [
+							{
+								"type": "reference",
+								"name": "HookTap",
+								"id": 46,
+								"typeArguments": [
+									{
+										"type": "typeParameter",
+										"name": "I"
+									},
+									{
+										"type": "typeParameter",
+										"name": "O"
+									}
+								]
+							}
+						]
+					},
+					"defaultValue": " []"
+				},
+				{
+					"id": 275,
+					"name": "execute",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isPublic": true,
+						"isExported": true,
+						"isExternal": true,
+						"isAbstract": true
+					},
+					"signatures": [
+						{
+							"id": 276,
+							"name": "execute",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 277,
+									"name": "data",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "typeParameter",
+										"name": "I"
+									}
+								}
+							],
+							"type": {
+								"type": "typeParameter",
+								"name": "O"
+							},
+							"implementationOf": {
+								"type": "reference",
+								"name": "IHook.execute",
+								"id": 38
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "baklavajs-core/src/events/eventEmitter.ts",
+							"line": 86,
+							"character": 27
+						}
+					],
+					"implementationOf": {
+						"type": "reference",
+						"name": "IHook.execute",
+						"id": 37
+					}
+				},
+				{
+					"id": 268,
+					"name": "tap",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isPublic": true,
+						"isExported": true,
+						"isExternal": true
+					},
+					"signatures": [
+						{
+							"id": 269,
+							"name": "tap",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 270,
+									"name": "token",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "TokenType",
+										"id": 40
+									}
+								},
+								{
+									"id": 271,
+									"name": "tapFn",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "HookTap",
+										"id": 46,
+										"typeArguments": [
+											{
+												"type": "typeParameter",
+												"name": "I"
+											},
+											{
+												"type": "typeParameter",
+												"name": "O"
+											}
+										]
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							},
+							"implementationOf": {
+								"type": "reference",
+								"name": "IHook.tap",
+								"id": 31
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "baklavajs-core/src/events/eventEmitter.ts",
+							"line": 69,
+							"character": 14
+						}
+					],
+					"implementationOf": {
+						"type": "reference",
+						"name": "IHook.tap",
+						"id": 30
+					}
+				},
+				{
+					"id": 272,
+					"name": "untap",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isPublic": true,
+						"isExported": true,
+						"isExternal": true
+					},
+					"signatures": [
+						{
+							"id": 273,
+							"name": "untap",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 274,
+									"name": "token",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "TokenType",
+										"id": 40
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							},
+							"implementationOf": {
+								"type": "reference",
+								"name": "IHook.untap",
+								"id": 35
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "baklavajs-core/src/events/eventEmitter.ts",
+							"line": 77,
+							"character": 16
+						}
+					],
+					"implementationOf": {
+						"type": "reference",
+						"name": "IHook.untap",
+						"id": 34
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"kind": 1024,
+					"children": [
+						267
+					]
+				},
+				{
+					"title": "Methods",
+					"kind": 2048,
+					"children": [
+						275,
+						268,
+						272
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "baklavajs-core/src/events/eventEmitter.ts",
+					"line": 64,
+					"character": 26
+				}
+			],
+			"extendedBy": [
+				{
+					"type": "reference",
+					"name": "SequentialHook",
+					"id": 278
+				}
+			],
+			"implementedTypes": [
+				{
+					"type": "reference",
+					"name": "IHook",
+					"id": 27,
+					"typeArguments": [
+						{
+							"type": "typeParameter",
+							"name": "I"
+						},
+						{
+							"type": "typeParameter",
+							"name": "O"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 418,
+			"name": "NodeStep",
+			"kind": 128,
+			"kindString": "Class",
+			"flags": {
+				"isExported": true
+			},
+			"children": [
+				{
+					"id": 420,
+					"name": "constructor",
+					"kind": 512,
+					"kindString": "Constructor",
+					"flags": {
+						"isPublic": true,
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 421,
+							"name": "new NodeStep",
+							"kind": 16384,
+							"kindString": "Constructor signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 422,
+									"name": "type",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "union",
+										"types": [
+											{
+												"type": "stringLiteral",
+												"value": "addNode"
+											},
+											{
+												"type": "stringLiteral",
+												"value": "removeNode"
+											}
+										]
+									}
+								},
+								{
+									"id": 423,
+									"name": "data",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "any"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "NodeStep",
+								"id": 418
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "baklavajs-plugin-renderer-vue/src/history/nodeStep.ts",
+							"line": 9,
+							"character": 35
+						}
+					]
+				},
+				{
+					"id": 419,
+					"name": "type",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isPublic": true,
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-plugin-renderer-vue/src/history/nodeStep.ts",
+							"line": 6,
+							"character": 15
+						}
+					],
+					"type": {
+						"type": "union",
+						"types": [
+							{
+								"type": "stringLiteral",
+								"value": "addNode"
+							},
+							{
+								"type": "stringLiteral",
+								"value": "removeNode"
+							}
+						]
+					},
+					"implementationOf": {
+						"type": "reference",
+						"name": "IStep.type",
+						"id": 399
+					}
+				},
+				{
+					"id": 427,
+					"name": "redo",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isPublic": true,
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 428,
+							"name": "redo",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 429,
+									"name": "editor",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "IEditor",
+										"id": 78
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							},
+							"implementationOf": {
+								"type": "reference",
+								"name": "IStep.redo",
+								"id": 404
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "baklavajs-plugin-renderer-vue/src/history/nodeStep.ts",
+							"line": 28,
+							"character": 15
+						}
+					],
+					"implementationOf": {
+						"type": "reference",
+						"name": "IStep.redo",
+						"id": 403
+					}
+				},
+				{
+					"id": 424,
+					"name": "undo",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isPublic": true,
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 425,
+							"name": "undo",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 426,
+									"name": "editor",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "IEditor",
+										"id": 78
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							},
+							"implementationOf": {
+								"type": "reference",
+								"name": "IStep.undo",
+								"id": 401
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "baklavajs-plugin-renderer-vue/src/history/nodeStep.ts",
+							"line": 20,
+							"character": 15
+						}
+					],
+					"implementationOf": {
+						"type": "reference",
+						"name": "IStep.undo",
+						"id": 400
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Constructors",
+					"kind": 512,
+					"children": [
+						420
+					]
+				},
+				{
+					"title": "Properties",
+					"kind": 1024,
+					"children": [
+						419
+					]
+				},
+				{
+					"title": "Methods",
+					"kind": 2048,
+					"children": [
+						427,
+						424
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "baklavajs-plugin-renderer-vue/src/history/nodeStep.ts",
+					"line": 4,
+					"character": 29
+				}
+			],
+			"implementedTypes": [
+				{
+					"type": "reference",
+					"name": "IStep",
+					"id": 398
+				}
+			]
+		},
+		{
+			"id": 251,
+			"name": "PreventableBaklavaEvent",
+			"kind": 128,
+			"kindString": "Class",
+			"flags": {
+				"isExported": true,
+				"isExternal": true
+			},
+			"comment": {
+				"shortText": "Extension for the [[BaklavaEvent]] class. A listener can return `false` to prevent\nthis event from happening."
+			},
+			"typeParameter": [
+				{
+					"id": 252,
+					"name": "T",
+					"kind": 131072,
+					"kindString": "Type parameter",
+					"flags": {}
+				}
+			],
+			"children": [
+				{
+					"id": 256,
+					"name": "listeners",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isProtected": true,
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/src/events/eventEmitter.ts",
+							"line": 10,
+							"character": 23
+						}
+					],
+					"type": {
+						"type": "reference",
+						"name": "Map",
+						"typeArguments": [
+							{
+								"type": "reference",
+								"name": "TokenType",
+								"id": 40
+							},
+							{
+								"type": "reference",
+								"name": "Listener",
+								"id": 41,
+								"typeArguments": [
+									{
+										"type": "typeParameter",
+										"name": "T"
+									}
+								]
+							}
+						]
+					},
+					"defaultValue": " new Map()",
+					"inheritedFrom": {
+						"type": "reference",
+						"name": "BaklavaEvent.listeners",
+						"id": 240
+					}
+				},
+				{
+					"id": 257,
+					"name": "addListener",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isPublic": true,
+						"isExported": true,
+						"isExternal": true
+					},
+					"signatures": [
+						{
+							"id": 258,
+							"name": "addListener",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"shortText": "Subscribe to the event"
+							},
+							"parameters": [
+								{
+									"id": 259,
+									"name": "token",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"comment": {
+										"text": "A token that can be used to unsubscribe from the event later on"
+									},
+									"type": {
+										"type": "reference",
+										"name": "TokenType",
+										"id": 40
+									}
+								},
+								{
+									"id": 260,
+									"name": "listener",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"comment": {
+										"text": "A callback that will be invoked when the event occurs\n"
+									},
+									"type": {
+										"type": "reference",
+										"name": "Listener",
+										"id": 41,
+										"typeArguments": [
+											{
+												"type": "typeParameter",
+												"name": "T"
+											}
+										]
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "BaklavaEvent.addListener",
+								"id": 241
+							},
+							"implementationOf": {
+								"type": "reference",
+								"name": "IBaklavaEvent.addListener",
+								"id": 6
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "baklavajs-core/src/events/eventEmitter.ts",
+							"line": 17,
+							"character": 22
+						}
+					],
+					"inheritedFrom": {
+						"type": "reference",
+						"name": "BaklavaEvent.addListener",
+						"id": 241
+					},
+					"implementationOf": {
+						"type": "reference",
+						"name": "IBaklavaEvent.addListener",
+						"id": 5
+					}
+				},
+				{
+					"id": 253,
+					"name": "emit",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"signatures": [
+						{
+							"id": 254,
+							"name": "emit",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"shortText": "Invoke all listeners.",
+								"returns": "`true` when one of the listeners requested to prevent the event, otherwise `false`\n"
+							},
+							"parameters": [
+								{
+									"id": 255,
+									"name": "data",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"comment": {
+										"text": "The data to invoke all listeners with"
+									},
+									"type": {
+										"type": "typeParameter",
+										"name": "T"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "boolean"
+							},
+							"overwrites": {
+								"type": "reference",
+								"name": "BaklavaEvent.emit",
+								"id": 248
+							},
+							"implementationOf": {
+								"type": "reference",
+								"name": "IBaklavaEvent.emit",
+								"id": 13
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "baklavajs-core/src/events/eventEmitter.ts",
+							"line": 52,
+							"character": 8
+						}
+					],
+					"overwrites": {
+						"type": "reference",
+						"name": "BaklavaEvent.emit",
+						"id": 248
+					},
+					"implementationOf": {
+						"type": "reference",
+						"name": "IBaklavaEvent.emit",
+						"id": 12
+					}
+				},
+				{
+					"id": 261,
+					"name": "removeListener",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isPublic": true,
+						"isExported": true,
+						"isExternal": true
+					},
+					"signatures": [
+						{
+							"id": 262,
+							"name": "removeListener",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"shortText": "Remove a listener"
+							},
+							"parameters": [
+								{
+									"id": 263,
+									"name": "token",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"comment": {
+										"text": "The token that was specified when subscribing to the listener.\nAn invalid token does not result in an error.\n"
+									},
+									"type": {
+										"type": "reference",
+										"name": "TokenType",
+										"id": 40
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "BaklavaEvent.removeListener",
+								"id": 245
+							},
+							"implementationOf": {
+								"type": "reference",
+								"name": "IBaklavaEvent.removeListener",
+								"id": 10
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "baklavajs-core/src/events/eventEmitter.ts",
+							"line": 26,
+							"character": 25
+						}
+					],
+					"inheritedFrom": {
+						"type": "reference",
+						"name": "BaklavaEvent.removeListener",
+						"id": 245
+					},
+					"implementationOf": {
+						"type": "reference",
+						"name": "IBaklavaEvent.removeListener",
+						"id": 9
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"kind": 1024,
+					"children": [
+						256
+					]
+				},
+				{
+					"title": "Methods",
+					"kind": 2048,
+					"children": [
+						257,
+						253,
+						261
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "baklavajs-core/src/events/eventEmitter.ts",
+					"line": 45,
+					"character": 36
+				}
+			],
+			"extendedTypes": [
+				{
+					"type": "reference",
+					"name": "BaklavaEvent",
+					"id": 238,
+					"typeArguments": [
+						{
+							"type": "typeParameter",
+							"name": "T"
+						}
+					]
+				}
+			],
+			"implementedTypes": [
+				{
+					"type": "reference",
+					"name": "IBaklavaEvent",
+					"id": 3,
+					"typeArguments": [
+						{
+							"type": "typeParameter",
+							"name": "T"
+						}
+					]
+				},
+				{
+					"type": "reference",
+					"name": "IBaklavaEvent",
+					"id": 3,
+					"typeArguments": [
+						{
+							"type": "typeParameter",
+							"name": "T"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 278,
+			"name": "SequentialHook",
+			"kind": 128,
+			"kindString": "Class",
+			"flags": {
+				"isExported": true,
+				"isExternal": true
+			},
+			"comment": {
+				"shortText": "This class will run the taps one after each other and pass the data from every tap to another."
+			},
+			"typeParameter": [
+				{
+					"id": 279,
+					"name": "T",
+					"kind": 131072,
+					"kindString": "Type parameter",
+					"flags": {}
+				},
+				{
+					"id": 283,
+					"name": "O",
+					"kind": 131072,
+					"kindString": "Type parameter",
+					"flags": {}
+				}
+			],
+			"children": [
+				{
+					"id": 284,
+					"name": "taps",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isProtected": true,
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/src/events/eventEmitter.ts",
+							"line": 67,
+							"character": 18
+						}
+					],
+					"type": {
+						"type": "reference",
+						"name": "Array",
+						"typeArguments": [
+							{
+								"type": "reference",
+								"name": "HookTap",
+								"id": 46,
+								"typeArguments": [
+									{
+										"type": "typeParameter",
+										"name": "T"
+									},
+									{
+										"type": "typeParameter",
+										"name": "O"
+									}
+								]
+							}
+						]
+					},
+					"defaultValue": " []",
+					"inheritedFrom": {
+						"type": "reference",
+						"name": "Hook.taps",
+						"id": 267
+					}
+				},
+				{
+					"id": 280,
+					"name": "execute",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isPublic": true,
+						"isExported": true,
+						"isExternal": true
+					},
+					"signatures": [
+						{
+							"id": 281,
+							"name": "execute",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 282,
+									"name": "data",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "typeParameter",
+										"name": "T"
+									}
+								}
+							],
+							"type": {
+								"type": "typeParameter",
+								"name": "T"
+							},
+							"overwrites": {
+								"type": "reference",
+								"name": "Hook.execute",
+								"id": 275
+							},
+							"implementationOf": {
+								"type": "reference",
+								"name": "IHook.execute",
+								"id": 38
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "baklavajs-core/src/events/eventEmitter.ts",
+							"line": 93,
+							"character": 18
+						}
+					],
+					"overwrites": {
+						"type": "reference",
+						"name": "Hook.execute",
+						"id": 275
+					},
+					"implementationOf": {
+						"type": "reference",
+						"name": "IHook.execute",
+						"id": 37
+					}
+				},
+				{
+					"id": 285,
+					"name": "tap",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isPublic": true,
+						"isExported": true,
+						"isExternal": true
+					},
+					"signatures": [
+						{
+							"id": 286,
+							"name": "tap",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 287,
+									"name": "token",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "TokenType",
+										"id": 40
+									}
+								},
+								{
+									"id": 288,
+									"name": "tapFn",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "HookTap",
+										"id": 46,
+										"typeArguments": [
+											{
+												"type": "typeParameter",
+												"name": "T"
+											},
+											{
+												"type": "typeParameter",
+												"name": "O"
+											}
+										]
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "Hook.tap",
+								"id": 268
+							},
+							"implementationOf": {
+								"type": "reference",
+								"name": "IHook.tap",
+								"id": 31
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "baklavajs-core/src/events/eventEmitter.ts",
+							"line": 69,
+							"character": 14
+						}
+					],
+					"inheritedFrom": {
+						"type": "reference",
+						"name": "Hook.tap",
+						"id": 268
+					},
+					"implementationOf": {
+						"type": "reference",
+						"name": "IHook.tap",
+						"id": 30
+					}
+				},
+				{
+					"id": 289,
+					"name": "untap",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isPublic": true,
+						"isExported": true,
+						"isExternal": true
+					},
+					"signatures": [
+						{
+							"id": 290,
+							"name": "untap",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 291,
+									"name": "token",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "TokenType",
+										"id": 40
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "Hook.untap",
+								"id": 272
+							},
+							"implementationOf": {
+								"type": "reference",
+								"name": "IHook.untap",
+								"id": 35
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "baklavajs-core/src/events/eventEmitter.ts",
+							"line": 77,
+							"character": 16
+						}
+					],
+					"inheritedFrom": {
+						"type": "reference",
+						"name": "Hook.untap",
+						"id": 272
+					},
+					"implementationOf": {
+						"type": "reference",
+						"name": "IHook.untap",
+						"id": 34
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"kind": 1024,
+					"children": [
+						284
+					]
+				},
+				{
+					"title": "Methods",
+					"kind": 2048,
+					"children": [
+						280,
+						285,
+						289
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "baklavajs-core/src/events/eventEmitter.ts",
+					"line": 91,
+					"character": 27
+				}
+			],
+			"extendedTypes": [
+				{
+					"type": "reference",
+					"name": "Hook",
+					"id": 264,
+					"typeArguments": [
+						{
+							"type": "typeParameter",
+							"name": "T"
+						}
+					]
+				}
+			],
+			"implementedTypes": [
+				{
+					"type": "reference",
+					"name": "IHook",
+					"id": 27,
+					"typeArguments": [
+						{
+							"type": "typeParameter",
+							"name": "T"
+						},
+						{
+							"type": "typeParameter",
+							"name": "O"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 357,
+			"name": "ViewPlugin",
+			"kind": 128,
+			"kindString": "Class",
+			"flags": {
+				"isExported": true
+			},
+			"children": [
+				{
+					"id": 359,
+					"name": "editor",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isPublic": true,
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-plugin-renderer-vue/src/viewPlugin.ts",
+							"line": 18,
+							"character": 17
+						}
+					],
+					"type": {
+						"type": "reference",
+						"name": "IEditor",
+						"id": 78
+					},
+					"implementationOf": {
+						"type": "reference",
+						"name": "IViewPlugin.editor",
+						"id": 340
+					}
+				},
+				{
+					"id": 368,
+					"name": "options",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isPublic": true,
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-plugin-renderer-vue/src/viewPlugin.ts",
+							"line": 23,
+							"character": 18
+						}
+					],
+					"type": {
+						"type": "reference",
+						"name": "Record",
+						"typeArguments": [
+							{
+								"type": "intrinsic",
+								"name": "string"
+							},
+							{
+								"type": "reference",
+								"name": "VueConstructor"
+							}
+						]
+					},
+					"implementationOf": {
+						"type": "reference",
+						"name": "IViewPlugin.options",
+						"id": 346
+					}
+				},
+				{
+					"id": 363,
+					"name": "scaling",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isPublic": true,
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-plugin-renderer-vue/src/viewPlugin.ts",
+							"line": 20,
+							"character": 18
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "number"
+					},
+					"defaultValue": "1",
+					"implementationOf": {
+						"type": "reference",
+						"name": "IViewPlugin.scaling",
+						"id": 343
+					}
+				},
+				{
+					"id": 358,
+					"name": "type",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isPublic": true,
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-plugin-renderer-vue/src/viewPlugin.ts",
+							"line": 17,
+							"character": 15
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					},
+					"defaultValue": "\"ViewPlugin\"",
+					"implementationOf": {
+						"type": "reference",
+						"name": "IViewPlugin.type",
+						"id": 353
+					}
+				},
+				{
+					"id": 382,
+					"name": "register",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isPublic": true,
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 383,
+							"name": "register",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 384,
+									"name": "editor",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "IEditor",
+										"id": 78
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							},
+							"implementationOf": {
+								"type": "reference",
+								"name": "IViewPlugin.register",
+								"id": 355
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "baklavajs-plugin-renderer-vue/src/viewPlugin.ts",
+							"line": 43,
+							"character": 19
+						}
+					],
+					"implementationOf": {
+						"type": "reference",
+						"name": "IViewPlugin.register",
+						"id": 354
+					}
+				},
+				{
+					"id": 385,
+					"name": "registerOption",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isPublic": true,
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 386,
+							"name": "registerOption",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 387,
+									"name": "name",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 388,
+									"name": "component",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "VueConstructor"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "baklavajs-plugin-renderer-vue/src/viewPlugin.ts",
+							"line": 76,
+							"character": 25
+						}
+					],
+					"implementationOf": {
+						"type": "reference",
+						"name": "IViewPlugin.registerOption",
+						"id": 349
+					}
+				},
+				{
+					"id": 374,
+					"name": "components",
+					"kind": 2097152,
+					"kindString": "Object literal",
+					"flags": {
+						"isPublic": true,
+						"isExported": true
+					},
+					"children": [
+						{
+							"id": 378,
+							"name": "connection",
+							"kind": 32,
+							"kindString": "Variable",
+							"flags": {
+								"isExported": true
+							},
+							"sources": [
+								{
+									"fileName": "baklavajs-plugin-renderer-vue/src/viewPlugin.ts",
+									"line": 37,
+									"character": 18
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "VueConstructor",
+								"typeArguments": [
+									{
+										"type": "reference",
+										"name": "Vue"
+									}
+								]
+							},
+							"defaultValue": " ConnectionWrapper"
+						},
+						{
+							"id": 380,
+							"name": "contextMenu",
+							"kind": 32,
+							"kindString": "Variable",
+							"flags": {
+								"isExported": true
+							},
+							"sources": [
+								{
+									"fileName": "baklavajs-plugin-renderer-vue/src/viewPlugin.ts",
+									"line": 39,
+									"character": 19
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "VueConstructor",
+								"typeArguments": [
+									{
+										"type": "reference",
+										"name": "Vue"
+									}
+								]
+							},
+							"defaultValue": " ContextMenu"
+						},
+						{
+							"id": 375,
+							"name": "node",
+							"kind": 32,
+							"kindString": "Variable",
+							"flags": {
+								"isExported": true
+							},
+							"sources": [
+								{
+									"fileName": "baklavajs-plugin-renderer-vue/src/viewPlugin.ts",
+									"line": 34,
+									"character": 12
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "VueConstructor",
+								"typeArguments": [
+									{
+										"type": "reference",
+										"name": "Vue"
+									}
+								]
+							},
+							"defaultValue": " NodeView"
+						},
+						{
+							"id": 377,
+							"name": "nodeInterface",
+							"kind": 32,
+							"kindString": "Variable",
+							"flags": {
+								"isExported": true
+							},
+							"sources": [
+								{
+									"fileName": "baklavajs-plugin-renderer-vue/src/viewPlugin.ts",
+									"line": 36,
+									"character": 21
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "VueConstructor",
+								"typeArguments": [
+									{
+										"type": "reference",
+										"name": "Vue"
+									}
+								]
+							},
+							"defaultValue": " NodeInterfaceView"
+						},
+						{
+							"id": 376,
+							"name": "nodeOption",
+							"kind": 32,
+							"kindString": "Variable",
+							"flags": {
+								"isExported": true
+							},
+							"sources": [
+								{
+									"fileName": "baklavajs-plugin-renderer-vue/src/viewPlugin.ts",
+									"line": 35,
+									"character": 18
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "VueConstructor",
+								"typeArguments": [
+									{
+										"type": "reference",
+										"name": "Vue"
+									}
+								]
+							},
+							"defaultValue": " NodeOptionView"
+						},
+						{
+							"id": 381,
+							"name": "sidebar",
+							"kind": 32,
+							"kindString": "Variable",
+							"flags": {
+								"isExported": true
+							},
+							"sources": [
+								{
+									"fileName": "baklavajs-plugin-renderer-vue/src/viewPlugin.ts",
+									"line": 40,
+									"character": 15
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "VueConstructor",
+								"typeArguments": [
+									{
+										"type": "reference",
+										"name": "Vue"
+									}
+								]
+							},
+							"defaultValue": " Sidebar"
+						},
+						{
+							"id": 379,
+							"name": "tempConnection",
+							"kind": 32,
+							"kindString": "Variable",
+							"flags": {
+								"isExported": true
+							},
+							"sources": [
+								{
+									"fileName": "baklavajs-plugin-renderer-vue/src/viewPlugin.ts",
+									"line": 38,
+									"character": 22
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "VueConstructor",
+								"typeArguments": [
+									{
+										"type": "reference",
+										"name": "Vue"
+									}
+								]
+							},
+							"defaultValue": " TempConnectionView"
+						}
+					],
+					"groups": [
+						{
+							"title": "Variables",
+							"kind": 32,
+							"children": [
+								378,
+								380,
+								375,
+								377,
+								376,
+								381,
+								379
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "baklavajs-plugin-renderer-vue/src/viewPlugin.ts",
+							"line": 33,
+							"character": 21
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "object"
+					}
+				},
+				{
+					"id": 369,
+					"name": "hooks",
+					"kind": 2097152,
+					"kindString": "Object literal",
+					"flags": {
+						"isPublic": true,
+						"isExported": true
+					},
+					"children": [
+						{
+							"id": 373,
+							"name": "renderConnection",
+							"kind": 32,
+							"kindString": "Variable",
+							"flags": {
+								"isExported": true
+							},
+							"sources": [
+								{
+									"fileName": "baklavajs-plugin-renderer-vue/src/viewPlugin.ts",
+									"line": 30,
+									"character": 24
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "SequentialHook",
+								"id": 278,
+								"typeArguments": [
+									{
+										"type": "reference",
+										"name": "Vue"
+									}
+								]
+							},
+							"defaultValue": " new SequentialHook<ConnectionView>()"
+						},
+						{
+							"id": 372,
+							"name": "renderInterface",
+							"kind": 32,
+							"kindString": "Variable",
+							"flags": {
+								"isExported": true
+							},
+							"sources": [
+								{
+									"fileName": "baklavajs-plugin-renderer-vue/src/viewPlugin.ts",
+									"line": 29,
+									"character": 23
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "SequentialHook",
+								"id": 278,
+								"typeArguments": [
+									{
+										"type": "reference",
+										"name": "Vue"
+									}
+								]
+							},
+							"defaultValue": " new SequentialHook<NodeInterfaceView>()"
+						},
+						{
+							"id": 370,
+							"name": "renderNode",
+							"kind": 32,
+							"kindString": "Variable",
+							"flags": {
+								"isExported": true
+							},
+							"comment": {
+								"shortText": "Called whenever a node is rendered"
+							},
+							"sources": [
+								{
+									"fileName": "baklavajs-plugin-renderer-vue/src/viewPlugin.ts",
+									"line": 27,
+									"character": 18
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "SequentialHook",
+								"id": 278,
+								"typeArguments": [
+									{
+										"type": "reference",
+										"name": "Vue"
+									}
+								]
+							},
+							"defaultValue": " new SequentialHook<NodeView>()"
+						},
+						{
+							"id": 371,
+							"name": "renderOption",
+							"kind": 32,
+							"kindString": "Variable",
+							"flags": {
+								"isExported": true
+							},
+							"sources": [
+								{
+									"fileName": "baklavajs-plugin-renderer-vue/src/viewPlugin.ts",
+									"line": 28,
+									"character": 20
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "SequentialHook",
+								"id": 278,
+								"typeArguments": [
+									{
+										"type": "reference",
+										"name": "Vue"
+									}
+								]
+							},
+							"defaultValue": " new SequentialHook<NodeOptionView>()"
+						}
+					],
+					"groups": [
+						{
+							"title": "Variables",
+							"kind": 32,
+							"children": [
+								373,
+								372,
+								370,
+								371
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "baklavajs-plugin-renderer-vue/src/viewPlugin.ts",
+							"line": 25,
+							"character": 16
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "object"
+					},
+					"implementationOf": {
+						"type": "reference",
+						"name": "IViewPlugin.hooks",
+						"id": 347
+					}
+				},
+				{
+					"id": 360,
+					"name": "panning",
+					"kind": 2097152,
+					"kindString": "Object literal",
+					"flags": {
+						"isPublic": true,
+						"isExported": true
+					},
+					"children": [
+						{
+							"id": 361,
+							"name": "x",
+							"kind": 32,
+							"kindString": "Variable",
+							"flags": {
+								"isExported": true
+							},
+							"sources": [
+								{
+									"fileName": "baklavajs-plugin-renderer-vue/src/viewPlugin.ts",
+									"line": 19,
+									"character": 24
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "number"
+							},
+							"defaultValue": "0"
+						},
+						{
+							"id": 362,
+							"name": "y",
+							"kind": 32,
+							"kindString": "Variable",
+							"flags": {
+								"isExported": true
+							},
+							"sources": [
+								{
+									"fileName": "baklavajs-plugin-renderer-vue/src/viewPlugin.ts",
+									"line": 19,
+									"character": 30
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "number"
+							},
+							"defaultValue": "0"
+						}
+					],
+					"groups": [
+						{
+							"title": "Variables",
+							"kind": 32,
+							"children": [
+								361,
+								362
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "baklavajs-plugin-renderer-vue/src/viewPlugin.ts",
+							"line": 19,
+							"character": 18
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "object"
+					},
+					"implementationOf": {
+						"type": "reference",
+						"name": "IViewPlugin.panning",
+						"id": 341
+					}
+				},
+				{
+					"id": 364,
+					"name": "sidebar",
+					"kind": 2097152,
+					"kindString": "Object literal",
+					"flags": {
+						"isPublic": true,
+						"isExported": true
+					},
+					"children": [
+						{
+							"id": 366,
+							"name": "nodeId",
+							"kind": 32,
+							"kindString": "Variable",
+							"flags": {
+								"isExported": true
+							},
+							"sources": [
+								{
+									"fileName": "baklavajs-plugin-renderer-vue/src/viewPlugin.ts",
+									"line": 21,
+									"character": 45
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							},
+							"defaultValue": "\"\""
+						},
+						{
+							"id": 367,
+							"name": "optionName",
+							"kind": 32,
+							"kindString": "Variable",
+							"flags": {
+								"isExported": true
+							},
+							"sources": [
+								{
+									"fileName": "baklavajs-plugin-renderer-vue/src/viewPlugin.ts",
+									"line": 21,
+									"character": 61
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							},
+							"defaultValue": "\"\""
+						},
+						{
+							"id": 365,
+							"name": "visible",
+							"kind": 32,
+							"kindString": "Variable",
+							"flags": {
+								"isExported": true
+							},
+							"sources": [
+								{
+									"fileName": "baklavajs-plugin-renderer-vue/src/viewPlugin.ts",
+									"line": 21,
+									"character": 30
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "boolean"
+							},
+							"defaultValue": "false"
+						}
+					],
+					"groups": [
+						{
+							"title": "Variables",
+							"kind": 32,
+							"children": [
+								366,
+								367,
+								365
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "baklavajs-plugin-renderer-vue/src/viewPlugin.ts",
+							"line": 21,
+							"character": 18
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "object"
+					},
+					"implementationOf": {
+						"type": "reference",
+						"name": "IViewPlugin.sidebar",
+						"id": 344
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"kind": 1024,
+					"children": [
+						359,
+						368,
+						363,
+						358
+					]
+				},
+				{
+					"title": "Methods",
+					"kind": 2048,
+					"children": [
+						382,
+						385
+					]
+				},
+				{
+					"title": "Object literals",
+					"kind": 2097152,
+					"children": [
+						374,
+						369,
+						360,
+						364
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "baklavajs-plugin-renderer-vue/src/viewPlugin.ts",
+					"line": 15,
+					"character": 23
+				}
+			],
+			"implementedTypes": [
+				{
+					"type": "reference",
+					"name": "IPlugin",
+					"id": 52
+				},
+				{
+					"type": "reference",
+					"name": "IViewPlugin",
+					"id": 339
+				}
+			]
+		},
+		{
+			"id": 132,
+			"name": "IAddConnectionEventData",
+			"kind": 256,
+			"kindString": "Interface",
+			"flags": {
+				"isExported": true,
+				"isExternal": true
+			},
+			"children": [
+				{
+					"id": 133,
+					"name": "from",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/eventDataTypes.ts",
+							"line": 7,
+							"character": 8
+						}
+					],
+					"type": {
+						"type": "reference",
+						"name": "INodeInterface",
+						"id": 189
+					}
+				},
+				{
+					"id": 134,
+					"name": "to",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/eventDataTypes.ts",
+							"line": 8,
+							"character": 6
+						}
+					],
+					"type": {
+						"type": "reference",
+						"name": "INodeInterface",
+						"id": 189
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"kind": 1024,
+					"children": [
+						133,
+						134
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "baklavajs-core/types/eventDataTypes.ts",
+					"line": 6,
+					"character": 40
+				}
+			]
+		},
+		{
+			"id": 139,
+			"name": "IAddInterfaceEventData",
+			"kind": 256,
+			"kindString": "Interface",
+			"flags": {
+				"isExported": true,
+				"isExternal": true
+			},
+			"children": [
+				{
+					"id": 143,
+					"name": "defaultValue",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true,
+						"isOptional": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/eventDataTypes.ts",
+							"line": 22,
+							"character": 16
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "any"
+					}
+				},
+				{
+					"id": 141,
+					"name": "isInput",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/eventDataTypes.ts",
+							"line": 20,
+							"character": 11
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "boolean"
+					}
+				},
+				{
+					"id": 140,
+					"name": "name",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/eventDataTypes.ts",
+							"line": 19,
+							"character": 8
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 142,
+					"name": "option",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true,
+						"isOptional": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/eventDataTypes.ts",
+							"line": 21,
+							"character": 10
+						}
+					],
+					"type": {
+						"type": "union",
+						"types": [
+							{
+								"type": "intrinsic",
+								"name": "undefined"
+							},
+							{
+								"type": "intrinsic",
+								"name": "string"
+							}
+						]
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"kind": 1024,
+					"children": [
+						143,
+						141,
+						140,
+						142
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "baklavajs-core/types/eventDataTypes.ts",
+					"line": 18,
+					"character": 39
+				}
+			]
+		},
+		{
+			"id": 135,
+			"name": "IAddNodeTypeEventData",
+			"kind": 256,
+			"kindString": "Interface",
+			"flags": {
+				"isExported": true,
+				"isExternal": true
+			},
+			"children": [
+				{
+					"id": 138,
+					"name": "category",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/eventDataTypes.ts",
+							"line": 14,
+							"character": 12
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 137,
+					"name": "type",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/eventDataTypes.ts",
+							"line": 13,
+							"character": 8
+						}
+					],
+					"type": {
+						"type": "reference",
+						"name": "NodeConstructor",
+						"id": 124
+					}
+				},
+				{
+					"id": 136,
+					"name": "typeName",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/eventDataTypes.ts",
+							"line": 12,
+							"character": 12
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"kind": 1024,
+					"children": [
+						138,
+						137,
+						136
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "baklavajs-core/types/eventDataTypes.ts",
+					"line": 11,
+					"character": 38
+				}
+			]
+		},
+		{
+			"id": 144,
+			"name": "IAddOptionEventData",
+			"kind": 256,
+			"kindString": "Interface",
+			"flags": {
+				"isExported": true,
+				"isExternal": true
+			},
+			"children": [
+				{
+					"id": 146,
+					"name": "component",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/eventDataTypes.ts",
+							"line": 27,
+							"character": 13
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 147,
+					"name": "defaultValue",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/eventDataTypes.ts",
+							"line": 28,
+							"character": 16
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "any"
+					}
+				},
+				{
+					"id": 145,
+					"name": "name",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/eventDataTypes.ts",
+							"line": 26,
+							"character": 8
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 148,
+					"name": "sidebarComponent",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true,
+						"isOptional": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/eventDataTypes.ts",
+							"line": 29,
+							"character": 20
+						}
+					],
+					"type": {
+						"type": "union",
+						"types": [
+							{
+								"type": "intrinsic",
+								"name": "undefined"
+							},
+							{
+								"type": "intrinsic",
+								"name": "string"
+							}
+						]
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"kind": 1024,
+					"children": [
+						146,
+						147,
+						145,
+						148
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "baklavajs-core/types/eventDataTypes.ts",
+					"line": 25,
+					"character": 36
+				}
+			]
+		},
+		{
+			"id": 3,
+			"name": "IBaklavaEvent",
+			"kind": 256,
+			"kindString": "Interface",
+			"flags": {
+				"isExported": true,
+				"isExternal": true
+			},
+			"typeParameter": [
+				{
+					"id": 4,
+					"name": "T",
+					"kind": 131072,
+					"kindString": "Type parameter",
+					"flags": {}
+				}
+			],
+			"children": [
+				{
+					"id": 5,
+					"name": "addListener",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"signatures": [
+						{
+							"id": 6,
+							"name": "addListener",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 7,
+									"name": "token",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "TokenType",
+										"id": 40
+									}
+								},
+								{
+									"id": 8,
+									"name": "listener",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "Listener",
+										"id": 41,
+										"typeArguments": [
+											{
+												"type": "typeParameter",
+												"name": "T"
+											}
+										]
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/events.ts",
+							"line": 6,
+							"character": 15
+						}
+					]
+				},
+				{
+					"id": 12,
+					"name": "emit",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"signatures": [
+						{
+							"id": 13,
+							"name": "emit",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 14,
+									"name": "data",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "typeParameter",
+										"name": "T"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/events.ts",
+							"line": 8,
+							"character": 8
+						}
+					]
+				},
+				{
+					"id": 9,
+					"name": "removeListener",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"signatures": [
+						{
+							"id": 10,
+							"name": "removeListener",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 11,
+									"name": "token",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "TokenType",
+										"id": 40
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/events.ts",
+							"line": 7,
+							"character": 18
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Methods",
+					"kind": 2048,
+					"children": [
+						5,
+						12,
+						9
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "baklavajs-core/types/events.ts",
+					"line": 5,
+					"character": 30
+				}
+			],
+			"extendedBy": [
+				{
+					"type": "reference",
+					"name": "IPreventableBaklavaEvent",
+					"id": 15
+				}
+			],
+			"implementedBy": [
+				{
+					"type": "reference",
+					"name": "BaklavaEvent",
+					"id": 238
+				},
+				{
+					"type": "reference",
+					"name": "PreventableBaklavaEvent",
+					"id": 251
+				},
+				{
+					"type": "reference",
+					"name": "PreventableBaklavaEvent",
+					"id": 251
+				}
+			]
+		},
+		{
+			"id": 215,
+			"name": "IConnection",
+			"kind": 256,
+			"kindString": "Interface",
+			"flags": {
+				"isExported": true,
+				"isExternal": true
+			},
+			"children": [
+				{
+					"id": 217,
+					"name": "from",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/connection.ts",
+							"line": 19,
+							"character": 8
+						}
+					],
+					"type": {
+						"type": "reference",
+						"name": "INodeInterface",
+						"id": 189
+					}
+				},
+				{
+					"id": 216,
+					"name": "id",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/connection.ts",
+							"line": 18,
+							"character": 6
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 218,
+					"name": "to",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/connection.ts",
+							"line": 20,
+							"character": 6
+						}
+					],
+					"type": {
+						"type": "reference",
+						"name": "INodeInterface",
+						"id": 189
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"kind": 1024,
+					"children": [
+						217,
+						216,
+						218
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "baklavajs-core/types/connection.ts",
+					"line": 17,
+					"character": 28
+				}
+			],
+			"extendedBy": [
+				{
+					"type": "reference",
+					"name": "ITransferConnection",
+					"id": 219
+				}
+			]
+		},
+		{
+			"id": 73,
+			"name": "IConnectionState",
+			"kind": 256,
+			"kindString": "Interface",
+			"flags": {
+				"isExported": true,
+				"isExternal": true
+			},
+			"children": [
+				{
+					"id": 75,
+					"name": "from",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/state.ts",
+							"line": 22,
+							"character": 8
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 74,
+					"name": "id",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/state.ts",
+							"line": 21,
+							"character": 6
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 76,
+					"name": "to",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/state.ts",
+							"line": 23,
+							"character": 6
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"kind": 1024,
+					"children": [
+						75,
+						74,
+						76
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "baklavajs-core/types/state.ts",
+					"line": 20,
+					"character": 33
+				}
+			],
+			"extendedTypes": [
+				{
+					"type": "reflection",
+					"declaration": {
+						"id": 77,
+						"name": "__type",
+						"kind": 65536,
+						"kindString": "Type literal",
+						"flags": {},
+						"sources": [
+							{
+								"fileName": "baklavajs-core/types/state.ts",
+								"line": 20,
+								"character": 41
+							}
+						]
+					}
+				}
+			]
+		},
+		{
+			"id": 78,
+			"name": "IEditor",
+			"kind": 256,
+			"kindString": "Interface",
+			"flags": {
+				"isExported": true,
+				"isExternal": true
+			},
+			"children": [
+				{
+					"id": 84,
+					"name": "connections",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/editor.ts",
+							"line": 35,
+							"character": 24
+						}
+					],
+					"type": {
+						"type": "reference",
+						"name": "ReadonlyArray",
+						"typeArguments": [
+							{
+								"type": "reference",
+								"name": "IConnection",
+								"id": 215
+							}
+						]
+					}
+				},
+				{
+					"id": 79,
+					"name": "events",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/editor.ts",
+							"line": 13,
+							"character": 10
+						}
+					],
+					"type": {
+						"type": "reflection",
+						"declaration": {
+							"id": 80,
+							"name": "__type",
+							"kind": 65536,
+							"kindString": "Type literal",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "baklavajs-core/types/editor.ts",
+									"line": 13,
+									"character": 11
+								}
+							]
+						}
+					}
+				},
+				{
+					"id": 81,
+					"name": "hooks",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/editor.ts",
+							"line": 29,
+							"character": 9
+						}
+					],
+					"type": {
+						"type": "reflection",
+						"declaration": {
+							"id": 82,
+							"name": "__type",
+							"kind": 65536,
+							"kindString": "Type literal",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "baklavajs-core/types/editor.ts",
+									"line": 29,
+									"character": 10
+								}
+							]
+						}
+					}
+				},
+				{
+					"id": 86,
+					"name": "nodeCategories",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/editor.ts",
+							"line": 37,
+							"character": 27
+						}
+					],
+					"type": {
+						"type": "reference",
+						"name": "ReadonlyMap",
+						"typeArguments": [
+							{
+								"type": "intrinsic",
+								"name": "string"
+							},
+							{
+								"type": "array",
+								"elementType": {
+									"type": "intrinsic",
+									"name": "string"
+								}
+							}
+						]
+					}
+				},
+				{
+					"id": 85,
+					"name": "nodeTypes",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/editor.ts",
+							"line": 36,
+							"character": 22
+						}
+					],
+					"type": {
+						"type": "reference",
+						"name": "ReadonlyMap",
+						"typeArguments": [
+							{
+								"type": "intrinsic",
+								"name": "string"
+							},
+							{
+								"type": "reference",
+								"name": "NodeConstructor",
+								"id": 124
+							}
+						]
+					}
+				},
+				{
+					"id": 83,
+					"name": "nodes",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/editor.ts",
+							"line": 34,
+							"character": 18
+						}
+					],
+					"type": {
+						"type": "reference",
+						"name": "ReadonlyArray",
+						"typeArguments": [
+							{
+								"type": "reference",
+								"name": "INode",
+								"id": 156
+							}
+						]
+					}
+				},
+				{
+					"id": 87,
+					"name": "plugins",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/editor.ts",
+							"line": 38,
+							"character": 20
+						}
+					],
+					"type": {
+						"type": "reference",
+						"name": "ReadonlySet",
+						"typeArguments": [
+							{
+								"type": "reference",
+								"name": "IPlugin",
+								"id": 52
+							}
+						]
+					}
+				},
+				{
+					"id": 99,
+					"name": "addConnection",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"signatures": [
+						{
+							"id": 100,
+							"name": "addConnection",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 101,
+									"name": "from",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "INodeInterface",
+										"id": 189
+									}
+								},
+								{
+									"id": 102,
+									"name": "to",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "INodeInterface",
+										"id": 189
+									}
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "reference",
+										"name": "IConnection",
+										"id": 215
+									},
+									{
+										"type": "intrinsic",
+										"name": "undefined"
+									}
+								]
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/editor.ts",
+							"line": 43,
+							"character": 17
+						}
+					]
+				},
+				{
+					"id": 93,
+					"name": "addNode",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"signatures": [
+						{
+							"id": 94,
+							"name": "addNode",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 95,
+									"name": "node",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "INode",
+										"id": 156
+									}
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "reference",
+										"name": "INode",
+										"id": 156
+									},
+									{
+										"type": "intrinsic",
+										"name": "undefined"
+									}
+								]
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/editor.ts",
+							"line": 41,
+							"character": 11
+						}
+					]
+				},
+				{
+					"id": 106,
+					"name": "checkConnection",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"signatures": [
+						{
+							"id": 107,
+							"name": "checkConnection",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 108,
+									"name": "from",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "INodeInterface",
+										"id": 189
+									}
+								},
+								{
+									"id": 109,
+									"name": "to",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "INodeInterface",
+										"id": 189
+									}
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "false"
+									},
+									{
+										"type": "reference",
+										"name": "IConnection",
+										"id": 215
+									}
+								]
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/editor.ts",
+							"line": 45,
+							"character": 19
+						}
+					]
+				},
+				{
+					"id": 121,
+					"name": "findNodeInterface",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"signatures": [
+						{
+							"id": 122,
+							"name": "findNodeInterface",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 123,
+									"name": "id",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "reference",
+										"name": "INodeInterface",
+										"id": 189
+									},
+									{
+										"type": "intrinsic",
+										"name": "undefined"
+									}
+								]
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/editor.ts",
+							"line": 50,
+							"character": 21
+						}
+					]
+				},
+				{
+					"id": 118,
+					"name": "generateId",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"signatures": [
+						{
+							"id": 119,
+							"name": "generateId",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 120,
+									"name": "prefix",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isOptional": true
+									},
+									"type": {
+										"type": "union",
+										"types": [
+											{
+												"type": "intrinsic",
+												"name": "undefined"
+											},
+											{
+												"type": "intrinsic",
+												"name": "string"
+											}
+										]
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/editor.ts",
+							"line": 49,
+							"character": 14
+						}
+					]
+				},
+				{
+					"id": 110,
+					"name": "load",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"signatures": [
+						{
+							"id": 111,
+							"name": "load",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 112,
+									"name": "state",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "IState",
+										"id": 57
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/editor.ts",
+							"line": 46,
+							"character": 8
+						}
+					]
+				},
+				{
+					"id": 88,
+					"name": "registerNodeType",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"signatures": [
+						{
+							"id": 89,
+							"name": "registerNodeType",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 90,
+									"name": "typeName",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 91,
+									"name": "type",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "NodeConstructor",
+										"id": 124
+									}
+								},
+								{
+									"id": 92,
+									"name": "category",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isOptional": true
+									},
+									"type": {
+										"type": "union",
+										"types": [
+											{
+												"type": "intrinsic",
+												"name": "undefined"
+											},
+											{
+												"type": "intrinsic",
+												"name": "string"
+											}
+										]
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/editor.ts",
+							"line": 40,
+							"character": 20
+						}
+					]
+				},
+				{
+					"id": 103,
+					"name": "removeConnection",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"signatures": [
+						{
+							"id": 104,
+							"name": "removeConnection",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 105,
+									"name": "connection",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "IConnection",
+										"id": 215
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/editor.ts",
+							"line": 44,
+							"character": 20
+						}
+					]
+				},
+				{
+					"id": 96,
+					"name": "removeNode",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"signatures": [
+						{
+							"id": 97,
+							"name": "removeNode",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 98,
+									"name": "node",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "INode",
+										"id": 156
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/editor.ts",
+							"line": 42,
+							"character": 14
+						}
+					]
+				},
+				{
+					"id": 113,
+					"name": "save",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"signatures": [
+						{
+							"id": 114,
+							"name": "save",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"type": {
+								"type": "reference",
+								"name": "IState",
+								"id": 57
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/editor.ts",
+							"line": 47,
+							"character": 8
+						}
+					]
+				},
+				{
+					"id": 115,
+					"name": "use",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"signatures": [
+						{
+							"id": 116,
+							"name": "use",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 117,
+									"name": "plugin",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "IPlugin",
+										"id": 52
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "boolean"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/editor.ts",
+							"line": 48,
+							"character": 7
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"kind": 1024,
+					"children": [
+						84,
+						79,
+						81,
+						86,
+						85,
+						83,
+						87
+					]
+				},
+				{
+					"title": "Methods",
+					"kind": 2048,
+					"children": [
+						99,
+						93,
+						106,
+						121,
+						118,
+						110,
+						88,
+						103,
+						96,
+						113,
+						115
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "baklavajs-core/types/editor.ts",
+					"line": 11,
+					"character": 24
+				}
+			]
+		},
+		{
+			"id": 27,
+			"name": "IHook",
+			"kind": 256,
+			"kindString": "Interface",
+			"flags": {
+				"isExported": true,
+				"isExternal": true
+			},
+			"typeParameter": [
+				{
+					"id": 28,
+					"name": "I",
+					"kind": 131072,
+					"kindString": "Type parameter",
+					"flags": {}
+				},
+				{
+					"id": 29,
+					"name": "O",
+					"kind": 131072,
+					"kindString": "Type parameter",
+					"flags": {}
+				}
+			],
+			"children": [
+				{
+					"id": 37,
+					"name": "execute",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"signatures": [
+						{
+							"id": 38,
+							"name": "execute",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 39,
+									"name": "data",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "typeParameter",
+										"name": "I"
+									}
+								}
+							],
+							"type": {
+								"type": "typeParameter",
+								"name": "O"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/events.ts",
+							"line": 18,
+							"character": 11
+						}
+					]
+				},
+				{
+					"id": 30,
+					"name": "tap",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"signatures": [
+						{
+							"id": 31,
+							"name": "tap",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 32,
+									"name": "token",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "TokenType",
+										"id": 40
+									}
+								},
+								{
+									"id": 33,
+									"name": "tapFn",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "HookTap",
+										"id": 46,
+										"typeArguments": [
+											{
+												"type": "typeParameter",
+												"name": "I"
+											},
+											{
+												"type": "typeParameter",
+												"name": "O"
+											}
+										]
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/events.ts",
+							"line": 16,
+							"character": 7
+						}
+					]
+				},
+				{
+					"id": 34,
+					"name": "untap",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"signatures": [
+						{
+							"id": 35,
+							"name": "untap",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 36,
+									"name": "token",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "TokenType",
+										"id": 40
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/events.ts",
+							"line": 17,
+							"character": 9
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Methods",
+					"kind": 2048,
+					"children": [
+						37,
+						30,
+						34
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "baklavajs-core/types/events.ts",
+					"line": 15,
+					"character": 22
+				}
+			],
+			"implementedBy": [
+				{
+					"type": "reference",
+					"name": "Hook",
+					"id": 264
+				},
+				{
+					"type": "reference",
+					"name": "SequentialHook",
+					"id": 278
+				}
+			]
+		},
+		{
+			"id": 69,
+			"name": "IInterfaceState",
+			"kind": 256,
+			"kindString": "Interface",
+			"flags": {
+				"isExported": true,
+				"isExternal": true
+			},
+			"children": [
+				{
+					"id": 70,
+					"name": "id",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/state.ts",
+							"line": 16,
+							"character": 6
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 71,
+					"name": "value",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/state.ts",
+							"line": 17,
+							"character": 9
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "any"
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"kind": 1024,
+					"children": [
+						70,
+						71
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "baklavajs-core/types/state.ts",
+					"line": 15,
+					"character": 32
+				}
+			],
+			"extendedTypes": [
+				{
+					"type": "reflection",
+					"declaration": {
+						"id": 72,
+						"name": "__type",
+						"kind": 65536,
+						"kindString": "Type literal",
+						"flags": {},
+						"sources": [
+							{
+								"fileName": "baklavajs-core/types/state.ts",
+								"line": 15,
+								"character": 40
+							}
+						]
+					}
+				}
+			]
+		},
+		{
+			"id": 156,
+			"name": "INode",
+			"kind": 256,
+			"kindString": "Interface",
+			"flags": {
+				"isExported": true,
+				"isExternal": true
+			},
+			"children": [
+				{
+					"id": 163,
+					"name": "events",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/node.ts",
+							"line": 17,
+							"character": 10
+						}
+					],
+					"type": {
+						"type": "reflection",
+						"declaration": {
+							"id": 164,
+							"name": "__type",
+							"kind": 65536,
+							"kindString": "Type literal",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "baklavajs-core/types/node.ts",
+									"line": 17,
+									"character": 11
+								}
+							]
+						}
+					}
+				},
+				{
+					"id": 165,
+					"name": "hooks",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/node.ts",
+							"line": 29,
+							"character": 9
+						}
+					],
+					"type": {
+						"type": "reflection",
+						"declaration": {
+							"id": 166,
+							"name": "__type",
+							"kind": 65536,
+							"kindString": "Type literal",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "baklavajs-core/types/node.ts",
+									"line": 29,
+									"character": 10
+								}
+							]
+						}
+					}
+				},
+				{
+					"id": 159,
+					"name": "id",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/node.ts",
+							"line": 12,
+							"character": 6
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 167,
+					"name": "inputInterfaces",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/node.ts",
+							"line": 34,
+							"character": 19
+						}
+					],
+					"type": {
+						"type": "reference",
+						"name": "Record",
+						"typeArguments": [
+							{
+								"type": "intrinsic",
+								"name": "string"
+							},
+							{
+								"type": "reference",
+								"name": "INodeInterface",
+								"id": 189
+							}
+						]
+					}
+				},
+				{
+					"id": 160,
+					"name": "interfaces",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/node.ts",
+							"line": 13,
+							"character": 14
+						}
+					],
+					"type": {
+						"type": "reference",
+						"name": "Map",
+						"typeArguments": [
+							{
+								"type": "intrinsic",
+								"name": "string"
+							},
+							{
+								"type": "reference",
+								"name": "INodeInterface",
+								"id": 189
+							}
+						]
+					}
+				},
+				{
+					"id": 158,
+					"name": "name",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/node.ts",
+							"line": 11,
+							"character": 8
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 161,
+					"name": "options",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/node.ts",
+							"line": 14,
+							"character": 11
+						}
+					],
+					"type": {
+						"type": "reference",
+						"name": "Map",
+						"typeArguments": [
+							{
+								"type": "intrinsic",
+								"name": "string"
+							},
+							{
+								"type": "reference",
+								"name": "INodeOption",
+								"id": 126
+							}
+						]
+					}
+				},
+				{
+					"id": 168,
+					"name": "outputInterfaces",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/node.ts",
+							"line": 35,
+							"character": 20
+						}
+					],
+					"type": {
+						"type": "reference",
+						"name": "Record",
+						"typeArguments": [
+							{
+								"type": "intrinsic",
+								"name": "string"
+							},
+							{
+								"type": "reference",
+								"name": "INodeInterface",
+								"id": 189
+							}
+						]
+					}
+				},
+				{
+					"id": 162,
+					"name": "state",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/node.ts",
+							"line": 15,
+							"character": 9
+						}
+					],
+					"type": {
+						"type": "reference",
+						"name": "Record",
+						"typeArguments": [
+							{
+								"type": "intrinsic",
+								"name": "string"
+							},
+							{
+								"type": "intrinsic",
+								"name": "any"
+							}
+						]
+					}
+				},
+				{
+					"id": 157,
+					"name": "type",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/node.ts",
+							"line": 10,
+							"character": 8
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 174,
+					"name": "calculate",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"signatures": [
+						{
+							"id": 175,
+							"name": "calculate",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "any"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/node.ts",
+							"line": 39,
+							"character": 13
+						}
+					]
+				},
+				{
+					"id": 176,
+					"name": "getInterface",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"signatures": [
+						{
+							"id": 177,
+							"name": "getInterface",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 178,
+									"name": "name",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "INodeInterface",
+								"id": 189
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/node.ts",
+							"line": 40,
+							"character": 16
+						}
+					]
+				},
+				{
+					"id": 179,
+					"name": "getOptionValue",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"signatures": [
+						{
+							"id": 180,
+							"name": "getOptionValue",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 181,
+									"name": "name",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "any"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/node.ts",
+							"line": 41,
+							"character": 18
+						}
+					]
+				},
+				{
+					"id": 169,
+					"name": "load",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"signatures": [
+						{
+							"id": 170,
+							"name": "load",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 171,
+									"name": "state",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "INodeState",
+										"id": 61
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/node.ts",
+							"line": 37,
+							"character": 8
+						}
+					]
+				},
+				{
+					"id": 186,
+					"name": "registerEditor",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"signatures": [
+						{
+							"id": 187,
+							"name": "registerEditor",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 188,
+									"name": "editor",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "IEditor",
+										"id": 78
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/node.ts",
+							"line": 43,
+							"character": 18
+						}
+					]
+				},
+				{
+					"id": 172,
+					"name": "save",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"signatures": [
+						{
+							"id": 173,
+							"name": "save",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"type": {
+								"type": "reference",
+								"name": "INodeState",
+								"id": 61
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/node.ts",
+							"line": 38,
+							"character": 8
+						}
+					]
+				},
+				{
+					"id": 182,
+					"name": "setOptionValue",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"signatures": [
+						{
+							"id": 183,
+							"name": "setOptionValue",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 184,
+									"name": "name",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 185,
+									"name": "value",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "any"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/node.ts",
+							"line": 42,
+							"character": 18
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"kind": 1024,
+					"children": [
+						163,
+						165,
+						159,
+						167,
+						160,
+						158,
+						161,
+						168,
+						162,
+						157
+					]
+				},
+				{
+					"title": "Methods",
+					"kind": 2048,
+					"children": [
+						174,
+						176,
+						179,
+						169,
+						186,
+						172,
+						182
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "baklavajs-core/types/node.ts",
+					"line": 8,
+					"character": 22
+				}
+			],
+			"extendedBy": [
+				{
+					"type": "reference",
+					"name": "IViewNode",
+					"id": 301
+				}
+			]
+		},
+		{
+			"id": 189,
+			"name": "INodeInterface",
+			"kind": 256,
+			"kindString": "Interface",
+			"flags": {
+				"isExported": true,
+				"isExternal": true
+			},
+			"children": [
+				{
+					"id": 198,
+					"name": "connectionCount",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/nodeInterface.ts",
+							"line": 23,
+							"character": 19
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "number"
+					}
+				},
+				{
+					"id": 194,
+					"name": "events",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/nodeInterface.ts",
+							"line": 12,
+							"character": 10
+						}
+					],
+					"type": {
+						"type": "reflection",
+						"declaration": {
+							"id": 195,
+							"name": "__type",
+							"kind": 65536,
+							"kindString": "Type literal",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "baklavajs-core/types/nodeInterface.ts",
+									"line": 12,
+									"character": 11
+								}
+							]
+						}
+					}
+				},
+				{
+					"id": 196,
+					"name": "hooks",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/nodeInterface.ts",
+							"line": 18,
+							"character": 9
+						}
+					],
+					"type": {
+						"type": "reflection",
+						"declaration": {
+							"id": 197,
+							"name": "__type",
+							"kind": 65536,
+							"kindString": "Type literal",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "baklavajs-core/types/nodeInterface.ts",
+									"line": 18,
+									"character": 10
+								}
+							]
+						}
+					}
+				},
+				{
+					"id": 190,
+					"name": "id",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/nodeInterface.ts",
+							"line": 7,
+							"character": 6
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 191,
+					"name": "isInput",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/nodeInterface.ts",
+							"line": 8,
+							"character": 11
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "boolean"
+					}
+				},
+				{
+					"id": 193,
+					"name": "option",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true,
+						"isOptional": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/nodeInterface.ts",
+							"line": 10,
+							"character": 10
+						}
+					],
+					"type": {
+						"type": "union",
+						"types": [
+							{
+								"type": "intrinsic",
+								"name": "undefined"
+							},
+							{
+								"type": "intrinsic",
+								"name": "string"
+							}
+						]
+					}
+				},
+				{
+					"id": 192,
+					"name": "parent",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/nodeInterface.ts",
+							"line": 9,
+							"character": 10
+						}
+					],
+					"type": {
+						"type": "reference",
+						"name": "INode",
+						"id": 156
+					}
+				},
+				{
+					"id": 199,
+					"name": "value",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/nodeInterface.ts",
+							"line": 24,
+							"character": 9
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "any"
+					}
+				},
+				{
+					"id": 200,
+					"name": "load",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"signatures": [
+						{
+							"id": 201,
+							"name": "load",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 202,
+									"name": "state",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "IInterfaceState",
+										"id": 69
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/nodeInterface.ts",
+							"line": 26,
+							"character": 8
+						}
+					]
+				},
+				{
+					"id": 203,
+					"name": "save",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"signatures": [
+						{
+							"id": 204,
+							"name": "save",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"type": {
+								"type": "reference",
+								"name": "IInterfaceState",
+								"id": 69
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/nodeInterface.ts",
+							"line": 27,
+							"character": 8
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"kind": 1024,
+					"children": [
+						198,
+						194,
+						196,
+						190,
+						191,
+						193,
+						192,
+						199
+					]
+				},
+				{
+					"title": "Methods",
+					"kind": 2048,
+					"children": [
+						200,
+						203
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "baklavajs-core/types/nodeInterface.ts",
+					"line": 5,
+					"character": 31
+				}
+			]
+		},
+		{
+			"id": 126,
+			"name": "INodeOption",
+			"kind": 256,
+			"kindString": "Interface",
+			"flags": {
+				"isExported": true,
+				"isExternal": true
+			},
+			"children": [
+				{
+					"id": 130,
+					"name": "events",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/nodeOption.ts",
+							"line": 8,
+							"character": 10
+						}
+					],
+					"type": {
+						"type": "reflection",
+						"declaration": {
+							"id": 131,
+							"name": "__type",
+							"kind": 65536,
+							"kindString": "Type literal",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "baklavajs-core/types/nodeOption.ts",
+									"line": 8,
+									"character": 11
+								}
+							]
+						}
+					}
+				},
+				{
+					"id": 127,
+					"name": "optionComponent",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/nodeOption.ts",
+							"line": 4,
+							"character": 19
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 129,
+					"name": "sidebarComponent",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true,
+						"isOptional": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/nodeOption.ts",
+							"line": 6,
+							"character": 20
+						}
+					],
+					"type": {
+						"type": "union",
+						"types": [
+							{
+								"type": "intrinsic",
+								"name": "undefined"
+							},
+							{
+								"type": "intrinsic",
+								"name": "string"
+							}
+						]
+					}
+				},
+				{
+					"id": 128,
+					"name": "value",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/nodeOption.ts",
+							"line": 5,
+							"character": 9
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "any"
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"kind": 1024,
+					"children": [
+						130,
+						127,
+						129,
+						128
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "baklavajs-core/types/nodeOption.ts",
+					"line": 3,
+					"character": 28
+				}
+			]
+		},
+		{
+			"id": 61,
+			"name": "INodeState",
+			"kind": 256,
+			"kindString": "Interface",
+			"flags": {
+				"isExported": true,
+				"isExternal": true
+			},
+			"children": [
+				{
+					"id": 64,
+					"name": "id",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/state.ts",
+							"line": 9,
+							"character": 6
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 65,
+					"name": "interfaces",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/state.ts",
+							"line": 10,
+							"character": 14
+						}
+					],
+					"type": {
+						"type": "reference",
+						"name": "Array",
+						"typeArguments": [
+							{
+								"type": "tuple",
+								"elements": [
+									{
+										"type": "intrinsic",
+										"name": "string"
+									},
+									{
+										"type": "reference",
+										"name": "IInterfaceState",
+										"id": 69
+									}
+								]
+							}
+						]
+					}
+				},
+				{
+					"id": 63,
+					"name": "name",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/state.ts",
+							"line": 8,
+							"character": 8
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 66,
+					"name": "options",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/state.ts",
+							"line": 11,
+							"character": 11
+						}
+					],
+					"type": {
+						"type": "reference",
+						"name": "Array",
+						"typeArguments": [
+							{
+								"type": "tuple",
+								"elements": [
+									{
+										"type": "intrinsic",
+										"name": "string"
+									},
+									{
+										"type": "intrinsic",
+										"name": "any"
+									}
+								]
+							}
+						]
+					}
+				},
+				{
+					"id": 67,
+					"name": "state",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/state.ts",
+							"line": 12,
+							"character": 9
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "any"
+					}
+				},
+				{
+					"id": 62,
+					"name": "type",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/state.ts",
+							"line": 7,
+							"character": 8
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"kind": 1024,
+					"children": [
+						64,
+						65,
+						63,
+						66,
+						67,
+						62
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "baklavajs-core/types/state.ts",
+					"line": 6,
+					"character": 27
+				}
+			],
+			"extendedTypes": [
+				{
+					"type": "reflection",
+					"declaration": {
+						"id": 68,
+						"name": "__type",
+						"kind": 65536,
+						"kindString": "Type literal",
+						"flags": {},
+						"sources": [
+							{
+								"fileName": "baklavajs-core/types/state.ts",
+								"line": 6,
+								"character": 35
+							}
+						]
+					}
+				}
+			]
+		},
+		{
+			"id": 152,
+			"name": "INodeUpdateEventData",
+			"kind": 256,
+			"kindString": "Interface",
+			"flags": {
+				"isExported": true,
+				"isExternal": true
+			},
+			"children": [
+				{
+					"id": 155,
+					"name": "interface",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true,
+						"isOptional": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/eventDataTypes.ts",
+							"line": 40,
+							"character": 13
+						}
+					],
+					"type": {
+						"type": "reference",
+						"name": "INodeInterface",
+						"id": 189
+					}
+				},
+				{
+					"id": 153,
+					"name": "name",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/eventDataTypes.ts",
+							"line": 38,
+							"character": 8
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 154,
+					"name": "option",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true,
+						"isOptional": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/eventDataTypes.ts",
+							"line": 39,
+							"character": 10
+						}
+					],
+					"type": {
+						"type": "reference",
+						"name": "INodeOption",
+						"id": 126
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"kind": 1024,
+					"children": [
+						155,
+						153,
+						154
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "baklavajs-core/types/eventDataTypes.ts",
+					"line": 37,
+					"character": 37
+				}
+			]
+		},
+		{
+			"id": 149,
+			"name": "IOptionEventData",
+			"kind": 256,
+			"kindString": "Interface",
+			"flags": {
+				"isExported": true,
+				"isExternal": true
+			},
+			"children": [
+				{
+					"id": 150,
+					"name": "name",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/eventDataTypes.ts",
+							"line": 33,
+							"character": 8
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 151,
+					"name": "option",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/eventDataTypes.ts",
+							"line": 34,
+							"character": 10
+						}
+					],
+					"type": {
+						"type": "reference",
+						"name": "INodeOption",
+						"id": 126
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"kind": 1024,
+					"children": [
+						150,
+						151
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "baklavajs-core/types/eventDataTypes.ts",
+					"line": 32,
+					"character": 33
+				}
+			]
+		},
+		{
+			"id": 52,
+			"name": "IPlugin",
+			"kind": 256,
+			"kindString": "Interface",
+			"flags": {
+				"isExported": true,
+				"isExternal": true
+			},
+			"children": [
+				{
+					"id": 53,
+					"name": "type",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/plugin.ts",
+							"line": 4,
+							"character": 8
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 54,
+					"name": "register",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"signatures": [
+						{
+							"id": 55,
+							"name": "register",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 56,
+									"name": "editor",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "IEditor",
+										"id": 78
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/plugin.ts",
+							"line": 5,
+							"character": 12
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"kind": 1024,
+					"children": [
+						53
+					]
+				},
+				{
+					"title": "Methods",
+					"kind": 2048,
+					"children": [
+						54
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "baklavajs-core/types/plugin.ts",
+					"line": 3,
+					"character": 24
+				}
+			],
+			"extendedBy": [
+				{
+					"type": "reference",
+					"name": "IViewPlugin",
+					"id": 339
+				}
+			],
+			"implementedBy": [
+				{
+					"type": "reference",
+					"name": "ViewPlugin",
+					"id": 357
+				}
+			]
+		},
+		{
+			"id": 15,
+			"name": "IPreventableBaklavaEvent",
+			"kind": 256,
+			"kindString": "Interface",
+			"flags": {
+				"isExported": true,
+				"isExternal": true
+			},
+			"typeParameter": [
+				{
+					"id": 16,
+					"name": "T",
+					"kind": 131072,
+					"kindString": "Type parameter",
+					"flags": {}
+				}
+			],
+			"children": [
+				{
+					"id": 20,
+					"name": "addListener",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"signatures": [
+						{
+							"id": 21,
+							"name": "addListener",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 22,
+									"name": "token",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "TokenType",
+										"id": 40
+									}
+								},
+								{
+									"id": 23,
+									"name": "listener",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "Listener",
+										"id": 41,
+										"typeArguments": [
+											{
+												"type": "typeParameter",
+												"name": "T"
+											}
+										]
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "IBaklavaEvent.addListener",
+								"id": 5
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/events.ts",
+							"line": 6,
+							"character": 15
+						}
+					],
+					"inheritedFrom": {
+						"type": "reference",
+						"name": "IBaklavaEvent.addListener",
+						"id": 5
+					}
+				},
+				{
+					"id": 17,
+					"name": "emit",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"signatures": [
+						{
+							"id": 18,
+							"name": "emit",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 19,
+									"name": "data",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "typeParameter",
+										"name": "T"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "boolean"
+							},
+							"overwrites": {
+								"type": "reference",
+								"name": "IBaklavaEvent.emit",
+								"id": 12
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/events.ts",
+							"line": 12,
+							"character": 8
+						}
+					],
+					"overwrites": {
+						"type": "reference",
+						"name": "IBaklavaEvent.emit",
+						"id": 12
+					}
+				},
+				{
+					"id": 24,
+					"name": "removeListener",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"signatures": [
+						{
+							"id": 25,
+							"name": "removeListener",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 26,
+									"name": "token",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "TokenType",
+										"id": 40
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "IBaklavaEvent.removeListener",
+								"id": 9
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/events.ts",
+							"line": 7,
+							"character": 18
+						}
+					],
+					"inheritedFrom": {
+						"type": "reference",
+						"name": "IBaklavaEvent.removeListener",
+						"id": 9
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Methods",
+					"kind": 2048,
+					"children": [
+						20,
+						17,
+						24
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "baklavajs-core/types/events.ts",
+					"line": 11,
+					"character": 41
+				}
+			],
+			"extendedTypes": [
+				{
+					"type": "reference",
+					"name": "IBaklavaEvent",
+					"id": 3,
+					"typeArguments": [
+						{
+							"type": "typeParameter",
+							"name": "T"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 57,
+			"name": "IState",
+			"kind": 256,
+			"kindString": "Interface",
+			"flags": {
+				"isExported": true,
+				"isExternal": true
+			},
+			"children": [
+				{
+					"id": 59,
+					"name": "connections",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/state.ts",
+							"line": 3,
+							"character": 15
+						}
+					],
+					"type": {
+						"type": "array",
+						"elementType": {
+							"type": "reference",
+							"name": "IConnectionState",
+							"id": 73
+						}
+					}
+				},
+				{
+					"id": 58,
+					"name": "nodes",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/state.ts",
+							"line": 2,
+							"character": 9
+						}
+					],
+					"type": {
+						"type": "array",
+						"elementType": {
+							"type": "reference",
+							"name": "INodeState",
+							"id": 61
+						}
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"kind": 1024,
+					"children": [
+						59,
+						58
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "baklavajs-core/types/state.ts",
+					"line": 1,
+					"character": 23
+				}
+			],
+			"extendedTypes": [
+				{
+					"type": "reflection",
+					"declaration": {
+						"id": 60,
+						"name": "__type",
+						"kind": 65536,
+						"kindString": "Type literal",
+						"flags": {},
+						"sources": [
+							{
+								"fileName": "baklavajs-core/types/state.ts",
+								"line": 1,
+								"character": 31
+							}
+						]
+					}
+				}
+			]
+		},
+		{
+			"id": 398,
+			"name": "IStep",
+			"kind": 256,
+			"kindString": "Interface",
+			"flags": {
+				"isExported": true
+			},
+			"children": [
+				{
+					"id": 399,
+					"name": "type",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-plugin-renderer-vue/src/history/step.ts",
+							"line": 4,
+							"character": 8
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 403,
+					"name": "redo",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 404,
+							"name": "redo",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 405,
+									"name": "editor",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "IEditor",
+										"id": 78
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "baklavajs-plugin-renderer-vue/src/history/step.ts",
+							"line": 6,
+							"character": 8
+						}
+					]
+				},
+				{
+					"id": 400,
+					"name": "undo",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 401,
+							"name": "undo",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 402,
+									"name": "editor",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "IEditor",
+										"id": 78
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "baklavajs-plugin-renderer-vue/src/history/step.ts",
+							"line": 5,
+							"character": 8
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"kind": 1024,
+					"children": [
+						399
+					]
+				},
+				{
+					"title": "Methods",
+					"kind": 2048,
+					"children": [
+						403,
+						400
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "baklavajs-plugin-renderer-vue/src/history/step.ts",
+					"line": 3,
+					"character": 22
+				}
+			],
+			"implementedBy": [
+				{
+					"type": "reference",
+					"name": "ConnectionStep",
+					"id": 406
+				},
+				{
+					"type": "reference",
+					"name": "NodeStep",
+					"id": 418
+				}
+			]
+		},
+		{
+			"id": 209,
+			"name": "ITemporaryConnection",
+			"kind": 256,
+			"kindString": "Interface",
+			"flags": {
+				"isExported": true,
+				"isExternal": true
+			},
+			"children": [
+				{
+					"id": 211,
+					"name": "from",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/connection.ts",
+							"line": 11,
+							"character": 8
+						}
+					],
+					"type": {
+						"type": "reference",
+						"name": "INodeInterface",
+						"id": 189
+					}
+				},
+				{
+					"id": 213,
+					"name": "mx",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true,
+						"isOptional": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/connection.ts",
+							"line": 13,
+							"character": 6
+						}
+					],
+					"type": {
+						"type": "union",
+						"types": [
+							{
+								"type": "intrinsic",
+								"name": "undefined"
+							},
+							{
+								"type": "intrinsic",
+								"name": "number"
+							}
+						]
+					}
+				},
+				{
+					"id": 214,
+					"name": "my",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true,
+						"isOptional": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/connection.ts",
+							"line": 14,
+							"character": 6
+						}
+					],
+					"type": {
+						"type": "union",
+						"types": [
+							{
+								"type": "intrinsic",
+								"name": "undefined"
+							},
+							{
+								"type": "intrinsic",
+								"name": "number"
+							}
+						]
+					}
+				},
+				{
+					"id": 210,
+					"name": "status",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/connection.ts",
+							"line": 10,
+							"character": 10
+						}
+					],
+					"type": {
+						"type": "reference",
+						"name": "TemporaryConnectionState",
+						"id": 205
+					}
+				},
+				{
+					"id": 212,
+					"name": "to",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true,
+						"isOptional": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/connection.ts",
+							"line": 12,
+							"character": 6
+						}
+					],
+					"type": {
+						"type": "reference",
+						"name": "INodeInterface",
+						"id": 189
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"kind": 1024,
+					"children": [
+						211,
+						213,
+						214,
+						210,
+						212
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "baklavajs-core/types/connection.ts",
+					"line": 9,
+					"character": 37
+				}
+			]
+		},
+		{
+			"id": 219,
+			"name": "ITransferConnection",
+			"kind": 256,
+			"kindString": "Interface",
+			"flags": {
+				"isExported": true,
+				"isExternal": true
+			},
+			"children": [
+				{
+					"id": 221,
+					"name": "destructed",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/connection.ts",
+							"line": 25,
+							"character": 14
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "boolean"
+					}
+				},
+				{
+					"id": 223,
+					"name": "from",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/connection.ts",
+							"line": 19,
+							"character": 8
+						}
+					],
+					"type": {
+						"type": "reference",
+						"name": "INodeInterface",
+						"id": 189
+					},
+					"inheritedFrom": {
+						"type": "reference",
+						"name": "IConnection.from",
+						"id": 217
+					}
+				},
+				{
+					"id": 222,
+					"name": "id",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/connection.ts",
+							"line": 18,
+							"character": 6
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					},
+					"inheritedFrom": {
+						"type": "reference",
+						"name": "IConnection.id",
+						"id": 216
+					}
+				},
+				{
+					"id": 220,
+					"name": "isInDanger",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/connection.ts",
+							"line": 24,
+							"character": 14
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "boolean"
+					}
+				},
+				{
+					"id": 224,
+					"name": "to",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/connection.ts",
+							"line": 20,
+							"character": 6
+						}
+					],
+					"type": {
+						"type": "reference",
+						"name": "INodeInterface",
+						"id": 189
+					},
+					"inheritedFrom": {
+						"type": "reference",
+						"name": "IConnection.to",
+						"id": 218
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"kind": 1024,
+					"children": [
+						221,
+						223,
+						222,
+						220,
+						224
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "baklavajs-core/types/connection.ts",
+					"line": 23,
+					"character": 36
+				}
+			],
+			"extendedTypes": [
+				{
+					"type": "reference",
+					"name": "IConnection",
+					"id": 215
+				}
+			]
+		},
+		{
+			"id": 301,
+			"name": "IViewNode",
+			"kind": 256,
+			"kindString": "Interface",
+			"flags": {
+				"isExported": true,
+				"isExternal": true
+			},
+			"children": [
+				{
+					"id": 305,
+					"name": "disablePointerEvents",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-plugin-renderer-vue/types/viewPlugin.ts",
+							"line": 6,
+							"character": 24
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "boolean"
+					}
+				},
+				{
+					"id": 313,
+					"name": "events",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/node.ts",
+							"line": 17,
+							"character": 10
+						}
+					],
+					"type": {
+						"type": "reflection",
+						"declaration": {
+							"id": 314,
+							"name": "__type",
+							"kind": 65536,
+							"kindString": "Type literal",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "baklavajs-core/types/node.ts",
+									"line": 17,
+									"character": 11
+								}
+							]
+						}
+					},
+					"inheritedFrom": {
+						"type": "reference",
+						"name": "INode.events",
+						"id": 163
+					}
+				},
+				{
+					"id": 315,
+					"name": "hooks",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/node.ts",
+							"line": 29,
+							"character": 9
+						}
+					],
+					"type": {
+						"type": "reflection",
+						"declaration": {
+							"id": 316,
+							"name": "__type",
+							"kind": 65536,
+							"kindString": "Type literal",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "baklavajs-core/types/node.ts",
+									"line": 29,
+									"character": 10
+								}
+							]
+						}
+					},
+					"inheritedFrom": {
+						"type": "reference",
+						"name": "INode.hooks",
+						"id": 165
+					}
+				},
+				{
+					"id": 309,
+					"name": "id",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/node.ts",
+							"line": 12,
+							"character": 6
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					},
+					"inheritedFrom": {
+						"type": "reference",
+						"name": "INode.id",
+						"id": 159
+					}
+				},
+				{
+					"id": 317,
+					"name": "inputInterfaces",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/node.ts",
+							"line": 34,
+							"character": 19
+						}
+					],
+					"type": {
+						"type": "reference",
+						"name": "Record",
+						"typeArguments": [
+							{
+								"type": "intrinsic",
+								"name": "string"
+							},
+							{
+								"type": "reference",
+								"name": "INodeInterface",
+								"id": 189
+							}
+						]
+					},
+					"inheritedFrom": {
+						"type": "reference",
+						"name": "INode.inputInterfaces",
+						"id": 167
+					}
+				},
+				{
+					"id": 310,
+					"name": "interfaces",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/node.ts",
+							"line": 13,
+							"character": 14
+						}
+					],
+					"type": {
+						"type": "reference",
+						"name": "Map",
+						"typeArguments": [
+							{
+								"type": "intrinsic",
+								"name": "string"
+							},
+							{
+								"type": "reference",
+								"name": "INodeInterface",
+								"id": 189
+							}
+						]
+					},
+					"inheritedFrom": {
+						"type": "reference",
+						"name": "INode.interfaces",
+						"id": 160
+					}
+				},
+				{
+					"id": 308,
+					"name": "name",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/node.ts",
+							"line": 11,
+							"character": 8
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					},
+					"inheritedFrom": {
+						"type": "reference",
+						"name": "INode.name",
+						"id": 158
+					}
+				},
+				{
+					"id": 311,
+					"name": "options",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/node.ts",
+							"line": 14,
+							"character": 11
+						}
+					],
+					"type": {
+						"type": "reference",
+						"name": "Map",
+						"typeArguments": [
+							{
+								"type": "intrinsic",
+								"name": "string"
+							},
+							{
+								"type": "reference",
+								"name": "INodeOption",
+								"id": 126
+							}
+						]
+					},
+					"inheritedFrom": {
+						"type": "reference",
+						"name": "INode.options",
+						"id": 161
+					}
+				},
+				{
+					"id": 318,
+					"name": "outputInterfaces",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/node.ts",
+							"line": 35,
+							"character": 20
+						}
+					],
+					"type": {
+						"type": "reference",
+						"name": "Record",
+						"typeArguments": [
+							{
+								"type": "intrinsic",
+								"name": "string"
+							},
+							{
+								"type": "reference",
+								"name": "INodeInterface",
+								"id": 189
+							}
+						]
+					},
+					"inheritedFrom": {
+						"type": "reference",
+						"name": "INode.outputInterfaces",
+						"id": 168
+					}
+				},
+				{
+					"id": 302,
+					"name": "position",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-plugin-renderer-vue/types/viewPlugin.ts",
+							"line": 4,
+							"character": 12
+						}
+					],
+					"type": {
+						"type": "reflection",
+						"declaration": {
+							"id": 303,
+							"name": "__type",
+							"kind": 65536,
+							"kindString": "Type literal",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "baklavajs-plugin-renderer-vue/types/viewPlugin.ts",
+									"line": 4,
+									"character": 13
+								}
+							]
+						}
+					}
+				},
+				{
+					"id": 312,
+					"name": "state",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/node.ts",
+							"line": 15,
+							"character": 9
+						}
+					],
+					"type": {
+						"type": "reference",
+						"name": "Record",
+						"typeArguments": [
+							{
+								"type": "intrinsic",
+								"name": "string"
+							},
+							{
+								"type": "intrinsic",
+								"name": "any"
+							}
+						]
+					},
+					"inheritedFrom": {
+						"type": "reference",
+						"name": "INode.state",
+						"id": 162
+					}
+				},
+				{
+					"id": 306,
+					"name": "twoColumn",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-plugin-renderer-vue/types/viewPlugin.ts",
+							"line": 7,
+							"character": 13
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "boolean"
+					}
+				},
+				{
+					"id": 307,
+					"name": "type",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/node.ts",
+							"line": 10,
+							"character": 8
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					},
+					"inheritedFrom": {
+						"type": "reference",
+						"name": "INode.type",
+						"id": 157
+					}
+				},
+				{
+					"id": 304,
+					"name": "width",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-plugin-renderer-vue/types/viewPlugin.ts",
+							"line": 5,
+							"character": 9
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "number"
+					}
+				},
+				{
+					"id": 324,
+					"name": "calculate",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"signatures": [
+						{
+							"id": 325,
+							"name": "calculate",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "any"
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "INode.calculate",
+								"id": 174
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/node.ts",
+							"line": 39,
+							"character": 13
+						}
+					],
+					"inheritedFrom": {
+						"type": "reference",
+						"name": "INode.calculate",
+						"id": 174
+					}
+				},
+				{
+					"id": 326,
+					"name": "getInterface",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"signatures": [
+						{
+							"id": 327,
+							"name": "getInterface",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 328,
+									"name": "name",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "INodeInterface",
+								"id": 189
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "INode.getInterface",
+								"id": 176
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/node.ts",
+							"line": 40,
+							"character": 16
+						}
+					],
+					"inheritedFrom": {
+						"type": "reference",
+						"name": "INode.getInterface",
+						"id": 176
+					}
+				},
+				{
+					"id": 329,
+					"name": "getOptionValue",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"signatures": [
+						{
+							"id": 330,
+							"name": "getOptionValue",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 331,
+									"name": "name",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "any"
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "INode.getOptionValue",
+								"id": 179
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/node.ts",
+							"line": 41,
+							"character": 18
+						}
+					],
+					"inheritedFrom": {
+						"type": "reference",
+						"name": "INode.getOptionValue",
+						"id": 179
+					}
+				},
+				{
+					"id": 319,
+					"name": "load",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"signatures": [
+						{
+							"id": 320,
+							"name": "load",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 321,
+									"name": "state",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "INodeState",
+										"id": 61
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "INode.load",
+								"id": 169
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/node.ts",
+							"line": 37,
+							"character": 8
+						}
+					],
+					"inheritedFrom": {
+						"type": "reference",
+						"name": "INode.load",
+						"id": 169
+					}
+				},
+				{
+					"id": 336,
+					"name": "registerEditor",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"signatures": [
+						{
+							"id": 337,
+							"name": "registerEditor",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 338,
+									"name": "editor",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "IEditor",
+										"id": 78
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "INode.registerEditor",
+								"id": 186
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/node.ts",
+							"line": 43,
+							"character": 18
+						}
+					],
+					"inheritedFrom": {
+						"type": "reference",
+						"name": "INode.registerEditor",
+						"id": 186
+					}
+				},
+				{
+					"id": 322,
+					"name": "save",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"signatures": [
+						{
+							"id": 323,
+							"name": "save",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"type": {
+								"type": "reference",
+								"name": "INodeState",
+								"id": 61
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "INode.save",
+								"id": 172
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/node.ts",
+							"line": 38,
+							"character": 8
+						}
+					],
+					"inheritedFrom": {
+						"type": "reference",
+						"name": "INode.save",
+						"id": 172
+					}
+				},
+				{
+					"id": 332,
+					"name": "setOptionValue",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"signatures": [
+						{
+							"id": 333,
+							"name": "setOptionValue",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 334,
+									"name": "name",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 335,
+									"name": "value",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "any"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "INode.setOptionValue",
+								"id": 182
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/node.ts",
+							"line": 42,
+							"character": 18
+						}
+					],
+					"inheritedFrom": {
+						"type": "reference",
+						"name": "INode.setOptionValue",
+						"id": 182
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"kind": 1024,
+					"children": [
+						305,
+						313,
+						315,
+						309,
+						317,
+						310,
+						308,
+						311,
+						318,
+						302,
+						312,
+						306,
+						307,
+						304
+					]
+				},
+				{
+					"title": "Methods",
+					"kind": 2048,
+					"children": [
+						324,
+						326,
+						329,
+						319,
+						336,
+						322,
+						332
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "baklavajs-plugin-renderer-vue/types/viewPlugin.ts",
+					"line": 3,
+					"character": 26
+				}
+			],
+			"extendedTypes": [
+				{
+					"type": "reference",
+					"name": "INode",
+					"id": 156
+				}
+			]
+		},
+		{
+			"id": 339,
+			"name": "IViewPlugin",
+			"kind": 256,
+			"kindString": "Interface",
+			"flags": {
+				"isExported": true,
+				"isExternal": true
+			},
+			"children": [
+				{
+					"id": 340,
+					"name": "editor",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-plugin-renderer-vue/types/viewPlugin.ts",
+							"line": 12,
+							"character": 10
+						}
+					],
+					"type": {
+						"type": "reference",
+						"name": "IEditor",
+						"id": 78
+					}
+				},
+				{
+					"id": 347,
+					"name": "hooks",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-plugin-renderer-vue/types/viewPlugin.ts",
+							"line": 21,
+							"character": 9
+						}
+					],
+					"type": {
+						"type": "reflection",
+						"declaration": {
+							"id": 348,
+							"name": "__type",
+							"kind": 65536,
+							"kindString": "Type literal",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "baklavajs-plugin-renderer-vue/types/viewPlugin.ts",
+									"line": 21,
+									"character": 10
+								}
+							]
+						}
+					}
+				},
+				{
+					"id": 346,
+					"name": "options",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-plugin-renderer-vue/types/viewPlugin.ts",
+							"line": 19,
+							"character": 11
+						}
+					],
+					"type": {
+						"type": "reference",
+						"name": "Record",
+						"typeArguments": [
+							{
+								"type": "intrinsic",
+								"name": "string"
+							},
+							{
+								"type": "intrinsic",
+								"name": "any"
+							}
+						]
+					}
+				},
+				{
+					"id": 341,
+					"name": "panning",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-plugin-renderer-vue/types/viewPlugin.ts",
+							"line": 13,
+							"character": 11
+						}
+					],
+					"type": {
+						"type": "reflection",
+						"declaration": {
+							"id": 342,
+							"name": "__type",
+							"kind": 65536,
+							"kindString": "Type literal",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "baklavajs-plugin-renderer-vue/types/viewPlugin.ts",
+									"line": 13,
+									"character": 12
+								}
+							]
+						}
+					}
+				},
+				{
+					"id": 343,
+					"name": "scaling",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-plugin-renderer-vue/types/viewPlugin.ts",
+							"line": 14,
+							"character": 11
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "number"
+					}
+				},
+				{
+					"id": 344,
+					"name": "sidebar",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-plugin-renderer-vue/types/viewPlugin.ts",
+							"line": 15,
+							"character": 11
+						}
+					],
+					"type": {
+						"type": "reflection",
+						"declaration": {
+							"id": 345,
+							"name": "__type",
+							"kind": 65536,
+							"kindString": "Type literal",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "baklavajs-plugin-renderer-vue/types/viewPlugin.ts",
+									"line": 15,
+									"character": 12
+								}
+							]
+						}
+					}
+				},
+				{
+					"id": 353,
+					"name": "type",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/plugin.ts",
+							"line": 4,
+							"character": 8
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					},
+					"inheritedFrom": {
+						"type": "reference",
+						"name": "IPlugin.type",
+						"id": 53
+					}
+				},
+				{
+					"id": 354,
+					"name": "register",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"signatures": [
+						{
+							"id": 355,
+							"name": "register",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 356,
+									"name": "editor",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "IEditor",
+										"id": 78
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "IPlugin.register",
+								"id": 54
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/plugin.ts",
+							"line": 5,
+							"character": 12
+						}
+					],
+					"inheritedFrom": {
+						"type": "reference",
+						"name": "IPlugin.register",
+						"id": 54
+					}
+				},
+				{
+					"id": 349,
+					"name": "registerOption",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"signatures": [
+						{
+							"id": 350,
+							"name": "registerOption",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 351,
+									"name": "name",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 352,
+									"name": "component",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "any"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "baklavajs-plugin-renderer-vue/types/viewPlugin.ts",
+							"line": 30,
+							"character": 18
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"kind": 1024,
+					"children": [
+						340,
+						347,
+						346,
+						341,
+						343,
+						344,
+						353
+					]
+				},
+				{
+					"title": "Methods",
+					"kind": 2048,
+					"children": [
+						354,
+						349
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "baklavajs-plugin-renderer-vue/types/viewPlugin.ts",
+					"line": 10,
+					"character": 28
+				}
+			],
+			"extendedTypes": [
+				{
+					"type": "reference",
+					"name": "IPlugin",
+					"id": 52
+				}
+			],
+			"implementedBy": [
+				{
+					"type": "reference",
+					"name": "ViewPlugin",
+					"id": 357
+				}
+			]
+		},
+		{
+			"id": 46,
+			"name": "HookTap",
+			"kind": 4194304,
+			"kindString": "Type alias",
+			"flags": {
+				"isExported": true,
+				"isExternal": true
+			},
+			"typeParameter": [
+				{
+					"id": 47,
+					"name": "I",
+					"kind": 131072,
+					"kindString": "Type parameter",
+					"flags": {}
+				},
+				{
+					"id": 48,
+					"name": "O",
+					"kind": 131072,
+					"kindString": "Type parameter",
+					"flags": {}
+				},
+				{
+					"id": 296,
+					"name": "I",
+					"kind": 131072,
+					"kindString": "Type parameter",
+					"flags": {}
+				},
+				{
+					"id": 297,
+					"name": "O",
+					"kind": 131072,
+					"kindString": "Type parameter",
+					"flags": {}
+				}
+			],
+			"sources": [
+				{
+					"fileName": "baklavajs-core/types/events.ts",
+					"line": 3,
+					"character": 19
+				},
+				{
+					"fileName": "baklavajs-core/src/events/eventEmitter.ts",
+					"line": 5,
+					"character": 19
+				}
+			],
+			"type": {
+				"type": "reflection",
+				"declaration": {
+					"id": 298,
+					"name": "__type",
+					"kind": 65536,
+					"kindString": "Type literal",
+					"flags": {},
+					"signatures": [
+						{
+							"id": 299,
+							"name": "__call",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 300,
+									"name": "i",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "typeParameter",
+										"name": "I"
+									}
+								}
+							],
+							"type": {
+								"type": "typeParameter",
+								"name": "O"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "baklavajs-core/src/events/eventEmitter.ts",
+							"line": 5,
+							"character": 27
+						}
+					]
+				}
+			}
+		},
+		{
+			"id": 41,
+			"name": "Listener",
+			"kind": 4194304,
+			"kindString": "Type alias",
+			"flags": {
+				"isExported": true,
+				"isExternal": true
+			},
+			"typeParameter": [
+				{
+					"id": 42,
+					"name": "T",
+					"kind": 131072,
+					"kindString": "Type parameter",
+					"flags": {}
+				},
+				{
+					"id": 292,
+					"name": "T",
+					"kind": 131072,
+					"kindString": "Type parameter",
+					"flags": {}
+				}
+			],
+			"sources": [
+				{
+					"fileName": "baklavajs-core/types/events.ts",
+					"line": 2,
+					"character": 20
+				},
+				{
+					"fileName": "baklavajs-core/src/events/eventEmitter.ts",
+					"line": 4,
+					"character": 20
+				}
+			],
+			"type": {
+				"type": "reflection",
+				"declaration": {
+					"id": 293,
+					"name": "__type",
+					"kind": 65536,
+					"kindString": "Type literal",
+					"flags": {},
+					"signatures": [
+						{
+							"id": 294,
+							"name": "__call",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 295,
+									"name": "ev",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "typeParameter",
+										"name": "T"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "any"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "baklavajs-core/src/events/eventEmitter.ts",
+							"line": 4,
+							"character": 25
+						}
+					]
+				}
+			}
+		},
+		{
+			"id": 124,
+			"name": "NodeConstructor",
+			"kind": 4194304,
+			"kindString": "Type alias",
+			"flags": {
+				"isExported": true,
+				"isExternal": true
+			},
+			"sources": [
+				{
+					"fileName": "baklavajs-core/types/editor.ts",
+					"line": 9,
+					"character": 27
+				}
+			],
+			"type": {
+				"type": "reflection",
+				"declaration": {
+					"id": 125,
+					"name": "__type",
+					"kind": 65536,
+					"kindString": "Type literal",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "baklavajs-core/types/editor.ts",
+							"line": 9,
+							"character": 29
+						}
+					]
+				}
+			}
+		},
+		{
+			"id": 40,
+			"name": "TokenType",
+			"kind": 4194304,
+			"kindString": "Type alias",
+			"flags": {
+				"isExported": true,
+				"isExternal": true
+			},
+			"sources": [
+				{
+					"fileName": "baklavajs-core/types/events.ts",
+					"line": 1,
+					"character": 21
+				},
+				{
+					"fileName": "baklavajs-core/src/events/eventEmitter.ts",
+					"line": 3,
+					"character": 21
+				}
+			],
+			"type": {
+				"type": "union",
+				"types": [
+					{
+						"type": "intrinsic",
+						"name": "object"
+					},
+					{
+						"type": "intrinsic",
+						"name": "symbol"
+					}
+				]
+			}
+		},
+		{
+			"id": 1,
+			"name": "BaklavaVuePlugin",
+			"kind": 32,
+			"kindString": "Variable",
+			"flags": {
+				"isExported": true,
+				"isConst": true
+			},
+			"sources": [
+				{
+					"fileName": "baklavajs-plugin-renderer-vue/src/baklavaVuePlugin.ts",
+					"line": 20,
+					"character": 29
+				}
+			],
+			"type": {
+				"type": "reflection",
+				"declaration": {
+					"id": 2,
+					"name": "__type",
+					"kind": 65536,
+					"kindString": "Type literal",
+					"flags": {}
+				}
+			},
+			"defaultValue": " Baklava"
+		},
+		{
+			"id": 446,
+			"name": "getDomElements",
+			"kind": 64,
+			"kindString": "Function",
+			"flags": {
+				"isExported": true
+			},
+			"signatures": [
+				{
+					"id": 447,
+					"name": "getDomElements",
+					"kind": 4096,
+					"kindString": "Call signature",
+					"flags": {},
+					"parameters": [
+						{
+							"id": 448,
+							"name": "ni",
+							"kind": 32768,
+							"kindString": "Parameter",
+							"flags": {},
+							"type": {
+								"type": "reference",
+								"name": "INodeInterface",
+								"id": 189
+							}
+						}
+					],
+					"type": {
+						"type": "reflection",
+						"declaration": {
+							"id": 449,
+							"name": "__type",
+							"kind": 65536,
+							"kindString": "Type literal",
+							"flags": {}
+						}
+					}
+				}
+			],
+			"sources": [
+				{
+					"fileName": "baklavajs-plugin-renderer-vue/src/utility/domResolver.ts",
+					"line": 3,
+					"character": 38
+				}
+			]
+		},
+		{
+			"id": 443,
+			"name": "sanitizeName",
+			"kind": 64,
+			"kindString": "Function",
+			"flags": {
+				"isExported": true
+			},
+			"signatures": [
+				{
+					"id": 444,
+					"name": "sanitizeName",
+					"kind": 4096,
+					"kindString": "Call signature",
+					"flags": {},
+					"parameters": [
+						{
+							"id": 445,
+							"name": "name",
+							"kind": 32768,
+							"kindString": "Parameter",
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				}
+			],
+			"sources": [
+				{
+					"fileName": "baklavajs-plugin-renderer-vue/src/utility/cssNames.ts",
+					"line": 1,
+					"character": 28
+				}
+			]
+		},
+		{
+			"id": 389,
+			"name": "Components",
+			"kind": 2097152,
+			"kindString": "Object literal",
+			"flags": {
+				"isExported": true,
+				"isConst": true
+			},
+			"children": [
+				{
+					"id": 390,
+					"name": "Connection",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-plugin-renderer-vue/src/index.ts",
+							"line": 13,
+							"character": 14
+						}
+					],
+					"type": {
+						"type": "reference",
+						"name": "VueConstructor",
+						"typeArguments": [
+							{
+								"type": "reference",
+								"name": "Vue"
+							}
+						]
+					}
+				},
+				{
+					"id": 391,
+					"name": "ConnectionWrapper",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-plugin-renderer-vue/src/index.ts",
+							"line": 13,
+							"character": 33
+						}
+					],
+					"type": {
+						"type": "reference",
+						"name": "VueConstructor",
+						"typeArguments": [
+							{
+								"type": "reference",
+								"name": "Vue"
+							}
+						]
+					}
+				},
+				{
+					"id": 396,
+					"name": "ContextMenu",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-plugin-renderer-vue/src/index.ts",
+							"line": 15,
+							"character": 15
+						}
+					],
+					"type": {
+						"type": "reference",
+						"name": "VueConstructor",
+						"typeArguments": [
+							{
+								"type": "reference",
+								"name": "Vue"
+							}
+						]
+					}
+				},
+				{
+					"id": 393,
+					"name": "Node",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-plugin-renderer-vue/src/index.ts",
+							"line": 14,
+							"character": 8
+						}
+					],
+					"type": {
+						"type": "reference",
+						"name": "VueConstructor",
+						"typeArguments": [
+							{
+								"type": "reference",
+								"name": "Vue"
+							}
+						]
+					}
+				},
+				{
+					"id": 394,
+					"name": "NodeInterface",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-plugin-renderer-vue/src/index.ts",
+							"line": 14,
+							"character": 23
+						}
+					],
+					"type": {
+						"type": "reference",
+						"name": "VueConstructor",
+						"typeArguments": [
+							{
+								"type": "reference",
+								"name": "Vue"
+							}
+						]
+					}
+				},
+				{
+					"id": 395,
+					"name": "NodeOption",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-plugin-renderer-vue/src/index.ts",
+							"line": 14,
+							"character": 35
+						}
+					],
+					"type": {
+						"type": "reference",
+						"name": "VueConstructor",
+						"typeArguments": [
+							{
+								"type": "reference",
+								"name": "Vue"
+							}
+						]
+					}
+				},
+				{
+					"id": 397,
+					"name": "Sidebar",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-plugin-renderer-vue/src/index.ts",
+							"line": 15,
+							"character": 24
+						}
+					],
+					"type": {
+						"type": "reference",
+						"name": "VueConstructor",
+						"typeArguments": [
+							{
+								"type": "reference",
+								"name": "Vue"
+							}
+						]
+					}
+				},
+				{
+					"id": 392,
+					"name": "TemporaryConnection",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "baklavajs-plugin-renderer-vue/src/index.ts",
+							"line": 13,
+							"character": 54
+						}
+					],
+					"type": {
+						"type": "reference",
+						"name": "VueConstructor",
+						"typeArguments": [
+							{
+								"type": "reference",
+								"name": "Vue"
+							}
+						]
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Variables",
+					"kind": 32,
+					"children": [
+						390,
+						391,
+						396,
+						393,
+						394,
+						395,
+						397,
+						392
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "baklavajs-plugin-renderer-vue/src/index.ts",
+					"line": 12,
+					"character": 23
+				}
+			],
+			"type": {
+				"type": "intrinsic",
+				"name": "object"
+			}
+		}
+	],
+	"groups": [
+		{
+			"title": "Enumerations",
+			"kind": 4,
+			"children": [
+				205
+			]
+		},
+		{
+			"title": "Classes",
+			"kind": 128,
+			"children": [
+				238,
+				225,
+				406,
+				430,
+				264,
+				418,
+				251,
+				278,
+				357
+			]
+		},
+		{
+			"title": "Interfaces",
+			"kind": 256,
+			"children": [
+				132,
+				139,
+				135,
+				144,
+				3,
+				215,
+				73,
+				78,
+				27,
+				69,
+				156,
+				189,
+				126,
+				61,
+				152,
+				149,
+				52,
+				15,
+				57,
+				398,
+				209,
+				219,
+				301,
+				339
+			]
+		},
+		{
+			"title": "Type aliases",
+			"kind": 4194304,
+			"children": [
+				46,
+				41,
+				124,
+				40
+			]
+		},
+		{
+			"title": "Variables",
+			"kind": 32,
+			"children": [
+				1
+			]
+		},
+		{
+			"title": "Functions",
+			"kind": 64,
+			"children": [
+				446,
+				443
+			]
+		},
+		{
+			"title": "Object literals",
+			"kind": 2097152,
+			"children": [
+				389
+			]
+		}
+	]
+}
