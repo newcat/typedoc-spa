@@ -2,7 +2,7 @@
     el-container
         el-header(height="70px").flex.aic.header
             h1.c-pointer.flex-grow(@click="go(-1)") {{ loadedModule ? loadedModule.name : "" }}
-            el-select.ml2(v-model="selectedModuleName", placeholder="Module")
+            el-select.ml2(:value="selectedModuleName", @change="onSelectedModuleChanged", placeholder="Module")
                 el-option(v-for="m in modules", :key="m.name", :label="m.name", :value="m.name")
         el-container
             el-aside.aside
@@ -77,9 +77,8 @@ export default class App extends Vue {
 
     }
 
-    @Watch("selectedModuleName")
-    onSelectedModuleChanged() {
-        this.$router.push({ name: "home", params: { module: this.selectedModuleName } });
+    onSelectedModuleChanged(value: string) {
+        this.$router.push({ name: "home", params: { module: value } });
     }
 
     async loadModule(mod?: IModule) {
