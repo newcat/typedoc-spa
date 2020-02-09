@@ -4,7 +4,7 @@
             h1.c-pointer.flex-grow(@click="go(-1)") {{ loadedModule ? loadedModule.name : "" }}
             el-select.ml2(:value="selectedModuleName", @change="onSelectedModuleChanged", placeholder="Module")
                 el-option(v-for="m in modules", :key="m.name", :label="m.name", :value="m.name")
-        el-container
+        el-container(v-loading="loading")
             el-aside.aside
                 el-menu.no-border(:default-active="reflection ? reflection.id.toString() : '-1'")
                     el-menu-item(index="-1", @click="go(-1)") Home
@@ -20,7 +20,7 @@
                         reference-renderer(:reflection="reflection")
                             type-icon.mr1(:kind="reflection.kind")
                             | {{ reflection.name }}
-                el-alert(v-else, type="warning", show-icon) Module "{{ $route.params.module }}" not found
+                el-alert(v-else-if="!loading", type="warning", show-icon) Module "{{ $route.params.module }}" not found
 </template>
 
 <script lang="ts">
@@ -47,6 +47,10 @@ export default class App extends Vue {
 
     get loadedModule() {
         return this.$store.state.loadedModule;
+    }
+
+    get loading() {
+        return this.$store.state.loading;
     }
 
     getReflection(id: number) {

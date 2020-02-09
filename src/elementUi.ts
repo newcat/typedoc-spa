@@ -75,4 +75,9 @@ import col from "element-ui/lib/col";
 import "element-ui/lib/theme-chalk/col.css";
 Vue.use(col);
 
+// @ts-ignore
+import loading from "element-ui/lib/loading";
+import "element-ui/lib/theme-chalk/loading.css";
+Vue.use(loading);
+
 import "element-ui/lib/theme-chalk/icon.css";

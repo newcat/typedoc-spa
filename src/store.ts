@@ -7,6 +7,7 @@ Vue.use(Vuex);
 export default new Vuex.Store({
     state: {
         raw: {} as any,
+        loading: false,
         loadedModule: null as IModule|null
     },
     getters: {
@@ -26,10 +27,14 @@ export default new Vuex.Store({
         setModule(state, [value, module]) {
             state.raw = value;
             state.loadedModule = module;
+        },
+        setLoading(state, value: boolean) {
+            state.loading = value;
         }
     },
     actions: {
         async loadModule({ commit }, m: IModule) {
+            commit("setLoading", true);
             if (m) {
                 const r = await fetch(m.file);
                 if (r.ok) {
@@ -40,6 +45,7 @@ export default new Vuex.Store({
             } else {
                 commit("setModule", [null, ""]);
             }
+            commit("setLoading", false);
         }
     },
 });
