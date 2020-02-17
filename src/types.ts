@@ -1,6 +1,7 @@
 export interface IModule {
     name: string;
     file: string;
+    githubBasePath?: string;
 }
 
 export enum Kind {
